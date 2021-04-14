@@ -3,8 +3,26 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-Welcome to SensoresPresion's documentation!
+Instrumentation of a pressure sensor array
 ===========================================
+Instituto Tecnológico y de Estudios Superiores de Monterrey
+
+.. image:: images/logotec.*
+   :target: 
+   :alt: 
+   :class: third
+   
+Biomecatronics Laboratory
+
+Februar-June 2021
+
+Tutors:
+
+Dr. Joel C. Huegel W.
+Dra. Ramona B. Alemón Galindo
+Ing. Marco Antonio González Barreto
+
+Roberto Estrella Mariscal
 
    
 .. toctree::
@@ -12,19 +30,21 @@ Welcome to SensoresPresion's documentation!
    :caption: Table of Contents
    :name: maintoc
    :includehidden:
-
-
+  
 .. toctree::
    :caption: Introduction
    :maxdepth: 1
    :hidden:
+
+intro
    
-   intro
+
+   
+   
 
 
 
-
-Indices and tables
+Index
 ==================
 
 * :ref:`genindex`
