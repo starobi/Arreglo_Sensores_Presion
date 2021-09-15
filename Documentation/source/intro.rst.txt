@@ -1,0 +1,5 @@
+Introduction
+=============
+When using a prosthesis there could be residual limb pain. There could be many reasons for the pain, but it could be mainly the fit or the design of the prosthesis. A way to analyze the performance of prosthesis is measuring the pressure between the stump and the prosthetic limb on specific points of interest. To accomplish this, a sensor measurement system is required.
+In this project a functional prototype for a pressure measuring system will be developed to determine the pressure distribution on a lower body limb on determined points of interest.
+
