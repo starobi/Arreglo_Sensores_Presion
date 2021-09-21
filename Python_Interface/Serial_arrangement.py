@@ -1,3 +1,5 @@
+#Read of serial port and arrangement of data according to it's sensor
+
 import serial
 sample = []
 sample.append([0])    #Time

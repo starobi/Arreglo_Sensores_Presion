@@ -1,3 +1,5 @@
+#Example animation of Pyqtgraph
+
 # -*- coding: utf-8 -*-
 from pyqtgraph.Qt import QtGui, QtCore
 import numpy as np

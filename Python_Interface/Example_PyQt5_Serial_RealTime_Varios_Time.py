@@ -1,3 +1,5 @@
+#This program plots 8 the reading of 8 sensors according to the times lapsed in seconds
+
 import sys
 from PyQt5.QtWidgets import QApplication
 import pyqtgraph as pg

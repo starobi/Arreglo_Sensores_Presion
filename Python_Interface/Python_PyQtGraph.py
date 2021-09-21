@@ -1,3 +1,4 @@
+#Example of pyqtgraph library
 
 from pyqtgraph.Qt import QtGui, QtCore
 import pyqtgraph as pg

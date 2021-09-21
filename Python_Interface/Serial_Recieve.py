@@ -1,3 +1,5 @@
+#Read from serial port
+
 import serial
 
 with serial.Serial("\\.\COM7", 57600) as ser:

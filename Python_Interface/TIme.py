@@ -1,3 +1,5 @@
+#Example of Qtime lybrary.
+
 import sys
 import numpy as np
 from pyqtgraph.Qt import QtGui, QtCore

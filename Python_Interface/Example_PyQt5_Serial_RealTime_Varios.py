@@ -1,3 +1,5 @@
+#This program the reading of 8 sensors according to the times lapsed with a summ
+
 import sys
 from PyQt5.QtWidgets import QApplication
 import pyqtgraph as pg
