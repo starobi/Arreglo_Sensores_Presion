@@ -1,11 +1,15 @@
 #This program plots 8 the reading of 8 sensors according to the times lapsed in seconds
 
 import sys
+from datetime import datetime
+
 from PyQt5.QtWidgets import QApplication
 import pyqtgraph as pg
 import numpy as np
 import serial
 import time
+import csv
+from datetime import datetime
 
 #Configuration Serial Port
 serial=0 #Quiero Comunicación Serial?
@@ -50,6 +54,12 @@ sensor6=p.plot(pen=(6, 8), name=labels[5])
 sensor7=p.plot(pen=(7, 8), name=labels[6])
 sensor8=p.plot(pen=(8, 8), name=labels[7])
 
+#CSV file initialization
+date=datetime.now()
+file_name="{}-{}-{}_{}_{}hrs_Test.csv".format(date.year,date.month,date.day,date.hour,date.minute)
+csv_file = open(file_name,'w',newline='',encoding="utf-8")
+csv_writer = csv.writer(csv_file,delimiter=',') #In an English OS works with ',' but in Spanisch, works with 'tab'
+csv_writer.writerow(['Time','Sensor 1','Sensor 2','Sensor 3','Sensor 4','Sensor 5','Sensor 6','Sensor 7','Sensor 8'])
 
 count_sample=9
 frames=50
@@ -69,7 +79,7 @@ def Update():
                 sensor7.setData(sample[0], sample[7])
                 sensor8.setData(sample[0], sample[8])
                 count_sample = 0
-                actual_time=time.time()-initial_time
+                actual_time=round(time.time()-initial_time,3)
                 sample[0].append(actual_time)
                 if len(sample[0]) > frames:
                     for i in range(0,9):
@@ -78,7 +88,7 @@ def Update():
                 sample[count_sample].append(int(line))
             count_sample = count_sample + 1
         else:
-            actual_time = time.time() - initial_time
+            actual_time = round(time.time() - initial_time,3)
             sample[0].append(actual_time)
             numbers = [10, 20, 30, 40, 50, 60, 70, 80]
             for x in range(1, 9):
@@ -91,6 +101,7 @@ def Update():
             sensor6.setData(sample[0], sample[6])
             sensor7.setData(sample[0], sample[7])
             sensor8.setData(sample[0], sample[8])
+            csv_writer.writerow([sample[0][-1],sample[1][-1],sample[2][-1],sample[3][-1],sample[4][-1],sample[5][-1],sample[6][-1],sample[7][-1],sample[8][-1]])
 
     except:
         pass
@@ -101,5 +112,6 @@ def Update():
     pg.QtGui.QGuiApplication.processEvents()
 
 initial_time=time.time()
-while ((time.time()-initial_time)<=30): Update() #Actualizamos lo rápido que podamos.
+while ((time.time()-initial_time)<=10): Update() #Actualizamos lo rápido que podamos.
+csv_file.close()
 pg.QtGui.QApplication.exec_()
