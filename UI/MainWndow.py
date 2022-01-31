@@ -86,55 +86,66 @@ class TestWindow(QMainWindow):
         self.count_sample = 9
 
         # Initialization Plot
-        plotWidget = pg.PlotWidget()
-        plotWidget.setTitle("Sensors")
-        plotWidget.addLegend()  # Add legends of Sensores colors
-        plotWidget.setLabel(axis='left', text='Voltage', units=None, unitPrefix=None)
-        plotWidget.setLabel(axis='bottom', text='Time', units='s', unitPrefix=None)
-        self.setCentralWidget(plotWidget)
+        self.plotWidget = pg.PlotWidget()
+        self.plotWidget.setTitle("Sensors Test 1")
+        self.test="Test1"
+        self.plotWidget.addLegend()  # Add legends of Sensores colors
+        self.plotWidget.setLabel(axis='left', text='Voltage', units=None, unitPrefix=None)
+        self.plotWidget.setLabel(axis='bottom', text='Time', units='s', unitPrefix=None)
+        self.setCentralWidget(self.plotWidget)
 
         self.sensor = [] #Array for DataPlotItem for each sensor
         labels = ['Sensor 1', 'Sensor 2', 'Sensor 3', 'Sensor 4', 'Sensor 5', 'Sensor 6', 'Sensor 7', 'Sensor 8']
-        self.sensor1 = plotWidget.plot(pen=(1, 8), name=labels[0])
-        self.sensor2 = plotWidget.plot(pen=(2, 8), name=labels[1])
-        self.sensor3 = plotWidget.plot(pen=(3, 8), name=labels[2])
-        self.sensor4 = plotWidget.plot(pen=(4, 8), name=labels[3])
-        self.sensor5 = plotWidget.plot(pen=(5, 8), name=labels[4])
-        self.sensor6 = plotWidget.plot(pen=(6, 8), name=labels[5])
-        self.sensor7 = plotWidget.plot(pen=(7, 8), name=labels[6])
-        self.sensor8 = plotWidget.plot(pen=(8, 8), name=labels[7])
+        self.sensor1 = self.plotWidget.plot(pen=(1, 8), name=labels[0])
+        self.sensor2 = self.plotWidget.plot(pen=(2, 8), name=labels[1])
+        self.sensor3 = self.plotWidget.plot(pen=(3, 8), name=labels[2])
+        self.sensor4 = self.plotWidget.plot(pen=(4, 8), name=labels[3])
+        self.sensor5 = self.plotWidget.plot(pen=(5, 8), name=labels[4])
+        self.sensor6 = self.plotWidget.plot(pen=(6, 8), name=labels[5])
+        self.sensor7 = self.plotWidget.plot(pen=(7, 8), name=labels[6])
+        self.sensor8 = self.plotWidget.plot(pen=(8, 8), name=labels[7])
 
         #Tool Bar
         tb=self.addToolBar("My Toolbar")
-        tb.setToolButtonStyle(Qt.ToolButtonTextUnderIcon)
-        test1b=QAction("Test1",self)
+        test1b=QAction("Test 1",self)
         tb.addAction(test1b)
-        test2b=QAction("Test2",self)
+        test2b=QAction("Test 2",self)
         tb.addAction(test2b)
-        test3b=QAction("Test3",self)
+        test3b=QAction("Test 3",self)
         tb.addAction(test3b)
         tb.actionTriggered.connect(self.btnFunc)
         startButton=QPushButton("Start Test")
         tb.addWidget(startButton)
+        startButton.clicked.connect(self.startButton)
 
+        self.show()
 
+    def btnFunc(self,btn):
+        if btn.text()=="Test 1":
+            self.plotWidget.setTitle("Sensors Test 1")
+            self.test="Test1"
+        elif btn.text() =="Test 2":
+            self.plotWidget.setTitle("Sensors Test 2")
+            self.test = "Test2"
+        elif btn.text() =="Test 3":
+            self.plotWidget.setTitle("Sensors Test 3")
+            self.test = "Test3"
+        self.plotReset()
+
+    def startButton(self):
         # CSV file initialization
         date = datetime.now()
-        file_name = "{}-{}-{}_{}_{}hrs_Test.csv".format(date.year, date.month, date.day, date.hour, date.minute)
+        file_name = "{}-{}-{}_{}_{}hrs_{}.csv".format(date.year, date.month, date.day, date.hour, date.minute,self.test)
         csv_file = open(file_name, 'w', newline='', encoding="utf-8")
-        self.csv_writer = csv.writer(csv_file,
-                                delimiter=',')  # In an English OS works with ',' but in Spanisch, works with 'tab'
-        self.csv_writer.writerow(['Time', 'Sensor 1', 'Sensor 2', 'Sensor 3', 'Sensor 4', 'Sensor 5', 'Sensor 6', 'Sensor 7', 'Sensor 8'])
+        self.csv_writer = csv.writer(csv_file,delimiter=',')  # In an English OS works with ',' but in Spanisch, works with 'tab'
+        self.csv_writer.writerow(
+            ['Time', 'Sensor 1', 'Sensor 2', 'Sensor 3', 'Sensor 4', 'Sensor 5', 'Sensor 6', 'Sensor 7', 'Sensor 8'])
 
         self.count_sample = 9
-        self.frames = 50 #Improve this to the acutal sample rate
-        self.show()
+        self.frames = 50  # Improve this to the acutal sample rate
         self.initial_time = time.time()
         while ((time.time() - self.initial_time) <= 10): self.Update()  # Actualizamos lo rápido que podamos.
         csv_file.close()
-
-    def btnFunc(self):
-        pass
 
     def Update(self):
         try:
@@ -179,6 +190,25 @@ class TestWindow(QMainWindow):
 
         # Actualizamos los datos y refrescamos la gráfica.
         pg.QtGui.QGuiApplication.processEvents()
+
+    def plotReset(self):
+        self.sensor1.setData()
+        self.sensor2.setData()
+        self.sensor3.setData()
+        self.sensor4.setData()
+        self.sensor5.setData()
+        self.sensor6.setData()
+        self.sensor7.setData()
+        self.sensor8.setData()
+        self.sample[0].clear()
+        self.sample[1].clear()
+        self.sample[2].clear()
+        self.sample[3].clear()
+        self.sample[4].clear()
+        self.sample[5].clear()
+        self.sample[6].clear()
+        self.sample[7].clear()
+        self.sample[8].clear()
 
     def closeEvent(self, event):
         self.windowMain=MainWindow()
