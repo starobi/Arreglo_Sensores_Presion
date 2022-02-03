@@ -1,5 +1,5 @@
 import sys
-#from PyQt5.QtGui import *
+from PyQt5.QtGui import *
 from PyQt5.QtWidgets import *
 from PyQt5.QtCore import *
 import pyqtgraph as pg
@@ -7,6 +7,7 @@ import serial
 import csv
 from datetime import datetime
 import time
+import os
 
 
 
@@ -135,8 +136,10 @@ class TestWindow(QMainWindow):
     def startButton(self):
         # CSV file initialization
         date = datetime.now()
-        file_name = "{}-{}-{}_{}_{}hrs_{}.csv".format(date.year, date.month, date.day, date.hour, date.minute,self.test)
-        csv_file = open(file_name, 'w', newline='', encoding="utf-8")
+        file_name= QFileDialog.getSaveFileName(self, "Confirm Name and Location", "Tests\{}-{}-{}_{}_{}hrs_{}".format(date.year, date.month, date.day, date.hour, date.minute,self.test), "*.csv")
+        if file_name[0]== "":
+            return
+        csv_file = open(file_name[0], 'w', newline='', encoding="utf-8")
         self.csv_writer = csv.writer(csv_file,delimiter=',')  # In an English OS works with ',' but in Spanisch, works with 'tab'
         self.csv_writer.writerow(
             ['Time', 'Sensor 1', 'Sensor 2', 'Sensor 3', 'Sensor 4', 'Sensor 5', 'Sensor 6', 'Sensor 7', 'Sensor 8'])
