@@ -9,6 +9,7 @@ import numpy as np
 import serial
 import time
 import csv
+from PyQt5.QtWidgets import *
 from datetime import datetime
 
 #Configuration Serial Port
@@ -33,11 +34,22 @@ count_sample=9
 
 #Initialization Plot
 app = pg.QtGui.QApplication([])
-w = pg.GraphicsLayoutWidget(title="Sensors", show=True,size=(1000,10000)) #GraphicLayout
-p = w.addPlot(title="Sensors' Samples") #PlotItem
-p.addLegend()
-p.setLabel(axis='left', text='Voltage', units=None, unitPrefix=None)
-p.setLabel(axis='bottom', text='Time', units='s', unitPrefix=None)
+window=QWidget()
+layout=QVBoxLayout()
+plotWidget=pg.PlotWidget()
+plotWidget.setTitle("Sensors")
+plotWidget.addLegend() #Add legends of Sensores colors
+plotWidget.setLabel(axis='left', text='Voltage', units=None, unitPrefix=None)
+plotWidget.setLabel(axis='bottom', text='Time', units='s', unitPrefix=None)
+layout.addWidget(plotWidget)
+window.setLayout(layout)
+window.show()
+
+# w = pg.GraphicsLayoutWidget(title="Sensors", show=True,size=(1000,10000)) #GraphicLayout
+# p = w.addPlot(title="Sensors' Samples") #PlotItem
+# p.addLegend()
+# p.setLabel(axis='left', text='Voltage', units=None, unitPrefix=None)
+# p.setLabel(axis='bottom', text='Time', units='s', unitPrefix=None)
 
 #Checar que hace graphiclayourwidget
 #que hace addplot
@@ -45,14 +57,14 @@ p.setLabel(axis='bottom', text='Time', units='s', unitPrefix=None)
 sensor=[]
 labels=['Sensor 1','Sensor 2','Sensor 3','Sensor 4','Sensor 5','Sensor 6','Sensor 7','Sensor 8']
 #'''
-sensor1=p.plot(pen=(1, 8), name=labels[0])
-sensor2=p.plot(pen=(2, 8), name=labels[1])
-sensor3=p.plot(pen=(3, 8), name=labels[2])
-sensor4=p.plot(pen=(4, 8), name=labels[3])
-sensor5=p.plot(pen=(5, 8), name=labels[4])
-sensor6=p.plot(pen=(6, 8), name=labels[5])
-sensor7=p.plot(pen=(7, 8), name=labels[6])
-sensor8=p.plot(pen=(8, 8), name=labels[7])
+sensor1=plotWidget.plot(pen=(1, 8), name=labels[0])
+sensor2=plotWidget.plot(pen=(2, 8), name=labels[1])
+sensor3=plotWidget.plot(pen=(3, 8), name=labels[2])
+sensor4=plotWidget.plot(pen=(4, 8), name=labels[3])
+sensor5=plotWidget.plot(pen=(5, 8), name=labels[4])
+sensor6=plotWidget.plot(pen=(6, 8), name=labels[5])
+sensor7=plotWidget.plot(pen=(7, 8), name=labels[6])
+sensor8=plotWidget.plot(pen=(8, 8), name=labels[7])
 
 #CSV file initialization
 date=datetime.now()
@@ -114,4 +126,4 @@ def Update():
 initial_time=time.time()
 while ((time.time()-initial_time)<=10): Update() #Actualizamos lo rápido que podamos.
 csv_file.close()
-pg.QtGui.QApplication.exec_()
+app.exec_()

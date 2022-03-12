@@ -135,6 +135,12 @@ class TestWindow(QMainWindow):
 
     def startButton(self):
         # CSV file initialization
+        # hola=os.getcwd()
+        # path= "Documents/Tests"
+        # try:
+        #     os.mkdir(path)
+        # except:
+        #     print("No se pudo")
         date = datetime.now()
         file_name= QFileDialog.getSaveFileName(self, "Confirm Name and Location", "Tests\{}-{}-{}_{}_{}hrs_{}".format(date.year, date.month, date.day, date.hour, date.minute,self.test), "*.csv")
         if file_name[0]== "":
