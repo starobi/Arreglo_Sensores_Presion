@@ -1,6 +1,6 @@
 ######NOTE######
 #This program is executed when the bluetooth device in configured
-#
+#This is the process of Validation of BLuetooth Conection
 #
 from infi.devicemanager import DeviceManager
 import serial
@@ -24,6 +24,17 @@ if bluetooth_device.__len__() == 1:
     for device in serial_over_bluetooth_devices:
         if bluetooth_id in device.instance_id:
             serial_COM="COM"+device.friendly_name[-2]
-            ser=serial.Serial(serial_COM, 9600)
-            ser.write("EXITO ".encode())
-            print("Exito en",serial_COM)
+            try:
+                ser=serial.Serial(serial_COM, 9600)
+            except:
+                print(
+"""The Bluetooth Port is not connected
+
+Solutions:
+*Verify that the Measuring Device is turned on and linked to the computer
+*Erase the bluetooth device from the computer and link it again""")
+            else:
+                ser.write("bluetooth_test ".encode())
+                print("Bluetooth working Correclty")
+else:
+    print("Bluetooth device not linked to the computer link bluetooth device first")
