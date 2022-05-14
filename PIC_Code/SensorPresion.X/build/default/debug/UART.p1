@@ -297,119 +297,119 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;UART.c: 27: }
 [e :UE 135 ]
 }
-"28
-[; ;UART.c: 28: void UART_Write(uint8_t data)
+"30
+[; ;UART.c: 30: void UART_Write(uint8_t data)
 [v _UART_Write `(v ~T0 @X0 1 ef1`uc ]
-"29
-[; ;UART.c: 29: {
+"31
+[; ;UART.c: 31: {
 {
 [e :U _UART_Write ]
-"28
-[; ;UART.c: 28: void UART_Write(uint8_t data)
-[v _data `uc ~T0 @X0 1 r1 ]
-"29
-[; ;UART.c: 29: {
-[f ]
 "30
-[; ;UART.c: 30:   while(!TRMT);
+[; ;UART.c: 30: void UART_Write(uint8_t data)
+[v _data `uc ~T0 @X0 1 r1 ]
+"31
+[; ;UART.c: 31: {
+[f ]
+"32
+[; ;UART.c: 32:   while(!TRMT);
 [e $U 137  ]
 [e :U 138 ]
 [e :U 137 ]
 [e $ ! _TRMT 138  ]
 [e :U 139 ]
-"31
-[; ;UART.c: 31:   TXREG = data;
+"33
+[; ;UART.c: 33:   TXREG = data;
 [e = _TXREG _data ]
-"32
-[; ;UART.c: 32: }
+"34
+[; ;UART.c: 34: }
 [e :UE 136 ]
 }
-"33
-[; ;UART.c: 33: uint8_t UART_TX_Empty(void)
+"37
+[; ;UART.c: 37: uint8_t UART_TX_Empty(void)
 [v _UART_TX_Empty `(uc ~T0 @X0 1 ef ]
-"34
-[; ;UART.c: 34: {
+"38
+[; ;UART.c: 38: {
 {
 [e :U _UART_TX_Empty ]
 [f ]
-"36
-[; ;UART.c: 36:   return TRMT;
+"40
+[; ;UART.c: 40:   return TRMT;
 [e ) -> _TRMT `uc ]
 [e $UE 140  ]
-"37
-[; ;UART.c: 37: }
+"41
+[; ;UART.c: 41: }
 [e :UE 140 ]
 }
-"39
-[; ;UART.c: 39: void UART_Buffer(uint8_t *buffer, uint8_t size)
+"44
+[; ;UART.c: 44: void UART_Buffer(uint8_t *buffer, uint8_t size)
 [v _UART_Buffer `(v ~T0 @X0 1 ef2`*uc`uc ]
-"40
-[; ;UART.c: 40: {
+"45
+[; ;UART.c: 45: {
 {
 [e :U _UART_Buffer ]
-"39
-[; ;UART.c: 39: void UART_Buffer(uint8_t *buffer, uint8_t size)
+"44
+[; ;UART.c: 44: void UART_Buffer(uint8_t *buffer, uint8_t size)
 [v _buffer `*uc ~T0 @X0 1 r1 ]
 [v _size `uc ~T0 @X0 1 r2 ]
-"40
-[; ;UART.c: 40: {
+"45
+[; ;UART.c: 45: {
 [f ]
-"41
-[; ;UART.c: 41:     char count=0;
+"46
+[; ;UART.c: 46:     char count=0;
 [v _count `uc ~T0 @X0 1 a ]
 [e = _count -> -> 0 `i `uc ]
-"42
-[; ;UART.c: 42:     while(count<size)
+"47
+[; ;UART.c: 47:     while(count<size)
 [e $U 142  ]
 [e :U 143 ]
-"43
-[; ;UART.c: 43:     {
+"48
+[; ;UART.c: 48:     {
 {
-"44
-[; ;UART.c: 44:         UART_Write(*buffer);
+"49
+[; ;UART.c: 49:         UART_Write(*buffer);
 [e ( _UART_Write (1 *U _buffer ]
-"45
-[; ;UART.c: 45:         count++;
+"50
+[; ;UART.c: 50:         count++;
 [e ++ _count -> -> 1 `i `uc ]
-"46
-[; ;UART.c: 46:         buffer++;
+"51
+[; ;UART.c: 51:         buffer++;
 [e ++ _buffer * -> -> 1 `i `x -> -> # *U _buffer `i `x ]
-"47
-[; ;UART.c: 47:     }
+"52
+[; ;UART.c: 52:     }
 }
 [e :U 142 ]
-"42
-[; ;UART.c: 42:     while(count<size)
+"47
+[; ;UART.c: 47:     while(count<size)
 [e $ < -> _count `i -> _size `i 143  ]
 [e :U 144 ]
-"48
-[; ;UART.c: 48: }
+"53
+[; ;UART.c: 53: }
 [e :UE 141 ]
 }
-"49
-[; ;UART.c: 49: void UART_number(int number)
+"56
+[; ;UART.c: 56: void UART_number(int number)
 [v _UART_number `(v ~T0 @X0 1 ef1`i ]
-"50
-[; ;UART.c: 50: {
+"57
+[; ;UART.c: 57: {
 {
 [e :U _UART_number ]
-"49
-[; ;UART.c: 49: void UART_number(int number)
+"56
+[; ;UART.c: 56: void UART_number(int number)
 [v _number `i ~T0 @X0 1 r1 ]
-"50
-[; ;UART.c: 50: {
+"57
+[; ;UART.c: 57: {
 [f ]
-"51
-[; ;UART.c: 51:  uint8_t buffer[10];
+"58
+[; ;UART.c: 58:  uint8_t buffer[10];
 [v _buffer `uc ~T0 @X0 -> 10 `i a ]
-"52
-[; ;UART.c: 52:  sprintf((char *)buffer,"%d\n",number);
+"59
+[; ;UART.c: 59:  sprintf((char *)buffer,"%d\n",number);
 [e ( _sprintf (1 , (. , -> &U _buffer `*uc :s 1C _number ]
-"53
-[; ;UART.c: 53:  UART_Buffer(buffer,strlen((char *)buffer));
+"60
+[; ;UART.c: 60:  UART_Buffer(buffer,strlen((char *)buffer));
 [e ( _UART_Buffer (2 , &U _buffer -> ( _strlen (1 -> -> &U _buffer `*uc `*Cuc `uc ]
-"54
-[; ;UART.c: 54: }
+"61
+[; ;UART.c: 61: }
 [e :UE 145 ]
 }
 [p f _sprintf 8388736 ]

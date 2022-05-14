@@ -2559,8 +2559,26 @@ void UART_number(int number);
 # 6 "./conbits.h" 2
 
 
+# 1 "./Timer.h" 1
+# 35 "./Timer.h"
 # 1 "C:\\Program Files\\Microchip\\xc8\\v2.32\\pic\\include\\c90\\stdint.h" 1 3
+# 35 "./Timer.h" 2
+
+
+
+extern uint16_t timer_overflows;
+extern uint16_t timer_overflow_counter;
+
+void Timer_set_ms_polling(uint16_t time);
+void Timer_set_ms_interrupt(uint16_t time);
+void Timer_Interrupt_Hanlde(void);
 # 8 "./conbits.h" 2
+
+# 1 "./Bluetooth.h" 1
+# 9 "./conbits.h" 2
+
+# 1 "C:\\Program Files\\Microchip\\xc8\\v2.32\\pic\\include\\c90\\stdint.h" 1 3
+# 10 "./conbits.h" 2
 
 # 1 "C:\\Program Files\\Microchip\\xc8\\v2.32\\pic\\include\\c90\\string.h" 1 3
 
@@ -2613,8 +2631,8 @@ extern char * strchr(const char *, int);
 extern char * strichr(const char *, int);
 extern char * strrchr(const char *, int);
 extern char * strrichr(const char *, int);
-# 9 "./conbits.h" 2
-# 19 "./conbits.h"
+# 11 "./conbits.h" 2
+# 21 "./conbits.h"
 #pragma config FOSC = HS
 #pragma config WDTE = OFF
 #pragma config PWRTE = OFF
@@ -2624,7 +2642,7 @@ extern char * strrichr(const char *, int);
 #pragma config BOREN = OFF
 #pragma config IESO = ON
 #pragma config FCMEN = ON
-#pragma config LVP = ON
+#pragma config LVP = OFF
 
 
 #pragma config BOR4V = BOR40V
@@ -2643,11 +2661,13 @@ void ADC_init_channel(char channel)
     ADCON1 = 0x80;
     ADCON0 |= (channel<<2);
 # 35 "ADC.c"
-    _delay((unsigned long)((30)*(16000000/4000000.0)));
+    _delay((unsigned long)((30)*(4000000/4000000.0)));
 
 
     GO_DONE = 1;
 }
+
+
 
 
 void ADC_init_channel_IR(char channel)
@@ -2666,11 +2686,12 @@ void ADC_init_channel_IR(char channel)
 
 
 
-    _delay((unsigned long)((30)*(16000000/4000000.0)));
+    _delay((unsigned long)((30)*(4000000/4000000.0)));
 
 
     GO_DONE = 1;
 }
+
 
 void ADC_burst(uint8_t *channels,uint16_t *reading,uint8_t numberc)
 {
@@ -2681,6 +2702,7 @@ void ADC_burst(uint8_t *channels,uint16_t *reading,uint8_t numberc)
         reading[n] = (ADRESH << 8) + ADRESL;
     }
 }
+
 
 void ADC_print_burst(uint16_t *BurstReadings, uint8_t NumberReadings)
 {

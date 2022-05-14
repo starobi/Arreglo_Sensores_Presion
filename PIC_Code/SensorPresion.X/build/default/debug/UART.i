@@ -2683,16 +2683,21 @@ void UART_TX_Init(uint32_t baud)
   TRISC6 = 1;
   TXEN = 1;
 }
+
+
 void UART_Write(uint8_t data)
 {
   while(!TRMT);
   TXREG = data;
 }
+
+
 uint8_t UART_TX_Empty(void)
 {
 
   return TRMT;
 }
+
 
 void UART_Buffer(uint8_t *buffer, uint8_t size)
 {
@@ -2704,6 +2709,8 @@ void UART_Buffer(uint8_t *buffer, uint8_t size)
         buffer++;
     }
 }
+
+
 void UART_number(int number)
 {
  uint8_t buffer[10];

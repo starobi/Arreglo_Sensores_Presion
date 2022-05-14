@@ -22,14 +22,6 @@ void ADC_init_channel(char channel)
     ADCON0 = 0x81;  // Turn ADC ON, and diveide FOSC/32 to obtain a Tad= 2us
     ADCON1 = 0x80; //  Result is "Right-Justified" 
     ADCON0 |= (channel<<2); //Channel selection
-    //RA5 Channel 4
-   /* 
-    //Configure Interrupts
-    ADIF = 0;  // Clear ADC Interrupt Flag
-    ADIE = 1;  // ADC Interrupt Enable Bit
-    PEIE = 1;  // Peripherals Interrupt Enable Bit
-    GIE = 1;   // Global Interrupts Enable Bit
-    */
     
     //Wait for the Time acquisition
     __delay_us(30);  // The Minimum Tacq = 20us, So That should be enough

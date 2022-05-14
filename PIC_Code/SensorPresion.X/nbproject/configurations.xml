@@ -7,6 +7,8 @@
       <itemPath>conbits.h</itemPath>
       <itemPath>ADC.h</itemPath>
       <itemPath>UART.h</itemPath>
+      <itemPath>Bluetooth.h</itemPath>
+      <itemPath>Timer.h</itemPath>
     </logicalFolder>
     <logicalFolder name="LinkerScript"
                    displayName="Linker Files"
@@ -15,14 +17,19 @@
     <logicalFolder name="SourceFiles"
                    displayName="Source Files"
                    projectFiles="true">
-      <itemPath>1_UART_Test.c</itemPath>
       <itemPath>ADC.c</itemPath>
+      <itemPath>UART.c</itemPath>
+      <itemPath>2_ADC_Test_Burst.c</itemPath>
+      <itemPath>2_ADC_Test_Polling.c</itemPath>
+      <itemPath>2_ADC_Test_Interrupt.c</itemPath>
       <itemPath>1_UART_Test_printf.c</itemPath>
       <itemPath>1_UART_Test_printnumber.c</itemPath>
-      <itemPath>2_ADC_Test_Polling.c</itemPath>
-      <itemPath>UART.c</itemPath>
-      <itemPath>2_ADC_Test_Interrupt.c</itemPath>
-      <itemPath>2_ADC_Test_Burst.c</itemPath>
+      <itemPath>1_UART_Test.c</itemPath>
+      <itemPath>3_Bluetooth_Test.c</itemPath>
+      <itemPath>Bluetooth.c</itemPath>
+      <itemPath>Timer.c</itemPath>
+      <itemPath>4_Timer_polling.c</itemPath>
+      <itemPath>4_Timer_Interrupt.c</itemPath>
     </logicalFolder>
     <logicalFolder name="ExternalFiles"
                    displayName="Important Files"
@@ -41,7 +48,7 @@
         <targetDevice>PIC16F886</targetDevice>
         <targetHeader></targetHeader>
         <targetPluginBoard></targetPluginBoard>
-        <platformTool>noID</platformTool>
+        <platformTool>PICkit3PlatformTool</platformTool>
         <languageToolchain>XC8</languageToolchain>
         <languageToolchainVersion>2.32</languageToolchainVersion>
         <platform>3</platform>
@@ -106,6 +113,16 @@
         <XC8-config-global>
         </XC8-config-global>
       </item>
+      <item path="2_ADC_Test_Burst.c" ex="true" overriding="false">
+        <HI-TECH-COMP>
+        </HI-TECH-COMP>
+        <HI-TECH-LINK>
+        </HI-TECH-LINK>
+        <XC8-CO>
+        </XC8-CO>
+        <XC8-config-global>
+        </XC8-config-global>
+      </item>
       <item path="2_ADC_Test_Interrupt.c" ex="true" overriding="false">
         <HI-TECH-COMP>
         </HI-TECH-COMP>
@@ -117,6 +134,26 @@
         </XC8-config-global>
       </item>
       <item path="2_ADC_Test_Polling.c" ex="true" overriding="false">
+        <HI-TECH-COMP>
+        </HI-TECH-COMP>
+        <HI-TECH-LINK>
+        </HI-TECH-LINK>
+        <XC8-CO>
+        </XC8-CO>
+        <XC8-config-global>
+        </XC8-config-global>
+      </item>
+      <item path="3_Bluetooth_Test.c" ex="true" overriding="false">
+        <HI-TECH-COMP>
+        </HI-TECH-COMP>
+        <HI-TECH-LINK>
+        </HI-TECH-LINK>
+        <XC8-CO>
+        </XC8-CO>
+        <XC8-config-global>
+        </XC8-config-global>
+      </item>
+      <item path="4_Timer_polling.c" ex="true" overriding="false">
         <HI-TECH-COMP>
         </HI-TECH-COMP>
         <HI-TECH-LINK>

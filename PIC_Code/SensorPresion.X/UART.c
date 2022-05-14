@@ -7,6 +7,7 @@
 
 
 #include "UART.h"
+#include "conbits.h"
 #include <string.h>
 #include <stdio.h>
 
@@ -15,7 +16,7 @@ void UART_TX_Init(uint32_t baud)
 {
   //Calculate value for Baud rate. It works until 57600 Baud/s
   uint8_t temp;
-  temp= (uint8_t)(((16000000/baud)/16)-1); // Formula to calcula SPBRG with high speed baud rate
+  temp= (uint8_t)(((_XTAL_FREQ/baud)/16)-1); // Formula to calcula SPBRG with high speed baud rate
   BRGH = 1; // Set For High-Speed Ba    ud Rate
   SPBRG = temp; // Set The Baud Rate To Be 9600 bps
   //--[ Enable The Ascynchronous Serial Port ]--
@@ -59,3 +60,5 @@ void UART_number(int number)
  sprintf((char *)buffer,"%d\n",number);  
  UART_Buffer(buffer,strlen((char *)buffer));
 }
+
+//Configure Receive: with timer 1. Configure Timer 1

@@ -2,6 +2,7 @@
  * File:   2_ADC_Test_Burst.c
  * Author: staro
  *
+ * This Program Sends a ADC burst through UART
  * Created on 19. Mai 2021, 10:25
  */
 

@@ -1,4 +1,4 @@
-# 1 "2_ADC_Test_Burst.c"
+# 1 "4_Timer_test.c"
 # 1 "<built-in>" 1
 # 1 "<built-in>" 3
 # 288 "<built-in>" 3
@@ -6,8 +6,15 @@
 # 1 "<built-in>" 2
 # 1 "C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\\pic\\include\\language_support.h" 1 3
 # 2 "<built-in>" 2
-# 1 "2_ADC_Test_Burst.c" 2
-# 10 "2_ADC_Test_Burst.c"
+# 1 "4_Timer_test.c" 2
+
+
+
+
+
+
+
+
 # 1 "C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\\pic\\include\\xc.h" 1 3
 # 18 "C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\\pic\\include\\xc.h" 3
 extern const char __xc8_OPTIM_SPEED;
@@ -2368,7 +2375,7 @@ extern __bank0 unsigned char __resetbits;
 extern __bank0 __bit __powerdown;
 extern __bank0 __bit __timeout;
 # 28 "C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\\pic\\include\\xc.h" 2 3
-# 10 "2_ADC_Test_Burst.c" 2
+# 9 "4_Timer_test.c" 2
 
 
 # 1 "./conbits.h" 1
@@ -2547,8 +2554,26 @@ void ADC_burst(uint8_t *channels,uint16_t *reading,uint8_t numberc);
 void ADC_print_burst(uint16_t *BurstReadings, uint8_t NumberReadings);
 # 7 "./conbits.h" 2
 
+# 1 "./Timer.h" 1
+# 35 "./Timer.h"
 # 1 "C:\\Program Files\\Microchip\\xc8\\v2.32\\pic\\include\\c90\\stdint.h" 1 3
+# 35 "./Timer.h" 2
+
+
+
+extern uint16_t timer_overflows;
+extern uint16_t timer_overflow_counter;
+
+
+void Timer_set_ms(uint16_t time);
+void Timer_Interrupt_Hanlde(void);
 # 8 "./conbits.h" 2
+
+# 1 "./Bluetooth.h" 1
+# 9 "./conbits.h" 2
+
+# 1 "C:\\Program Files\\Microchip\\xc8\\v2.32\\pic\\include\\c90\\stdint.h" 1 3
+# 10 "./conbits.h" 2
 
 # 1 "C:\\Program Files\\Microchip\\xc8\\v2.32\\pic\\include\\c90\\string.h" 1 3
 
@@ -2601,8 +2626,8 @@ extern char * strchr(const char *, int);
 extern char * strichr(const char *, int);
 extern char * strrchr(const char *, int);
 extern char * strrichr(const char *, int);
-# 9 "./conbits.h" 2
-# 19 "./conbits.h"
+# 11 "./conbits.h" 2
+# 21 "./conbits.h"
 #pragma config FOSC = HS
 #pragma config WDTE = OFF
 #pragma config PWRTE = OFF
@@ -2612,29 +2637,30 @@ extern char * strrichr(const char *, int);
 #pragma config BOREN = OFF
 #pragma config IESO = ON
 #pragma config FCMEN = ON
-#pragma config LVP = ON
+#pragma config LVP = OFF
 
 
 #pragma config BOR4V = BOR40V
 #pragma config WRT = OFF
-# 12 "2_ADC_Test_Burst.c" 2
-
-
-
-uint8_t mensaje[]="Programa Iniciado \n";
-uint8_t ANChannels[]={12,10,8,11,13,4,3,1};
-uint16_t ANRead[8];
+# 11 "4_Timer_test.c" 2
+# 30 "4_Timer_test.c"
 void main(void) {
-    UART_TX_Init(57600);
-    UART_Buffer(mensaje, strlen(mensaje));
-    TRISC1=0;
+    SCS=1;
+    TRISC3=0;
+    RC3=0;
+    Timer_set_ms(1000);
     while(1)
     {
-        RC1=1;
-        ADC_burst(ANChannels,ANRead,8);
-        ADC_print_burst(ANRead,8);
-        RC1=0;
-        _delay((unsigned long)((100)*(16000000/4000.0)));
+        if(TMR1IF)
+        {
+            TMR1 = 64535;
+            TMR1IF=0;
+            timer_overflow_counter++;
+            if(timer_overflow_counter==timer_overflows)
+            {
+                timer_overflow_counter=0;
+                RC3=~RC3;
+            }
+        }
     }
-    return;
 }
