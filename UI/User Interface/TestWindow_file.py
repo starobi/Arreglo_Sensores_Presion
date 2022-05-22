@@ -1,6 +1,5 @@
 #Description
-#Import COM port
-#Make directory of Tests
+
 #Make Configuration interchangable
 
 from PyQt5.QtWidgets import *
@@ -9,6 +8,7 @@ import serial
 import time
 from datetime import datetime
 import csv
+import os
 
 
 class TestWindow(QMainWindow):
@@ -22,7 +22,14 @@ class TestWindow(QMainWindow):
         # Configuration Serial Port
         self.serial = 0  # Serial Activated/Desactivated just for debugging
         if (self.serial == 1):
-            puerto = "COM8"
+            try:
+                bluetooth_com_name_file = open("Bluetooth_COM.txt", mode='r', encoding="utf-8")
+            except:
+                QMessageBox.information(self, "Information", "No COM port configuration was found. Please verify bluetooth connection first")
+                return
+
+            puerto = bluetooth_com_name_file.read()
+            bluetooth_com_name_file.close()
             baudrate = 57600
             self.ser = serial.Serial(puerto, baudrate)
 
@@ -87,13 +94,11 @@ class TestWindow(QMainWindow):
         self.plotReset()
 
     def startButton(self):
-        # CSV file initialization
-        # hola=os.getcwd()
-        # path= "Documents/Tests"
-        # try:
-        #     os.mkdir(path)
-        # except:
-        #     print("No se pudo")
+        cwd = os.getcwd()
+        testsPath = os.path.join(cwd, "Tests")
+        if not os.path.exists(testsPath):
+            os.mkdir(testsPath)
+        os.chdir(testsPath)
         date = datetime.now()
         file_name= QFileDialog.getSaveFileName(self, "Confirm Name and Location", "Tests\{}-{}-{}_{}_{}hrs_{}".format(date.year, date.month, date.day, date.hour, date.minute,self.test), "*.csv")
         if file_name[0]== "":
@@ -172,5 +177,4 @@ class TestWindow(QMainWindow):
         self.sample[7].clear()
         self.sample[8].clear()
 
-    #def closeEvent(self, event):
 
