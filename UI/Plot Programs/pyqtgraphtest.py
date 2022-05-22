@@ -1,8 +1,4 @@
-import sys
-#from PyQt5.QtGui import *
-import PyQt5
 from PyQt5.QtWidgets import *
-from PyQt5.QtCore import *
 import pyqtgraph as pg
 
 
@@ -19,10 +15,7 @@ class MainWindow(QWidget):
         datax = [1, 2, 3, 4, 5]
         datay = [2, 4, 2, 3, 5]
         Pwidget=pg.PlotWidget()
-        print(type(Pwidget.plot(datax,datay)))
-        #Pwidget.set
-        #self.setLayout(layout)
-        # self.setCentralWidget(Pwidget)
+        Pwidget.plot(datax,datay)
         layout.addWidget(Pwidget)
         self.setLayout(layout)
 
@@ -30,7 +23,7 @@ class MainWindow(QWidget):
 
 
 def main():
-    APP=QApplication(sys.argv)
+    APP=QApplication([])
     window=MainWindow()
     APP.exec_()
 
