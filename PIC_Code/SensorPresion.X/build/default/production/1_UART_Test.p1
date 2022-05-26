@@ -1,32 +1,17 @@
 Version 4.0 HI-TECH Software Intermediate Code
-"4155 C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f886.h
-[; ;C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f886.h: 4155: extern volatile __bit TMR1IF __attribute__((address(0x60)));
-[v _TMR1IF `Vb ~T0 @X0 0 e@96 ]
-"3957
-[; ;C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f886.h: 3957: extern volatile __bit RC3 __attribute__((address(0x3B)));
-[v _RC3 `Vb ~T0 @X0 0 e@59 ]
-"571
-[; ;C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f886.h: 571: extern volatile unsigned short TMR1 __attribute__((address(0x00E)));
-[v _TMR1 `Vus ~T0 @X0 0 e@14 ]
-"39 ./Timer.h
-[; ;./Timer.h: 39: extern uint16_t timer_overflow_counter;
-[v _timer_overflow_counter `ui ~T0 @X0 0 e ]
-"38
-[; ;./Timer.h: 38: extern uint16_t timer_overflows;
-[v _timer_overflows `ui ~T0 @X0 0 e ]
-"4158 C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f886.h
-[; ;C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f886.h: 4158: extern volatile __bit TMR1ON __attribute__((address(0x80)));
-[v _TMR1ON `Vb ~T0 @X0 0 e@128 ]
-"42 ./Timer.h
-[; ;./Timer.h: 42: void Timer_set_ms_interrupt(uint16_t time);
-[v _Timer_set_ms_interrupt `(v ~T0 @X0 0 ef1`ui ]
 [p mainexit ]
-"4029 C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f886.h
-[; ;C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f886.h: 4029: extern volatile __bit SCS __attribute__((address(0x478)));
-[v _SCS `Vb ~T0 @X0 0 e@1144 ]
-"4239
-[; ;C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f886.h: 4239: extern volatile __bit TRISC3 __attribute__((address(0x43B)));
-[v _TRISC3 `Vb ~T0 @X0 0 e@1083 ]
+"1704 C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f886.h
+[; ;C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f886.h: 1704: extern volatile unsigned char OSCCON __attribute__((address(0x08F)));
+[v _OSCCON `Vuc ~T0 @X0 0 e@143 ]
+"15 ./UART.h
+[; ;./UART.h: 15: void UART_TX_Init(uint32_t baud);
+[v _UART_TX_Init `(v ~T0 @X0 0 ef1`ul ]
+"16
+[; ;./UART.h: 16: void UART_Write(uint8_t data);
+[v _UART_Write `(v ~T0 @X0 0 ef1`uc ]
+"56 C:\Program Files\Microchip\xc8\v2.32\pic\include\c90\string.h
+[; ;C:\Program Files\Microchip\xc8\v2.32\pic\include\c90\string.h: 56: extern size_t strlen(const char *);
+[v _strlen `(ui ~T0 @X0 0 ef1`*Cuc ]
 [v F1196 `(v ~T0 @X0 1 tf1`ul ]
 "92 C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\pic.h
 [v __delay `JF1196 ~T0 @X0 0 e ]
@@ -276,77 +261,66 @@ Version 4.0 HI-TECH Software Intermediate Code
 "28
 [p x IESO  =  ON         ]
 "29
-[p x FCMEN  =  ON        ]
+[p x FCMEN  =  ON       ]
 "30
 [p x LVP  =  OFF          ]
 "33
 [p x BOR4V  =  BOR40V    ]
 "34
 [p x WRT  =  OFF         ]
-"7 4_Timer_Interrupt.c
-[v ___interruptISR `(v ~T0 @X0 1 ef ]
-"8
-{
-[e :U ___interruptISR ]
-[f ]
-"9
-[e $ ! _TMR1IF 135  ]
-"10
-{
-"11
-[e = _RC3 -> -> 1 `i `b ]
-"12
-[e = _TMR1IF -> -> 0 `i `b ]
-"13
-[e = _TMR1 -> -> 64535 `l `us ]
-"14
-[e ++ _timer_overflow_counter -> -> 1 `i `ui ]
-"15
-[e $ ! == _timer_overflow_counter _timer_overflows 136  ]
-"16
-{
-"17
-[e = _TMR1ON -> -> 0 `i `b ]
-"18
-[e = _timer_overflow_counter -> -> 0 `i `ui ]
-"19
-[e = _RC3 -> ~ -> _RC3 `ui `b ]
-"20
-[e ( _Timer_set_ms_interrupt (1 -> -> 1000 `i `ui ]
-"21
-}
-[e :U 136 ]
-"23
-}
-[e :U 135 ]
-"24
-[e :UE 134 ]
-}
+"17 1_UART_Test.c
+[v _mensaje `uc ~T0 @X0 -> 7 `i e ]
+[i _mensaje
+:U ..
+-> 72 `c
+-> 101 `c
+-> 108 `c
+-> 108 `c
+-> 111 `c
+-> 10 `c
+-> 0 `c
+..
+]
 [v $root$_main `(v ~T0 @X0 0 e ]
-"26
+"19
 [v _main `(v ~T0 @X0 1 ef ]
 {
 [e :U _main ]
 [f ]
-"27
-[e = _SCS -> -> 1 `i `b ]
-"28
-[e = _TRISC3 -> -> 0 `i `b ]
-"29
-[e = _RC3 -> -> 0 `i `b ]
-"30
-[e ( __delay (1 -> * -> -> 1000 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
-"31
-[e ( _Timer_set_ms_interrupt (1 -> -> 1000 `i `ui ]
-"32
-[e :U 139 ]
-"33
+"20
+[e =| _OSCCON -> -> < -> 7 `i -> 4 `i `i `Vuc ]
+"21
+[e ( _UART_TX_Init (1 -> -> -> 9600 `i `l `ul ]
+"22
+[e :U 137 ]
+"23
 {
-"34
+"24
+{
+[v _a `uc ~T0 @X0 1 a ]
+[e = _a -> -> 0 `i `uc ]
+[e $U 142  ]
+[e :U 139 ]
+"25
+{
+"26
+[e ( _UART_Write (1 *U + &U _mensaje * -> _a `ux -> -> # *U &U _mensaje `ui `ux ]
+"27
 }
-[e :U 138 ]
-[e $U 139  ]
+[e ++ _a -> -> 1 `i `uc ]
+[e :U 142 ]
+[e $ < -> _a `ui ( _strlen (1 -> -> &U _mensaje `*uc `*Cuc 139  ]
 [e :U 140 ]
-"35
-[e :UE 137 ]
+}
+"28
+[e ( __delay (1 -> * -> -> 1000 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
+"29
+}
+[e :U 136 ]
+[e $U 137  ]
+[e :U 138 ]
+"32
+[e $UE 135  ]
+"33
+[e :UE 135 ]
 }

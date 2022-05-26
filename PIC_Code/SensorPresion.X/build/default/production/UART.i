@@ -2732,7 +2732,7 @@ void UART_TX_Init(uint32_t baud)
 {
 
   uint8_t temp;
-  temp= (uint8_t)(((4000000/baud)/16)-1);
+  temp= (uint8_t)(((8000000/baud)/16)-1);
   BRGH = 1;
   SPBRG = temp;
 

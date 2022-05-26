@@ -56,24 +56,24 @@ class BluetoothWindow(QWidget):
                     try:
                         ser = serial.Serial(serial_COM, 9600)
                         try:
-                            bluetooth_com_name_file = open("Bluetooth_COM.txt", mode='r', encoding="utf-8")
+                            bluetooth_com_name_file = open("Bluetooth_COM.txt", mode='w', encoding="utf-8")
                         except:
                             bluetooth_com_name_file = open("Bluetooth_COM.txt", mode='x', encoding="utf-8")
                             bluetooth_com_name_file = open("Bluetooth_COM.txt", mode='w', encoding="utf-8")
                         bluetooth_com_name_file.write(serial_COM)
+                        bluetooth_com_name_file.close()
                     except:
                         mbox = QMessageBox.information(self, "Failed Connection",
 """Bluetooth port connection could not be established
 
 Solutions:
 *Verify that the Measuring Device is turned on and linked to the computer
-*Erase the bluetooth device from the computer and link it again
-*Verify the name of the device""")
+*Erase the bluetooth device from the computer and link it again""")
                     else:
                         ser.write("bluetooth_test ".encode())
                         mbox = QMessageBox.information(self, "", "Bluetooth working Correclty")
         else:
-            mbox = QMessageBox.information(self, "Not linked device", "Bluetooth device not linked to the computer, link bluetooth device first")
+            mbox = QMessageBox.information(self, "Not linked device", "Bluetooth device not linked to the computer, link bluetooth device first or verify the device name. Other option is to erase and link again the device")
 
     def saveNameDevice(self):
         self.bluetooth_device_name=self.nameBluetoothQline.text()

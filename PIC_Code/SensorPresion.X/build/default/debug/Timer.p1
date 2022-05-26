@@ -335,74 +335,74 @@ Version 4.0 HI-TECH Software Intermediate Code
 "38
 [; ;Timer.c: 38:   timer_overflows=time;
 [e = _timer_overflows _time ]
-"40
-[; ;Timer.c: 40:   TMR1 = 64535;
-[e = _TMR1 -> -> 64535 `l `us ]
-"42
-[; ;Timer.c: 42:   TMR1CS = 0;
-[e = _TMR1CS -> -> 0 `i `b ]
-"44
-[; ;Timer.c: 44:   T1CKPS0 = 0;
-[e = _T1CKPS0 -> -> 0 `i `b ]
-"45
-[; ;Timer.c: 45:   T1CKPS1 = 0;
-[e = _T1CKPS1 -> -> 0 `i `b ]
-"47
-[; ;Timer.c: 47:   TMR1IE = 1;
-[e = _TMR1IE -> -> 1 `i `b ]
-"48
-[; ;Timer.c: 48:   TMR1IF = 0;
-[e = _TMR1IF -> -> 0 `i `b ]
-"49
-[; ;Timer.c: 49:   timer_overflow_counter=0;
+"39
+[; ;Timer.c: 39:   timer_overflow_counter=0;
 [e = _timer_overflow_counter -> -> 0 `i `ui ]
-"50
-[; ;Timer.c: 50:   PEIE = 1;
-[e = _PEIE -> -> 1 `i `b ]
+"41
+[; ;Timer.c: 41:   TMR1 = 64535;
+[e = _TMR1 -> -> 64535 `l `us ]
+"43
+[; ;Timer.c: 43:   TMR1CS = 0;
+[e = _TMR1CS -> -> 0 `i `b ]
+"45
+[; ;Timer.c: 45:   T1CKPS0 = 0;
+[e = _T1CKPS0 -> -> 0 `i `b ]
+"46
+[; ;Timer.c: 46:   T1CKPS1 = 0;
+[e = _T1CKPS1 -> -> 0 `i `b ]
+"48
+[; ;Timer.c: 48:   TMR1IE = 1;
+[e = _TMR1IE -> -> 1 `i `b ]
+"49
+[; ;Timer.c: 49:   TMR1IF = 0;
+[e = _TMR1IF -> -> 0 `i `b ]
 "51
-[; ;Timer.c: 51:   GIE = 1;
+[; ;Timer.c: 51:   PEIE = 1;
+[e = _PEIE -> -> 1 `i `b ]
+"52
+[; ;Timer.c: 52:   GIE = 1;
 [e = _GIE -> -> 1 `i `b ]
-"53
-[; ;Timer.c: 53:   TMR1ON = 1;
+"55
+[; ;Timer.c: 55:   TMR1ON = 1;
 [e = _TMR1ON -> -> 1 `i `b ]
-"54
-[; ;Timer.c: 54: }
+"56
+[; ;Timer.c: 56: }
 [e :UE 135 ]
 }
-"56
-[; ;Timer.c: 56: void Timer_Interrupt_Hanlde(void)
+"58
+[; ;Timer.c: 58: void Timer_Interrupt_Hanlde(void)
 [v _Timer_Interrupt_Hanlde `(v ~T0 @X0 1 ef ]
-"57
-[; ;Timer.c: 57: {
+"59
+[; ;Timer.c: 59: {
 {
 [e :U _Timer_Interrupt_Hanlde ]
 [f ]
-"58
-[; ;Timer.c: 58:       TMR1IF = 0;
-[e = _TMR1IF -> -> 0 `i `b ]
-"59
-[; ;Timer.c: 59:       timer_overflow_counter++;
-[e ++ _timer_overflow_counter -> -> 1 `i `ui ]
 "60
-[; ;Timer.c: 60:       if(timer_overflow_counter==timer_overflows)
-[e $ ! == _timer_overflow_counter _timer_overflows 137  ]
+[; ;Timer.c: 60:       TMR1IF = 0;
+[e = _TMR1IF -> -> 0 `i `b ]
 "61
-[; ;Timer.c: 61:       {
-{
+[; ;Timer.c: 61:       timer_overflow_counter++;
+[e ++ _timer_overflow_counter -> -> 1 `i `ui ]
+"62
+[; ;Timer.c: 62:       if(timer_overflow_counter==timer_overflows)
+[e $ ! == _timer_overflow_counter _timer_overflows 137  ]
 "63
-[; ;Timer.c: 63:         TMR1ON = 0;
-[e = _TMR1ON -> -> 0 `i `b ]
+[; ;Timer.c: 63:       {
+{
 "65
-[; ;Timer.c: 65:         RC2 = ~RC2;
-[e = _RC2 -> ~ -> _RC2 `ui `b ]
+[; ;Timer.c: 65:         TMR1ON = 0;
+[e = _TMR1ON -> -> 0 `i `b ]
 "67
-[; ;Timer.c: 67:         timer_overflow_counter = 0;
-[e = _timer_overflow_counter -> -> 0 `i `ui ]
+[; ;Timer.c: 67:         RC2 = ~RC2;
+[e = _RC2 -> ~ -> _RC2 `ui `b ]
 "69
-[; ;Timer.c: 69:       }
+[; ;Timer.c: 69:         timer_overflow_counter = 0;
+[e = _timer_overflow_counter -> -> 0 `i `ui ]
+"71
+[; ;Timer.c: 71:       }
 }
 [e :U 137 ]
-"71
-[; ;Timer.c: 71: }
+"73
+[; ;Timer.c: 73: }
 [e :UE 136 ]
 }

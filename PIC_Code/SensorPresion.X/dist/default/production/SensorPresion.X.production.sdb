@@ -3,7 +3,7 @@
 [d edition pro ]
 [d chip 16F886 ]
 [d frameptr 0 ]
-"26 C:\Users\staro\OneDrive\Escuela\TEC\Laboratorio Biomecatronica\Documentacion\Arreglo_Sensores_Presion\PIC_Code\SensorPresion.X\4_Timer_Interrupt.c
+"19 C:\Users\staro\OneDrive\Escuela\TEC\Laboratorio Biomecatronica\Documentacion\Arreglo_Sensores_Presion\PIC_Code\SensorPresion.X\1_UART_Test.c
 [v _main main `(v  1 e 1 0 ]
 "19 C:\Users\staro\OneDrive\Escuela\TEC\Laboratorio Biomecatronica\Documentacion\Arreglo_Sensores_Presion\PIC_Code\SensorPresion.X\ADC.c
 [v _ADC_init_channel ADC_init_channel `(v  1 e 1 0 ]
@@ -21,14 +21,16 @@
 [v ___eecpymem __eecpymem `(v  1 e 1 0 ]
 "39
 [v ___memcpyee __memcpyee `(v  1 e 1 0 ]
-"34 C:\Users\staro\OneDrive\Escuela\TEC\Laboratorio Biomecatronica\Documentacion\Arreglo_Sensores_Presion\PIC_Code\SensorPresion.X\Timer.c
-[v _Timer_set_ms_interrupt Timer_set_ms_interrupt `(v  1 e 1 0 ]
-"31 C:\Users\staro\OneDrive\Escuela\TEC\Laboratorio Biomecatronica\Documentacion\Arreglo_Sensores_Presion\PIC_Code\SensorPresion.X\UART.c
+"15 C:\Users\staro\OneDrive\Escuela\TEC\Laboratorio Biomecatronica\Documentacion\Arreglo_Sensores_Presion\PIC_Code\SensorPresion.X\UART.c
+[v _UART_TX_Init UART_TX_Init `(v  1 e 1 0 ]
+"31
 [v _UART_Write UART_Write `(v  1 e 1 0 ]
 "45
 [v _UART_Buffer UART_Buffer `(v  1 e 1 0 ]
 "57
 [v _UART_number UART_number `(v  1 e 1 0 ]
+"17 C:\Users\staro\OneDrive\Escuela\TEC\Laboratorio Biomecatronica\Documentacion\Arreglo_Sensores_Presion\PIC_Code\SensorPresion.X\1_UART_Test.c
+[v _mensaje mensaje `[7]uc  1 e 7 0 ]
 "571 C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f886.h
 [v _TMR1 TMR1 `VEus  1 e 2 @14 ]
 "1054
@@ -60,6 +62,8 @@
 ]
 [u S55 . 1 `S35 1 . 1 0 `S40 1 . 1 0 `S49 1 . 1 0 `S52 1 . 1 0 ]
 [v _ADCON0bits ADCON0bits `VES55  1 e 1 @31 ]
+"1704
+[v _OSCCON OSCCON `VEuc  1 e 1 @143 ]
 "2484
 [v _SPBRG SPBRG `VEuc  1 e 1 @153 ]
 "2812
@@ -80,10 +84,6 @@
 [v _PEIE PEIE `VEb  1 e 0 @94 ]
 "3954
 [v _RC2 RC2 `VEb  1 e 0 @58 ]
-"3957
-[v _RC3 RC3 `VEb  1 e 0 @59 ]
-"4029
-[v _SCS SCS `VEb  1 e 0 @1144 ]
 "4041
 [v _SPEN SPEN `VEb  1 e 0 @199 ]
 "4095
@@ -100,8 +100,6 @@
 [v _TMR1IF TMR1IF `VEb  1 e 0 @96 ]
 "4158
 [v _TMR1ON TMR1ON `VEb  1 e 0 @128 ]
-"4239
-[v _TRISC3 TRISC3 `VEb  1 e 0 @1083 ]
 "4248
 [v _TRISC6 TRISC6 `VEb  1 e 0 @1086 ]
 "4257
@@ -112,14 +110,51 @@
 [v _timer_overflows timer_overflows `ui  1 e 2 0 ]
 "11
 [v _timer_overflow_counter timer_overflow_counter `ui  1 e 2 0 ]
-"26 C:\Users\staro\OneDrive\Escuela\TEC\Laboratorio Biomecatronica\Documentacion\Arreglo_Sensores_Presion\PIC_Code\SensorPresion.X\4_Timer_Interrupt.c
+"19 C:\Users\staro\OneDrive\Escuela\TEC\Laboratorio Biomecatronica\Documentacion\Arreglo_Sensores_Presion\PIC_Code\SensorPresion.X\1_UART_Test.c
 [v _main main `(v  1 e 1 0 ]
 {
+"24
+[v main@a a `uc  1 a 1 13 ]
+"33
+} 0
+"4 C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\strlen.c
+[v _strlen strlen `(ui  1 e 2 0 ]
+{
+[v strlen@s s `*.4DCuc  1 a 1 wreg ]
+"6
+[v strlen@cp cp `*.4DCuc  1 a 1 3 ]
+"4
+[v strlen@s s `*.4DCuc  1 a 1 wreg ]
+"8
+[v strlen@s s `*.4DCuc  1 a 1 4 ]
+"13
+} 0
+"31 C:\Users\staro\OneDrive\Escuela\TEC\Laboratorio Biomecatronica\Documentacion\Arreglo_Sensores_Presion\PIC_Code\SensorPresion.X\UART.c
+[v _UART_Write UART_Write `(v  1 e 1 0 ]
+{
+[v UART_Write@data data `uc  1 a 1 wreg ]
+[v UART_Write@data data `uc  1 a 1 wreg ]
+[v UART_Write@data data `uc  1 a 1 0 ]
 "35
 } 0
-"34 C:\Users\staro\OneDrive\Escuela\TEC\Laboratorio Biomecatronica\Documentacion\Arreglo_Sensores_Presion\PIC_Code\SensorPresion.X\Timer.c
-[v _Timer_set_ms_interrupt Timer_set_ms_interrupt `(v  1 e 1 0 ]
+"15
+[v _UART_TX_Init UART_TX_Init `(v  1 e 1 0 ]
 {
-[v Timer_set_ms_interrupt@time time `ui  1 p 2 0 ]
-"56
+"18
+[v UART_TX_Init@temp temp `uc  1 a 1 9 ]
+"15
+[v UART_TX_Init@baud baud `ul  1 p 4 0 ]
+"28
+} 0
+"5 C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\__lldiv.c
+[v ___lldiv __lldiv `(ul  1 e 4 0 ]
+{
+"10
+[v ___lldiv@quotient quotient `ul  1 a 4 9 ]
+"11
+[v ___lldiv@counter counter `uc  1 a 1 13 ]
+"5
+[v ___lldiv@divisor divisor `ul  1 p 4 0 ]
+[v ___lldiv@dividend dividend `ul  1 p 4 4 ]
+"30
 } 0

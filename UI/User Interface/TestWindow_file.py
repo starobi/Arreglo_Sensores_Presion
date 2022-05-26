@@ -20,7 +20,7 @@ class TestWindow(QMainWindow):
 
     def UI(self):
         # Configuration Serial Port
-        self.serial = 0  # Serial Activated/Desactivated just for debugging
+        self.serial = 1  # Serial Activated/Desactivated just for debugging
         if (self.serial == 1):
             try:
                 bluetooth_com_name_file = open("Bluetooth_COM.txt", mode='r', encoding="utf-8")

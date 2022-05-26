@@ -2483,6 +2483,7 @@ void Timer_set_ms_interrupt(uint16_t time)
 
 
   timer_overflows=time;
+  timer_overflow_counter=0;
 
   TMR1 = 64535;
 
@@ -2493,9 +2494,10 @@ void Timer_set_ms_interrupt(uint16_t time)
 
   TMR1IE = 1;
   TMR1IF = 0;
-  timer_overflow_counter=0;
+
   PEIE = 1;
   GIE = 1;
+
 
   TMR1ON = 1;
 }

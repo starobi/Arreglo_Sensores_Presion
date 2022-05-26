@@ -9,12 +9,47 @@ import time
 from infi.devicemanager import DeviceManager
 import os
 
+class MainMenu(QWidget):
+    def __init__(self):
+        super().__init__() #It initialize the init of the Base Class QWidget
+        self.setWindowTitle("Main Menu")
+        self.setGeometry(350,150,500,500)
+        self.UI()
+
+    def UI(self):
+        ###########Set Layout#############
+        self.hLayout=QHBoxLayout()
+        self.vLayout=QVBoxLayout()
+
+        btnCal=QPushButton("Calibration")
+        btnBlue=QPushButton("Bluetooth Configuration")
+        btnTests=QPushButton("Tests")
+        btnTests.clicked.connect(self.windowTest)
+        btnCal.clicked.connect(self.windowCalibration)
+        btnBlue.clicked.connect(self.windowBluetooth)
+        label=QLabel("Sensor Pressure Array Interface")
+        label.setAlignment(Qt.AlignCenter)
+        self.vLayout.addStretch()
+        self.vLayout.addWidget(label)
+        self.vLayout.addLayout(self.hLayout)
+        self.hLayout.addWidget(btnBlue)
+        self.hLayout.addWidget(btnCal)
+        self.vLayout.addWidget(btnTests)
+        self.vLayout.addStretch()
+
+        self.setLayout(self.vLayout)
+
+        self.show()
 
 
+    def windowCalibration(self):
+        self.windowT=CalibrationWindow()
 
+    def windowTest(self):
+        self.windowT=TestWindow()
 
-
-
+    def windowBluetooth(self):
+        self.windowT=BluetoothWindow()
 
 class TestWindow(QMainWindow):
     def __init__(self):
@@ -27,7 +62,14 @@ class TestWindow(QMainWindow):
         # Configuration Serial Port
         self.serial = 0  # Serial Activated/Desactivated just for debugging
         if (self.serial == 1):
-            puerto = "COM8"
+            try:
+                bluetooth_com_name_file = open("Bluetooth_COM.txt", mode='r', encoding="utf-8")
+            except:
+                QMessageBox.information(self, "Information", "No COM port configuration was found. Please verify bluetooth connection first")
+                return
+
+            puerto = bluetooth_com_name_file.read()
+            bluetooth_com_name_file.close()
             baudrate = 57600
             self.ser = serial.Serial(puerto, baudrate)
 
@@ -92,13 +134,11 @@ class TestWindow(QMainWindow):
         self.plotReset()
 
     def startButton(self):
-        # CSV file initialization
-        # hola=os.getcwd()
-        # path= "Documents/Tests"
-        # try:
-        #     os.mkdir(path)
-        # except:
-        #     print("No se pudo")
+        cwd = os.getcwd()
+        testsPath = os.path.join(cwd, "Tests")
+        if not os.path.exists(testsPath):
+            os.mkdir(testsPath)
+        os.chdir(testsPath)
         date = datetime.now()
         file_name= QFileDialog.getSaveFileName(self, "Confirm Name and Location", "Tests\{}-{}-{}_{}_{}hrs_{}".format(date.year, date.month, date.day, date.hour, date.minute,self.test), "*.csv")
         if file_name[0]== "":
@@ -177,9 +217,6 @@ class TestWindow(QMainWindow):
         self.sample[7].clear()
         self.sample[8].clear()
 
-    def closeEvent(self, event):
-        self.windowMain=MainMenu()
-
 class BluetoothWindow(QWidget):
     def __init__(self):
         super().__init__() #It initialize the init of the Base Class QWidget
@@ -188,16 +225,31 @@ class BluetoothWindow(QWidget):
         self.UI()
 
     def UI(self):
-        self.vLayout = QVBoxLayout()
+        vLayout = QVBoxLayout()
+        hLayout = QHBoxLayout()
+        self.nameBluetoothQline = QLineEdit(self)
+        btnSaveDeviceName = QPushButton("Save Device Name")
+        btnSaveDeviceName.clicked.connect(self.saveNameDevice)
         btnVerifyConnection = QPushButton("Verify Connection")
         btnVerifyConnection.clicked.connect(self.verifyConnection)
-        self.vLayout.addWidget(btnVerifyConnection)
-        self.setLayout(self.vLayout)
+        hLayout.addWidget(self.nameBluetoothQline)
+        hLayout.addWidget(btnSaveDeviceName)
+        vLayout.addLayout(hLayout)
+        vLayout.addWidget(btnVerifyConnection)
+        self.setLayout(vLayout)
+        try:
+            bluetooth_name_file=open("Bluetooth_device_name.txt",mode='r',encoding="utf-8")
+        except:
+            bluetooth_name_file=open("Bluetooth_device_name.txt",mode='x',encoding="utf-8")
+            bluetooth_name_file =open("Bluetooth_device_name.txt", mode='r', encoding="utf-8")
+        self.bluetooth_device_name=bluetooth_name_file.readline()
+        bluetooth_name_file.close()
+        self.nameBluetoothQline.setText(self.bluetooth_device_name)
         self.show()
 
     def verifyConnection(self):
         ####### Name Bluetooth Device######
-        bluetooth_device_name = "=HOLA"
+        bluetooth_device_name = self.bluetooth_device_name
         ###################################
 
         dm = DeviceManager()
@@ -218,6 +270,13 @@ class BluetoothWindow(QWidget):
                     serial_COM = "COM" + device.friendly_name[-2]
                     try:
                         ser = serial.Serial(serial_COM, 9600)
+                        try:
+                            bluetooth_com_name_file = open("Bluetooth_COM.txt", mode='w', encoding="utf-8")
+                        except:
+                            bluetooth_com_name_file = open("Bluetooth_COM.txt", mode='x', encoding="utf-8")
+                            bluetooth_com_name_file = open("Bluetooth_COM.txt", mode='w', encoding="utf-8")
+                        bluetooth_com_name_file.write(serial_COM)
+                        bluetooth_com_name_file.close()
                     except:
                         mbox = QMessageBox.information(self, "Failed Connection",
 """Bluetooth port connection could not be established
@@ -229,12 +288,14 @@ Solutions:
                         ser.write("bluetooth_test ".encode())
                         mbox = QMessageBox.information(self, "", "Bluetooth working Correclty")
         else:
-            mbox = QMessageBox.information(self, "Not linked device", "Bluetooth device not linked to the computer, link bluetooth device first")
+            mbox = QMessageBox.information(self, "Not linked device", "Bluetooth device not linked to the computer, link bluetooth device first or verify the device name")
 
-
-
-    def closeEvent(self, event):
-        self.windowMain=MainMenu()
+    def saveNameDevice(self):
+        self.bluetooth_device_name=self.nameBluetoothQline.text()
+        bluetooth_name_file = open("Bluetooth_device_name.txt", mode='w', encoding="utf-8")
+        bluetooth_name_file.write(self.bluetooth_device_name)
+        bluetooth_name_file.close()
+        QMessageBox.information(self, "Information", "Name saved succefully")
 
 class CalibrationWindow(QWidget):
     def __init__(self):

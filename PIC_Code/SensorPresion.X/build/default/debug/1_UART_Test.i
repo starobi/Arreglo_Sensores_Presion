@@ -1,4 +1,4 @@
-# 1 "4_Timer_test.c"
+# 1 "1_UART_Test.c"
 # 1 "<built-in>" 1
 # 1 "<built-in>" 3
 # 288 "<built-in>" 3
@@ -6,7 +6,7 @@
 # 1 "<built-in>" 2
 # 1 "C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\\pic\\include\\language_support.h" 1 3
 # 2 "<built-in>" 2
-# 1 "4_Timer_test.c" 2
+# 1 "1_UART_Test.c" 2
 
 
 
@@ -2375,7 +2375,7 @@ extern __bank0 unsigned char __resetbits;
 extern __bank0 __bit __powerdown;
 extern __bank0 __bit __timeout;
 # 28 "C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\\pic\\include\\xc.h" 2 3
-# 9 "4_Timer_test.c" 2
+# 9 "1_UART_Test.c" 2
 
 
 # 1 "./conbits.h" 1
@@ -2564,8 +2564,8 @@ void ADC_print_burst(uint16_t *BurstReadings, uint8_t NumberReadings);
 extern uint16_t timer_overflows;
 extern uint16_t timer_overflow_counter;
 
-
-void Timer_set_ms(uint16_t time);
+void Timer_set_ms_polling(uint16_t time);
+void Timer_set_ms_interrupt(uint16_t time);
 void Timer_Interrupt_Hanlde(void);
 # 8 "./conbits.h" 2
 
@@ -2642,25 +2642,110 @@ extern char * strrichr(const char *, int);
 
 #pragma config BOR4V = BOR40V
 #pragma config WRT = OFF
-# 11 "4_Timer_test.c" 2
-# 30 "4_Timer_test.c"
+# 11 "1_UART_Test.c" 2
+
+# 1 "C:\\Program Files\\Microchip\\xc8\\v2.32\\pic\\include\\c90\\stdint.h" 1 3
+# 12 "1_UART_Test.c" 2
+
+# 1 "C:\\Program Files\\Microchip\\xc8\\v2.32\\pic\\include\\c90\\stdio.h" 1 3
+# 11 "C:\\Program Files\\Microchip\\xc8\\v2.32\\pic\\include\\c90\\stdio.h" 3
+# 1 "C:\\Program Files\\Microchip\\xc8\\v2.32\\pic\\include\\c90\\stdarg.h" 1 3
+
+
+
+
+
+
+typedef void * va_list[1];
+
+#pragma intrinsic(__va_start)
+extern void * __va_start(void);
+
+#pragma intrinsic(__va_arg)
+extern void * __va_arg(void *, ...);
+# 11 "C:\\Program Files\\Microchip\\xc8\\v2.32\\pic\\include\\c90\\stdio.h" 2 3
+# 43 "C:\\Program Files\\Microchip\\xc8\\v2.32\\pic\\include\\c90\\stdio.h" 3
+struct __prbuf
+{
+ char * ptr;
+ void (* func)(char);
+};
+# 85 "C:\\Program Files\\Microchip\\xc8\\v2.32\\pic\\include\\c90\\stdio.h" 3
+# 1 "C:\\Program Files\\Microchip\\xc8\\v2.32\\pic\\include\\c90\\conio.h" 1 3
+
+
+
+
+
+
+
+# 1 "C:\\Program Files\\Microchip\\xc8\\v2.32\\pic\\include\\c90\\errno.h" 1 3
+# 29 "C:\\Program Files\\Microchip\\xc8\\v2.32\\pic\\include\\c90\\errno.h" 3
+extern int errno;
+# 8 "C:\\Program Files\\Microchip\\xc8\\v2.32\\pic\\include\\c90\\conio.h" 2 3
+
+
+
+
+extern void init_uart(void);
+
+extern char getch(void);
+extern char getche(void);
+extern void putch(char);
+extern void ungetch(char);
+
+extern __bit kbhit(void);
+
+
+
+extern char * cgets(char *);
+extern void cputs(const char *);
+# 85 "C:\\Program Files\\Microchip\\xc8\\v2.32\\pic\\include\\c90\\stdio.h" 2 3
+
+
+
+extern int cprintf(char *, ...);
+#pragma printf_check(cprintf)
+
+
+
+extern int _doprnt(struct __prbuf *, const register char *, register va_list);
+# 180 "C:\\Program Files\\Microchip\\xc8\\v2.32\\pic\\include\\c90\\stdio.h" 3
+#pragma printf_check(vprintf) const
+#pragma printf_check(vsprintf) const
+
+extern char * gets(char *);
+extern int puts(const char *);
+extern int scanf(const char *, ...) __attribute__((unsupported("scanf() is not supported by this compiler")));
+extern int sscanf(const char *, const char *, ...) __attribute__((unsupported("sscanf() is not supported by this compiler")));
+extern int vprintf(const char *, va_list) __attribute__((unsupported("vprintf() is not supported by this compiler")));
+extern int vsprintf(char *, const char *, va_list) __attribute__((unsupported("vsprintf() is not supported by this compiler")));
+extern int vscanf(const char *, va_list ap) __attribute__((unsupported("vscanf() is not supported by this compiler")));
+extern int vsscanf(const char *, const char *, va_list) __attribute__((unsupported("vsscanf() is not supported by this compiler")));
+
+#pragma printf_check(printf) const
+#pragma printf_check(sprintf) const
+extern int sprintf(char *, const char *, ...);
+extern int printf(const char *, ...);
+# 13 "1_UART_Test.c" 2
+
+
+
+
+uint8_t mensaje[]="Hello\n";
+
 void main(void) {
-    SCS=1;
-    TRISC3=0;
-    RC3=0;
-    Timer_set_ms(1000);
+    OSCCON|=(0b111)<(4);
+    UART_TX_Init(9600);
     while(1)
     {
-        if(TMR1IF)
+        for(uint8_t a=0;a<strlen((char *)mensaje);a++)
         {
-            TMR1 = 64535;
-            TMR1IF=0;
-            timer_overflow_counter++;
-            if(timer_overflow_counter==timer_overflows)
-            {
-                timer_overflow_counter=0;
-                RC3=~RC3;
-            }
+            UART_Write(mensaje[a]);
         }
+        _delay((unsigned long)((1000)*(8000000/4000.0)));
     }
+
+
+    return;
 }

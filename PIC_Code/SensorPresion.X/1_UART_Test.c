@@ -17,6 +17,7 @@
 uint8_t mensaje[]="Hello\n";
 
 void main(void) {
+    OSCCON|=(0b111)<(4);
     UART_TX_Init(9600);
     while(1)
     {

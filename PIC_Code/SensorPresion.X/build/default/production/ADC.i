@@ -2660,8 +2660,9 @@ void ADC_init_channel(char channel)
     ADCON0 = 0x81;
     ADCON1 = 0x80;
     ADCON0 |= (channel<<2);
-# 35 "ADC.c"
-    _delay((unsigned long)((30)*(4000000/4000000.0)));
+
+
+    _delay((unsigned long)((30)*(8000000/4000000.0)));
 
 
     GO_DONE = 1;
@@ -2686,7 +2687,7 @@ void ADC_init_channel_IR(char channel)
 
 
 
-    _delay((unsigned long)((30)*(4000000/4000000.0)));
+    _delay((unsigned long)((30)*(8000000/4000000.0)));
 
 
     GO_DONE = 1;
