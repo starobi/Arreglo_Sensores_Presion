@@ -83,7 +83,7 @@
         <makeCustomizationEnableLongLines>false</makeCustomizationEnableLongLines>
         <makeCustomizationNormalizeHexFile>false</makeCustomizationNormalizeHexFile>
       </makeCustomizationType>
-      <item path="1_UART_Test.c" ex="false" overriding="false">
+      <item path="1_UART_Test.c" ex="true" overriding="false">
         <HI-TECH-COMP>
         </HI-TECH-COMP>
         <HI-TECH-LINK>
@@ -113,7 +113,7 @@
         <XC8-config-global>
         </XC8-config-global>
       </item>
-      <item path="2_ADC_Test_Burst.c" ex="true" overriding="false">
+      <item path="2_ADC_Test_Burst.c" ex="false" overriding="false">
         <HI-TECH-COMP>
         </HI-TECH-COMP>
         <HI-TECH-LINK>

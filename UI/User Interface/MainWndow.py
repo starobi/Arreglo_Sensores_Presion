@@ -60,7 +60,7 @@ class TestWindow(QMainWindow):
 
     def UI(self):
         # Configuration Serial Port
-        self.serial = 0  # Serial Activated/Desactivated just for debugging
+        self.serial = 1  # Serial Activated/Desactivated just for debugging
         if (self.serial == 1):
             try:
                 bluetooth_com_name_file = open("Bluetooth_COM.txt", mode='r', encoding="utf-8")
@@ -151,7 +151,7 @@ class TestWindow(QMainWindow):
         self.count_sample = 9
         self.frames = 50  # Improve this to the acutal sample rate
         self.initial_time = time.time()
-        while ((time.time() - self.initial_time) <= 10): self.Update()  # Actualizamos lo rápido que podamos.
+        while ((time.time() - self.initial_time) <= 30): self.Update()  # Actualizamos lo rápido que podamos.
         csv_file.close()
 
     def Update(self):
