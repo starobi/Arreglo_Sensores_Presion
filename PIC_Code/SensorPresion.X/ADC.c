@@ -19,7 +19,7 @@ uint16_t AN0_RES;
 void ADC_init_channel(char channel)
 {
     //Turn on and Select channel
-    ADCON0 = 0x81;  // Turn ADC ON, and diveide FOSC/32 to obtain a Tad= 2us
+    ADCON0 = 0x81;  // Turn ADC ON, and diveide FOSC/32 to obtain a Tad= 2us. Minimum Tad=1.6us 
     ADCON1 = 0x80; //  Result is "Right-Justified" 
     ADCON0 |= (channel<<2); //Channel selection
     

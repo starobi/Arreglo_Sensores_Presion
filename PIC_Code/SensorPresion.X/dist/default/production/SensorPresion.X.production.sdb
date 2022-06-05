@@ -31,14 +31,14 @@
 [v ___memcpyee __memcpyee `(v  1 e 1 0 ]
 "15 C:\Users\staro\OneDrive\Escuela\TEC\Laboratorio Biomecatronica\Documentacion\Arreglo_Sensores_Presion\PIC_Code\SensorPresion.X\UART.c
 [v _UART_TX_Init UART_TX_Init `(v  1 e 1 0 ]
-"31
+"34
 [v _UART_Write UART_Write `(v  1 e 1 0 ]
-"45
+"48
 [v _UART_Buffer UART_Buffer `(v  1 e 1 0 ]
-"57
+"60
 [v _UART_number UART_number `(v  1 e 1 0 ]
 "16 C:\Users\staro\OneDrive\Escuela\TEC\Laboratorio Biomecatronica\Documentacion\Arreglo_Sensores_Presion\PIC_Code\SensorPresion.X\2_ADC_Test_Burst.c
-[v _mensaje mensaje `[20]uc  1 e 20 0 ]
+[v _mensaje mensaje `[19]uc  1 e 19 0 ]
 "17
 [v _ANChannels ANChannels `[8]uc  1 e 8 0 ]
 "18
@@ -74,10 +74,10 @@
 ]
 [u S55 . 1 `S35 1 . 1 0 `S40 1 . 1 0 `S49 1 . 1 0 `S52 1 . 1 0 ]
 [v _ADCON0bits ADCON0bits `VES55  1 e 1 @31 ]
-"1704
-[v _OSCCON OSCCON `VEuc  1 e 1 @143 ]
 "2484
 [v _SPBRG SPBRG `VEuc  1 e 1 @153 ]
+"2546
+[v _SPBRGH SPBRGH `VEuc  1 e 1 @154 ]
 "2812
 [v _ADRESL ADRESL `VEuc  1 e 1 @158 ]
 "2819
@@ -86,6 +86,8 @@
 [v _ADIE ADIE `VEb  1 e 0 @1126 ]
 "3411
 [v _ADIF ADIF `VEb  1 e 0 @102 ]
+"3483
+[v _BRG16 BRG16 `VEb  1 e 0 @3131 ]
 "3510
 [v _BRGH BRGH `VEb  1 e 0 @1218 ]
 "3711
@@ -133,16 +135,16 @@
 "19 C:\Users\staro\OneDrive\Escuela\TEC\Laboratorio Biomecatronica\Documentacion\Arreglo_Sensores_Presion\PIC_Code\SensorPresion.X\2_ADC_Test_Burst.c
 [v _main main `(v  1 e 1 0 ]
 {
-"36
+"35
 } 0
 "15 C:\Users\staro\OneDrive\Escuela\TEC\Laboratorio Biomecatronica\Documentacion\Arreglo_Sensores_Presion\PIC_Code\SensorPresion.X\UART.c
 [v _UART_TX_Init UART_TX_Init `(v  1 e 1 0 ]
 {
 "18
-[v UART_TX_Init@temp temp `uc  1 a 1 9 ]
+[v UART_TX_Init@temp temp `ui  1 a 2 8 ]
 "15
 [v UART_TX_Init@baud baud `ul  1 p 4 0 ]
-"30
+"31
 } 0
 "5 C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\__lldiv.c
 [v ___lldiv __lldiv `(ul  1 e 4 0 ]
@@ -169,14 +171,14 @@
 [v ADC_print_burst@BurstReadings BurstReadings `*.4ui  1 a 1 29 ]
 "78
 } 0
-"59 C:\Users\staro\OneDrive\Escuela\TEC\Laboratorio Biomecatronica\Documentacion\Arreglo_Sensores_Presion\PIC_Code\SensorPresion.X\UART.c
+"60 C:\Users\staro\OneDrive\Escuela\TEC\Laboratorio Biomecatronica\Documentacion\Arreglo_Sensores_Presion\PIC_Code\SensorPresion.X\UART.c
 [v _UART_number UART_number `(v  1 e 1 0 ]
 {
-"61
+"62
 [v UART_number@buffer buffer `[10]uc  1 a 10 16 ]
-"59
+"60
 [v UART_number@number number `i  1 p 2 13 ]
-"64
+"65
 } 0
 "4 C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\strlen.c
 [v _strlen strlen `(ui  1 e 2 0 ]
@@ -190,9 +192,6 @@
 [v strlen@s s `*.4DCuc  1 a 1 4 ]
 "13
 } 0
-<<<<<<< Updated upstream
-"31 C:\Users\staro\OneDrive\Escuela\TEC\Laboratorio Biomecatronica\Documentacion\Arreglo_Sensores_Presion\PIC_Code\SensorPresion.X\UART.c
-=======
 "505 C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\doprnt.c
 [v _sprintf sprintf `(i  1 e 2 0 ]
 {
@@ -236,38 +235,30 @@
 [v ___lwdiv@dividend dividend `ui  1 p 2 2 ]
 "30
 } 0
-"47 C:\Users\staro\OneDrive\Escuela\TEC\Laboratorio Biomecatronica\Documentacion\Arreglo_Sensores_Presion\PIC_Code\SensorPresion.X\UART.c
+"48 C:\Users\staro\OneDrive\Escuela\TEC\Laboratorio Biomecatronica\Documentacion\Arreglo_Sensores_Presion\PIC_Code\SensorPresion.X\UART.c
 [v _UART_Buffer UART_Buffer `(v  1 e 1 0 ]
 {
 [v UART_Buffer@buffer buffer `*.4uc  1 a 1 wreg ]
-"49
+"50
 [v UART_Buffer@count count `uc  1 a 1 7 ]
-"47
+"48
 [v UART_Buffer@buffer buffer `*.4uc  1 a 1 wreg ]
 [v UART_Buffer@size size `uc  1 p 1 5 ]
-"49
+"50
 [v UART_Buffer@buffer buffer `*.4uc  1 a 1 8 ]
-"56
+"57
 } 0
-"33
->>>>>>> Stashed changes
+"34
 [v _UART_Write UART_Write `(v  1 e 1 0 ]
 {
 [v UART_Write@data data `uc  1 a 1 wreg ]
 [v UART_Write@data data `uc  1 a 1 wreg ]
 [v UART_Write@data data `uc  1 a 1 0 ]
-"35
+"38
 } 0
 "59 C:\Users\staro\OneDrive\Escuela\TEC\Laboratorio Biomecatronica\Documentacion\Arreglo_Sensores_Presion\PIC_Code\SensorPresion.X\ADC.c
 [v _ADC_burst ADC_burst `(v  1 e 1 0 ]
 {
-<<<<<<< Updated upstream
-"18
-[v UART_TX_Init@temp temp `uc  1 a 1 9 ]
-"15
-[v UART_TX_Init@baud baud `ul  1 p 4 0 ]
-"28
-=======
 [v ADC_burst@channels channels `*.4uc  1 a 1 wreg ]
 "61
 [v ADC_burst@n n `uc  1 a 1 8 ]
@@ -278,7 +269,6 @@
 "61
 [v ADC_burst@channels channels `*.4uc  1 a 1 7 ]
 "67
->>>>>>> Stashed changes
 } 0
 "19
 [v _ADC_init_channel ADC_init_channel `(v  1 e 1 0 ]

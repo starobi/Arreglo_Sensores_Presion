@@ -244,7 +244,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 "28
 [p x IESO  =  ON         ]
 "29
-[p x FCMEN  =  ON       ]
+[p x FCMEN  =  OFF       ]
 "30
 [p x LVP  =  OFF          ]
 "33

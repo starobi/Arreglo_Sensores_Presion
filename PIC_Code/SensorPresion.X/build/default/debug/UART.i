@@ -2635,7 +2635,7 @@ extern char * strrichr(const char *, int);
 #pragma config CPD = OFF
 #pragma config BOREN = OFF
 #pragma config IESO = ON
-#pragma config FCMEN = ON
+#pragma config FCMEN = OFF
 #pragma config LVP = OFF
 
 
@@ -2731,10 +2731,13 @@ extern int printf(const char *, ...);
 void UART_TX_Init(uint32_t baud)
 {
 
-  uint8_t temp;
-  temp= (uint8_t)(((8000000/baud)/16)-1);
+  uint16_t temp;
+  temp= (uint16_t)(((16000000/baud)/4)-1);
   BRGH = 1;
-  SPBRG = temp;
+  BRG16=1;
+  SPBRG = 0xFF&temp;
+  SPBRGH= (temp&0xFF00)>>(4);
+
 
   SYNC = 0;
   SPEN = 1;

@@ -2636,7 +2636,7 @@ extern char * strrichr(const char *, int);
 #pragma config CPD = OFF
 #pragma config BOREN = OFF
 #pragma config IESO = ON
-#pragma config FCMEN = ON
+#pragma config FCMEN = OFF
 #pragma config LVP = OFF
 
 
@@ -2735,15 +2735,15 @@ extern int printf(const char *, ...);
 uint8_t mensaje[]="Hello\n";
 
 void main(void) {
-    OSCCON|=(0b111)<(4);
-    UART_TX_Init(9600);
+
+    UART_TX_Init(230400);
     while(1)
     {
         for(uint8_t a=0;a<strlen((char *)mensaje);a++)
         {
             UART_Write(mensaje[a]);
         }
-        _delay((unsigned long)((1000)*(8000000/4000.0)));
+        _delay((unsigned long)((1000)*(16000000/4000.0)));
     }
 
 

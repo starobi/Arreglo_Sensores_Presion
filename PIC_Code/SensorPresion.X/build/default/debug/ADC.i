@@ -2641,7 +2641,7 @@ extern char * strrichr(const char *, int);
 #pragma config CPD = OFF
 #pragma config BOREN = OFF
 #pragma config IESO = ON
-#pragma config FCMEN = ON
+#pragma config FCMEN = OFF
 #pragma config LVP = OFF
 
 
@@ -2662,7 +2662,7 @@ void ADC_init_channel(char channel)
     ADCON0 |= (channel<<2);
 
 
-    _delay((unsigned long)((30)*(8000000/4000000.0)));
+    _delay((unsigned long)((30)*(16000000/4000000.0)));
 
 
     GO_DONE = 1;
@@ -2687,7 +2687,7 @@ void ADC_init_channel_IR(char channel)
 
 
 
-    _delay((unsigned long)((30)*(8000000/4000000.0)));
+    _delay((unsigned long)((30)*(16000000/4000000.0)));
 
 
     GO_DONE = 1;

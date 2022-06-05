@@ -2621,7 +2621,7 @@ extern char * strrchr(const char *, int);
 extern char * strrichr(const char *, int);
 # 11 "./conbits.h" 2
 # 21 "./conbits.h"
-#pragma config FOSC = INTRC_NOCLKOUT
+#pragma config FOSC = HS
 #pragma config WDTE = OFF
 #pragma config PWRTE = OFF
 #pragma config MCLRE = ON
@@ -2629,7 +2629,7 @@ extern char * strrichr(const char *, int);
 #pragma config CPD = OFF
 #pragma config BOREN = OFF
 #pragma config IESO = ON
-#pragma config FCMEN = ON
+#pragma config FCMEN = OFF
 #pragma config LVP = OFF
 
 
@@ -2639,12 +2639,11 @@ extern char * strrichr(const char *, int);
 
 
 
-uint8_t mensaje[]="Programa Iniciado \n";
-uint8_t ANChannels[]={12,10,8,9,11,13,4,3};
+uint8_t mensaje[]="Programa Iniciado\n";
+uint8_t ANChannels[]={12,10,8,9,11,13,1,0};
 uint16_t ANRead[8];
 void main(void) {
-    OSCCON=(0b111)<<(4);
-    UART_TX_Init(115200);
+    UART_TX_Init(230400);
     UART_Buffer(mensaje, strlen(mensaje));
     TRISC1=0;
     TRISC2=0;
@@ -2656,7 +2655,7 @@ void main(void) {
         RC2=0;
         ADC_print_burst(ANRead,8);
         RC1=0;
-        _delay((unsigned long)((100)*(8000000/4000.0)));
+        _delay((unsigned long)((100)*(16000000/4000.0)));
     }
     return;
 }

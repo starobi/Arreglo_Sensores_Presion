@@ -23,11 +23,11 @@
 [v ___memcpyee __memcpyee `(v  1 e 1 0 ]
 "15 C:\Users\staro\OneDrive\Escuela\TEC\Laboratorio Biomecatronica\Documentacion\Arreglo_Sensores_Presion\PIC_Code\SensorPresion.X\UART.c
 [v _UART_TX_Init UART_TX_Init `(v  1 e 1 0 ]
-"31
+"34
 [v _UART_Write UART_Write `(v  1 e 1 0 ]
-"45
+"48
 [v _UART_Buffer UART_Buffer `(v  1 e 1 0 ]
-"57
+"60
 [v _UART_number UART_number `(v  1 e 1 0 ]
 "17 C:\Users\staro\OneDrive\Escuela\TEC\Laboratorio Biomecatronica\Documentacion\Arreglo_Sensores_Presion\PIC_Code\SensorPresion.X\1_UART_Test.c
 [v _mensaje mensaje `[7]uc  1 e 7 0 ]
@@ -62,10 +62,10 @@
 ]
 [u S55 . 1 `S35 1 . 1 0 `S40 1 . 1 0 `S49 1 . 1 0 `S52 1 . 1 0 ]
 [v _ADCON0bits ADCON0bits `VES55  1 e 1 @31 ]
-"1704
-[v _OSCCON OSCCON `VEuc  1 e 1 @143 ]
 "2484
 [v _SPBRG SPBRG `VEuc  1 e 1 @153 ]
+"2546
+[v _SPBRGH SPBRGH `VEuc  1 e 1 @154 ]
 "2812
 [v _ADRESL ADRESL `VEuc  1 e 1 @158 ]
 "2819
@@ -74,6 +74,8 @@
 [v _ADIE ADIE `VEb  1 e 0 @1126 ]
 "3411
 [v _ADIF ADIF `VEb  1 e 0 @102 ]
+"3483
+[v _BRG16 BRG16 `VEb  1 e 0 @3131 ]
 "3510
 [v _BRGH BRGH `VEb  1 e 0 @1218 ]
 "3711
@@ -129,22 +131,22 @@
 [v strlen@s s `*.4DCuc  1 a 1 4 ]
 "13
 } 0
-"31 C:\Users\staro\OneDrive\Escuela\TEC\Laboratorio Biomecatronica\Documentacion\Arreglo_Sensores_Presion\PIC_Code\SensorPresion.X\UART.c
+"34 C:\Users\staro\OneDrive\Escuela\TEC\Laboratorio Biomecatronica\Documentacion\Arreglo_Sensores_Presion\PIC_Code\SensorPresion.X\UART.c
 [v _UART_Write UART_Write `(v  1 e 1 0 ]
 {
 [v UART_Write@data data `uc  1 a 1 wreg ]
 [v UART_Write@data data `uc  1 a 1 wreg ]
 [v UART_Write@data data `uc  1 a 1 0 ]
-"35
+"38
 } 0
 "15
 [v _UART_TX_Init UART_TX_Init `(v  1 e 1 0 ]
 {
 "18
-[v UART_TX_Init@temp temp `uc  1 a 1 9 ]
+[v UART_TX_Init@temp temp `ui  1 a 2 9 ]
 "15
 [v UART_TX_Init@baud baud `ul  1 p 4 5 ]
-"28
+"31
 } 0
 "5 C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\__lldiv.c
 [v ___lldiv __lldiv `(ul  1 e 4 0 ]

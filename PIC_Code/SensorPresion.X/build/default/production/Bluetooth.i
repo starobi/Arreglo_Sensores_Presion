@@ -2640,7 +2640,7 @@ extern char * strrichr(const char *, int);
 #pragma config CPD = OFF
 #pragma config BOREN = OFF
 #pragma config IESO = ON
-#pragma config FCMEN = ON
+#pragma config FCMEN = OFF
 #pragma config LVP = OFF
 
 

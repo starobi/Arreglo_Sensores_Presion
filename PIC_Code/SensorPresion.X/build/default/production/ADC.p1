@@ -304,7 +304,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 "28
 [p x IESO  =  ON         ]
 "29
-[p x FCMEN  =  ON       ]
+[p x FCMEN  =  OFF       ]
 "30
 [p x LVP  =  OFF          ]
 "33
@@ -337,8 +337,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;ADC.c: 24:     ADCON0 |= (channel<<2);
 [e =| _ADCON0 -> << -> _channel `i -> 2 `i `Vuc ]
 "27
-[; ;ADC.c: 27:     _delay((unsigned long)((30)*(8000000/4000000.0)));
-[e ( __delay (1 -> * -> -> 30 `i `d / -> -> 8000000 `l `d .4000000.0 `ul ]
+[; ;ADC.c: 27:     _delay((unsigned long)((5)*(16000000/4000000.0)));
+[e ( __delay (1 -> * -> -> 5 `i `d / -> -> 16000000 `l `d .4000000.0 `ul ]
 "30
 [; ;ADC.c: 30:     GO_DONE = 1;
 [e = _GO_DONE -> -> 1 `i `b ]
@@ -381,8 +381,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;ADC.c: 48:     GIE = 1;
 [e = _GIE -> -> 1 `i `b ]
 "52
-[; ;ADC.c: 52:     _delay((unsigned long)((30)*(8000000/4000000.0)));
-[e ( __delay (1 -> * -> -> 30 `i `d / -> -> 8000000 `l `d .4000000.0 `ul ]
+[; ;ADC.c: 52:     _delay((unsigned long)((30)*(16000000/4000000.0)));
+[e ( __delay (1 -> * -> -> 30 `i `d / -> -> 16000000 `l `d .4000000.0 `ul ]
 "55
 [; ;ADC.c: 55:     GO_DONE = 1;
 [e = _GO_DONE -> -> 1 `i `b ]

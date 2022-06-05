@@ -1,13 +1,18 @@
-import sys
-from PyQt5.QtWidgets import *
-from PyQt5.QtCore import *
-import pyqtgraph as pg
-import serial
-import csv
-from datetime import datetime
-import time
-from infi.devicemanager import DeviceManager
-import os
+from PyQt5.QtWidgets import * #Required for User Interface
+from PyQt5.QtCore import * #Required for User Interface
+import pyqtgraph as pg #Required to plot Data
+import serial #Required to use Serial Communication
+import csv  #Required to creave CSV files
+from datetime import datetime #Get the date and time
+import time #Get the exact time
+from infi.devicemanager import DeviceManager #Explore information of the computers devices
+import os   #Create Directories and get the current direction
+
+###########CONFIGURATION VARIABLES#########################
+SerialActivated=1 #This variable works to use Serial Information to plot or not. When Developing is useful
+testTime=30 #This is the time that the test will last
+framesTestWindow=70 #This is the number of values desplayed on the plot before scrolling.
+###########################################################
 
 class MainMenu(QWidget):
     def __init__(self):
@@ -44,13 +49,13 @@ class MainMenu(QWidget):
 
     def windowCalibration(self):
         self.windowT=CalibrationWindow()
-
+        self.close()
     def windowTest(self):
         self.windowT=TestWindow()
-
+        self.close()
     def windowBluetooth(self):
         self.windowT=BluetoothWindow()
-
+        self.close()
 class TestWindow(QMainWindow):
     def __init__(self):
         super().__init__() #It initialize the init of the Base Class QWidget
@@ -60,18 +65,23 @@ class TestWindow(QMainWindow):
 
     def UI(self):
         # Configuration Serial Port
-        self.serial = 1  # Serial Activated/Desactivated just for debugging
+        self.serial = SerialActivated  # Serial Activated/Desactivated just for debugging
         if (self.serial == 1):
             try:
                 bluetooth_com_name_file = open("Bluetooth_COM.txt", mode='r', encoding="utf-8")
             except:
                 QMessageBox.information(self, "Information", "No COM port configuration was found. Please verify bluetooth connection first")
+                self.close()
                 return
 
             puerto = bluetooth_com_name_file.read()
             bluetooth_com_name_file.close()
             baudrate = 57600
-            self.ser = serial.Serial(puerto, baudrate)
+            try:
+                self.ser = serial.Serial(puerto, baudrate)
+            except:
+                QMessageBox.information(self, "Information", "The Bluetooth connection had an error")
+                self.close()
 
         # Initialization Sample variable
         self.sample = [] #Array of Arrays with all Sensors samples
@@ -134,24 +144,25 @@ class TestWindow(QMainWindow):
         self.plotReset()
 
     def startButton(self):
-        cwd = os.getcwd()
+        self.plotReset()
+        cwd = os.path.dirname(os.path.abspath(__file__))
         testsPath = os.path.join(cwd, "Tests")
         if not os.path.exists(testsPath):
             os.mkdir(testsPath)
         os.chdir(testsPath)
         date = datetime.now()
-        file_name= QFileDialog.getSaveFileName(self, "Confirm Name and Location", "Tests\{}-{}-{}_{}_{}hrs_{}".format(date.year, date.month, date.day, date.hour, date.minute,self.test), "*.csv")
+        file_name= QFileDialog.getSaveFileName(self, "Confirm Name and Location", "{}-{}-{}_{}_{}hrs_{}".format(date.year, date.month, date.day, date.hour, date.minute,self.test), "*.csv")
         if file_name[0]== "":
             return
         csv_file = open(file_name[0], 'w', newline='', encoding="utf-8")
-        self.csv_writer = csv.writer(csv_file,delimiter=',')  # In an English OS works with ',' but in Spanisch, works with 'tab'
+        self.csv_writer = csv.writer(csv_file,delimiter=',')
         self.csv_writer.writerow(
             ['Time', 'Sensor 1', 'Sensor 2', 'Sensor 3', 'Sensor 4', 'Sensor 5', 'Sensor 6', 'Sensor 7', 'Sensor 8'])
 
         self.count_sample = 9
-        self.frames = 50  # Improve this to the acutal sample rate
+        self.frames = framesTestWindow
         self.initial_time = time.time()
-        while ((time.time() - self.initial_time) <= 30): self.Update()  # Actualizamos lo rápido que podamos.
+        while ((time.time() - self.initial_time) <= testTime): self.Update()  # Actualizamos lo rápido que podamos.
         csv_file.close()
 
     def Update(self):
@@ -216,6 +227,13 @@ class TestWindow(QMainWindow):
         self.sample[6].clear()
         self.sample[7].clear()
         self.sample[8].clear()
+
+    def closeEvent(self, event):
+        try:
+            self.ser.close()
+        except:
+            pass
+        self.windowMain = MainMenu()
 
 class BluetoothWindow(QWidget):
     def __init__(self):
@@ -297,6 +315,9 @@ Solutions:
         bluetooth_name_file.close()
         QMessageBox.information(self, "Information", "Name saved succefully")
 
+    def closeEvent(self, event):
+        self.windowMain=MainMenu()
+
 class CalibrationWindow(QWidget):
     def __init__(self):
         super().__init__() #It initialize the init of the Base Class QWidget
@@ -307,11 +328,14 @@ class CalibrationWindow(QWidget):
     def UI(self):
         self.show()
 
+    def closeEvent(self, event):
+        self.windowMain=MainMenu()
+
 
 def main():
-    App=QApplication(sys.argv)
+    App=QApplication([])
     window = MainMenu()
-    sys.exit(App.exec_())
+    App.exec_()
 
 if __name__=='__main__':
     main()

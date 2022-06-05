@@ -5,7 +5,7 @@ Linker command line:
 -W-3 --edf=C:\Program Files\Microchip\xc8\v2.32\pic\dat\en_msgs.txt -cn \
   -h+dist/default/debug\SensorPresion.X.debug.sym \
   --cmf=dist/default/debug\SensorPresion.X.debug.cmf -z -Q16F886 \
-  -oC:\Users\staro\AppData\Local\Temp\xcAs33s.4 --defsym=__MPLAB_BUILD=1 \
+  -oC:\Users\staro\AppData\Local\Temp\xcAs12c.4 --defsym=__MPLAB_BUILD=1 \
   -Mdist/default/debug/SensorPresion.X.debug.map -E1 -ver=XC8 Compiler \
   --acfsm=1493 -ASTACK=0110h-016Fh -pstack=STACK \
   -ACODE=00h-07FFhx3,01800h-01EFFh,01FFFh-01FFFh \
@@ -20,7 +20,7 @@ Linker command line:
   -AEEDATA=00h-0FFh/02100h -peeprom_data=EEDATA -DEEDATA=2 -DCODE=2 \
   -DSTRCODE=2 -DSTRING=2 -DCONST=2 -DENTRY=2 \
   -preset_vec=00h,intentry,init,end_init -ppowerup=CODE -pcinit=CODE \
-  -pfunctab=ENTRY -k C:\Users\staro\AppData\Local\Temp\xcAs33s.o \
+  -pfunctab=ENTRY -k C:\Users\staro\AppData\Local\Temp\xcAs12c.o \
   dist/default/debug\SensorPresion.X.debug.o 
 
 Object code version is 3.11
@@ -30,7 +30,7 @@ Machine type is 16F886
 
 
                 Name                               Link     Load   Length Selector   Space Scale
-C:\Users\staro\AppData\Local\Temp\xcAs33s.o
+C:\Users\staro\AppData\Local\Temp\xcAs12c.o
                 end_init                              1        1        3        0       0
                 reset_vec                             0        0        1        0       0
                 config                             2007     2007        2        0       4
@@ -38,17 +38,17 @@ dist/default/debug\SensorPresion.X.debug.o
                 cinit                               7E8      7E8       18      FD0       0
                 config                             2007     2007        2        0       4
                 text4                               780      780       68      F00       0
-                text3                               6F7      6F7       3D      DEE       0
-                text2                               6BF      6BF        C      D7E       0
-                text1                               6DE      6DE       19      DBC       0
-                maintext                            734      734       4C      E68       0
+                text3                               727      727       59      E4E       0
+                text2                               6A4      6A4        C      D48       0
+                text1                               6C3      6C3       19      D86       0
+                maintext                            6DC      6DC       4B      DB8       0
                 cstackBANK0                          20       20        F       20       1
                 cstackCOMMON                         71       71        D       71       1
-                inittext                            6CB      6CB       13      D96       0
+                inittext                            6B0      6B0       13      D60       0
                 dataBANK0                            2F       2F        7       20       1
                 bssBANK0                             36       36        6       20       1
                 strings                               4        4        A        8       0
-                idataBANK0                          6B8      6B8        7      D70       0
+                idataBANK0                          69D      69D        7      D3A       0
 
 TOTAL           Name                               Link     Load   Length     Space
         CLASS   STACK          
@@ -58,12 +58,12 @@ TOTAL           Name                               Link     Load   Length     Sp
                 cinit                               7E8      7E8       18         0
                 reset_vec                             0        0        1         0
                 text4                               780      780       68         0
-                text3                               6F7      6F7       3D         0
-                text2                               6BF      6BF        C         0
-                text1                               6DE      6DE       19         0
-                maintext                            734      734       4C         0
-                inittext                            6CB      6CB       13         0
-                idataBANK0                          6B8      6B8        7         0
+                text3                               727      727       59         0
+                text2                               6A4      6A4        C         0
+                text1                               6C3      6C3       19         0
+                maintext                            6DC      6DC       4B         0
+                inittext                            6B0      6B0       13         0
+                idataBANK0                          69D      69D        7         0
 
         CLASS   STRCODE        
 
@@ -116,12 +116,12 @@ SEGMENTS        Name                           Load    Length   Top    Selector 
                 strings                        000004  00000A  00000E         8       0  STRING      2
                 cstackBANK0                    000020  00001C  00003C        20       1  BANK0       1
                 cstackCOMMON                   000071  00000D  00007E        71       1  COMMON      1
-                idataBANK0                     0006B8  000007  0006BF       D70       0  CODE        2
-                text2                          0006BF  00000C  0006CB       D7E       0  CODE        2
-                inittext                       0006CB  000013  0006DE       D96       0  CODE        2
-                text1                          0006DE  000019  0006F7       DBC       0  CODE        2
-                text3                          0006F7  00003D  000734       DEE       0  CODE        2
-                maintext                       000734  00004C  000780       E68       0  CODE        2
+                idataBANK0                     00069D  000007  0006A4       D3A       0  CODE        2
+                text2                          0006A4  00000C  0006B0       D48       0  CODE        2
+                inittext                       0006B0  000013  0006C3       D60       0  CODE        2
+                text1                          0006C3  000019  0006DC       D86       0  CODE        2
+                maintext                       0006DC  00004B  000727       DB8       0  CODE        2
+                text3                          000727  000059  000780       E4E       0  CODE        2
                 text4                          000780  000068  0007E8       F00       0  CODE        2
                 cinit                          0007E8  000018  000800       FD0       0  CODE        2
 
@@ -133,14 +133,14 @@ UNUSED ADDRESS RANGES
         BANK1            00A0-00EF             50           1
         BANK2            0110-016F             60           1
         BANK3            0190-01E4             55           1
-        CODE             000E-06B7            6AA           2
+        CODE             000E-069C            68F           2
                          0800-1EFF            800
                          1FFF-1FFF              1
-        CONST            000E-06B7            100           2
+        CONST            000E-069C            100           2
                          0800-1EFF            100
                          1FFF-1FFF              1
         EEDATA           2100-21FF            100           2
-        ENTRY            000E-06B7            100           2
+        ENTRY            000E-069C            100           2
                          0800-1EFF            100
                          1FFF-1FFF              1
         IDLOC            2000-2003              4           2
@@ -153,10 +153,10 @@ UNUSED ADDRESS RANGES
         SFR2             0100-010F             10           1
         SFR3             0180-018F             10           1
         STACK            0110-016F             60           1
-        STRCODE          000E-06B7            6AA           2
+        STRCODE          000E-069C            68F           2
                          0800-1EFF           1700
                          1FFF-1FFF              1
-        STRING           000E-06B7            100           2
+        STRING           000E-069C            100           2
                          0800-1EFF            100
                          1FFF-1FFF              1
 
@@ -165,7 +165,7 @@ UNUSED ADDRESS RANGES
 ?___lldiv                cstackCOMMON 0071
 ?_strlen                 cstackCOMMON 0071
 UART_TX_Init@baud        cstackBANK0  0025
-UART_TX_Init@temp        cstackCOMMON 007A
+UART_TX_Init@temp        cstackBANK0  0029
 UART_Write@data          cstackCOMMON 0071
 _ADCON0                  (abs)        001F
 _ADCON0bits              (abs)        001F
@@ -174,13 +174,14 @@ _ADIE                    (abs)        0466
 _ADIF                    (abs)        0066
 _ADRESH                  (abs)        001E
 _ADRESL                  (abs)        009E
+_BRG16                   (abs)        0C3B
 _BRGH                    (abs)        04C2
 _GIE                     (abs)        005F
 _GO_DONE                 (abs)        00F9
-_OSCCON                  (abs)        008F
 _PEIE                    (abs)        005E
 _RC2                     (abs)        003A
 _SPBRG                   (abs)        0099
+_SPBRGH                  (abs)        009A
 _SPEN                    (abs)        00C7
 _SYNC                    (abs)        04C4
 _T1CKPS0                 (abs)        0084
@@ -194,8 +195,8 @@ _TRISC6                  (abs)        043E
 _TRMT                    (abs)        04C1
 _TXEN                    (abs)        04C5
 _TXREG                   (abs)        0019
-_UART_TX_Init            text3        06F7
-_UART_Write              text2        06BF
+_UART_TX_Init            text3        0727
+_UART_Write              text2        06A4
 __Habs1                  abs1         0000
 __Hbank0                 bank0        0000
 __Hbank1                 bank1        0000
@@ -284,24 +285,24 @@ ___lldiv@quotient        cstackBANK0  0020
 ___sp                    stack        0000
 ___stackhi               (abs)        0000
 ___stacklo               (abs)        0000
-__end_of_UART_TX_Init    text3        0734
-__end_of_UART_Write      text2        06CB
+__end_of_UART_TX_Init    text3        0780
+__end_of_UART_Write      text2        06B0
 __end_of___lldiv         text4        07E8
 __end_of__initialization cinit        07FC
 __end_of__stringtab      strings      000A
-__end_of_main            maintext     0780
-__end_of_strlen          text1        06F7
+__end_of_main            maintext     0727
+__end_of_strlen          text1        06DC
 __initialization         cinit        07E8
 __pbssBANK0              bssBANK0     0036
 __pcstackBANK0           cstackBANK0  0020
 __pcstackCOMMON          cstackCOMMON 0071
 __pdataBANK0             dataBANK0    002F
-__pidataBANK0            idataBANK0   06B8
-__pmaintext              maintext     0734
+__pidataBANK0            idataBANK0   069D
+__pmaintext              maintext     06DC
 __pstrings               strings      0004
-__ptext1                 text1        06DE
-__ptext2                 text2        06BF
-__ptext3                 text3        06F7
+__ptext1                 text1        06C3
+__ptext2                 text2        06A4
+__ptext3                 text3        0727
 __ptext4                 text4        0780
 __size_of_UART_TX_Init   (abs)        0000
 __size_of_UART_Write     (abs)        0000
@@ -310,15 +311,15 @@ __size_of_main           (abs)        0000
 __size_of_strlen         (abs)        0000
 __stringbase             strings      0009
 __stringtab              strings      0004
-_main                    maintext     0734
+_main                    maintext     06DC
 _mensaje                 dataBANK0    002F
-_strlen                  text1        06DE
+_strlen                  text1        06C3
 _timer_overflow_counter  bssBANK0     0036
 _timer_overflows         bssBANK0     0038
 btemp                    (abs)        007E
 end_of_initialization    cinit        07FC
-init_fetch0              inittext     06CB
-init_ram0                inittext     06CF
+init_fetch0              inittext     06B0
+init_ram0                inittext     06B4
 intlevel0                functab      0000
 intlevel1                functab      0000
 intlevel2                functab      0000
@@ -338,18 +339,18 @@ MODULE INFORMATION
 
 Module		Function		Class		Link	Load	Size
 1_UART_Test.c
-		_main          		CODE           	0734	0000	76
+		_main          		CODE           	06DC	0000	75
 
-1_UART_Test.c estimated size: 76
+1_UART_Test.c estimated size: 75
 
 UART.c
-		_UART_Write    		CODE           	06BF	0000	12
-		_UART_TX_Init  		CODE           	06F7	0000	61
+		_UART_Write    		CODE           	06A4	0000	12
+		_UART_TX_Init  		CODE           	0727	0000	89
 
-UART.c estimated size: 73
+UART.c estimated size: 101
 
 C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\strlen.c
-		_strlen        		CODE           	06DE	0000	25
+		_strlen        		CODE           	06C3	0000	25
 
 C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\strlen.c estimated size: 25
 
