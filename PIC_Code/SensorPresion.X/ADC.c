@@ -24,7 +24,7 @@ void ADC_init_channel(char channel)
     ADCON0 |= (channel<<2); //Channel selection
     
     //Wait for the Time acquisition
-    __delay_us(30);  // The Minimum Tacq = 20us, So That should be enough
+    __delay_us(5);  // The Minimum Tacq = 5us
     
     //Star ADC conversion
     GO_DONE = 1;  // Start A/D Conversion

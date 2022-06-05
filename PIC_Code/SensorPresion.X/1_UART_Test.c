@@ -17,8 +17,8 @@
 uint8_t mensaje[]="Hello\n";
 
 void main(void) {
-    OSCCON=(0b111)<<(4);// Change Oscillator to 8Mhz
-    UART_TX_Init(115200);
+    //OSCCON=(0b111)<<(4);// Change Oscillator to 8Mhz
+    UART_TX_Init(230400);
     while(1)
     {
         for(uint8_t a=0;a<strlen((char *)mensaje);a++)

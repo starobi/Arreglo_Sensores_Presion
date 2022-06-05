@@ -15,10 +15,13 @@
 void UART_TX_Init(uint32_t baud)
 {
   //Calculate value for Baud rate. It works until 57600 Baud/s
-  uint8_t temp;
-  temp= (uint8_t)(((_XTAL_FREQ/baud)/16)-1); // Formula to calcula SPBRG with high speed baud rate
-  BRGH = 1; // Set For High-Speed Ba    ud Rate
-  SPBRG = temp; // Set The Baud Rate To Be 9600 bps
+  uint16_t temp;
+  temp= (uint16_t)(((_XTAL_FREQ/baud)/4)-1); // Formula to calculate SPBRG with high speed baud rate
+  BRGH = 1; // Set For High-Speed Baud Rate
+  BRG16=1; //Baud generator of 16 bit format
+  SPBRG = 0xFF&temp; 
+  SPBRGH= (temp&0xFF00)>>(8);
+  
   //--[ Enable The Ascynchronous Serial Port ]--
   SYNC = 0;
   SPEN = 1;
