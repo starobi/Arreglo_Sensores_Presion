@@ -195,10 +195,10 @@ class TestWindow(QMainWindow):
                         self.sensor6.setData(self.plotArray[0], self.plotArray[6])
                         self.sensor7.setData(self.plotArray[0], self.plotArray[7])
                         self.sensor8.setData(self.plotArray[0], self.plotArray[8])
+                        pg.QtGui.QGuiApplication.processEvents() # Actualizamos los datos y refrescamos la gráfica.
                         if len(self.plotArray[0]) > self.frames:
                             for i in range(0, 9):
                                 self.plotArray[i].pop(0)
-
                     self.sample_check=[]
                 else:
                     self.sample_check.append(int(line))
@@ -219,8 +219,6 @@ class TestWindow(QMainWindow):
                 self.csv_writer.writerow([self.sample[0][-1], self.sample[1][-1], self.sample[2][-1], self.sample[3][-1], self.sample[4][-1], self.sample[5][-1],self.sample[6][-1], self.sample[7][-1], self.sample[8][-1]])
         except:
             pass
-        # Actualizamos los datos y refrescamos la gráfica.
-        pg.QtGui.QGuiApplication.processEvents()
 
     def plotReset(self):
         self.sensor1.setData()

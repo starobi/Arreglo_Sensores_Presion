@@ -19,17 +19,17 @@ uint16_t ANRead[8];
 void main(void) {
     UART_TX_Init(230400); //Maximum Speed 230400
     UART_Buffer(mensaje, strlen(mensaje));
-    TRISC1=0; //PORTC 1 output to Measure Transmision Time with Logic Analyzer 
-    TRISC2=0; //PORTC 2 output to Measure Sampling Time
+    //TRISC1=0; //PORTC 1 output to Measure Transmision Time with Logic Analyzer 
+    //TRISC2=0; //PORTC 2 output to Measure Sampling Time
     while(1)
     {
-        RC1=1; 
-        RC2=1,
+        //RC1=1; 
+        //RC2=1,
         ADC_burst(ANChannels,ANRead,8);
-        RC2=0;
+        //RC2=0;
         ADC_print_burst(ANRead,8);
-        RC1=0;
-        __delay_ms(100); //7.38
+        //RC1=0;
+        __delay_ms(7.38); //7.38
     }
     return;
 }

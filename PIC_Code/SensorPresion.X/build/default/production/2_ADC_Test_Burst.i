@@ -2645,17 +2645,17 @@ uint16_t ANRead[8];
 void main(void) {
     UART_TX_Init(230400);
     UART_Buffer(mensaje, strlen(mensaje));
-    TRISC1=0;
-    TRISC2=0;
+
+
     while(1)
     {
-        RC1=1;
-        RC2=1,
+
+
         ADC_burst(ANChannels,ANRead,8);
-        RC2=0;
+
         ADC_print_burst(ANRead,8);
-        RC1=0;
-        _delay((unsigned long)((100)*(16000000/4000.0)));
+
+        _delay((unsigned long)((7.38)*(16000000/4000.0)));
     }
     return;
 }

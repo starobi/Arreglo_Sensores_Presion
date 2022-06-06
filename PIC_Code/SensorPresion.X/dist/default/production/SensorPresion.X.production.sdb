@@ -96,8 +96,6 @@
 [v _GO_DONE GO_DONE `VEb  1 e 0 @249 ]
 "3855
 [v _PEIE PEIE `VEb  1 e 0 @94 ]
-"3951
-[v _RC1 RC1 `VEb  1 e 0 @57 ]
 "3954
 [v _RC2 RC2 `VEb  1 e 0 @58 ]
 "4041
@@ -116,10 +114,6 @@
 [v _TMR1IF TMR1IF `VEb  1 e 0 @96 ]
 "4158
 [v _TMR1ON TMR1ON `VEb  1 e 0 @128 ]
-"4233
-[v _TRISC1 TRISC1 `VEb  1 e 0 @1081 ]
-"4236
-[v _TRISC2 TRISC2 `VEb  1 e 0 @1082 ]
 "4248
 [v _TRISC6 TRISC6 `VEb  1 e 0 @1086 ]
 "4257
