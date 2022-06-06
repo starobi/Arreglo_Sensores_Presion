@@ -1,2 +1,0 @@
-* Se útiliza el opamp MCP 6004
-*En la referencia 17 se habla sobre como se seleccioarón los puntos de interes. 

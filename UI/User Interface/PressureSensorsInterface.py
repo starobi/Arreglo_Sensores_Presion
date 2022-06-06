@@ -11,7 +11,8 @@ import os   #Create Directories and get the current direction
 ###########CONFIGURATION VARIABLES#########################
 SerialActivated=1 #This variable works to use Serial Information to plot or not. When Developing is useful
 testTime=30 #This is the time that the test will last
-framesTestWindow=70 #This is the number of values desplayed on the plot before scrolling.
+framesTestWindow=50 #This is the number of values desplayed on the plot before scrolling.
+baudRate=230400
 ###########################################################
 
 class MainMenu(QWidget):
@@ -22,7 +23,7 @@ class MainMenu(QWidget):
         self.UI()
 
     def UI(self):
-        ###########Set Layout#############
+        ###########Set Layout###########    ##
         self.hLayout=QHBoxLayout()
         self.vLayout=QVBoxLayout()
 
@@ -76,12 +77,12 @@ class TestWindow(QMainWindow):
 
             puerto = bluetooth_com_name_file.read()
             bluetooth_com_name_file.close()
-            baudrate = 57600
             try:
-                self.ser = serial.Serial(puerto, baudrate)
+                self.ser = serial.Serial(puerto, baudRate)
             except:
                 QMessageBox.information(self, "Information", "The Bluetooth connection had an error")
                 self.close()
+                return
 
         # Initialization Sample variable
         self.sample = [] #Array of Arrays with all Sensors samples
@@ -159,10 +160,17 @@ class TestWindow(QMainWindow):
         self.csv_writer.writerow(
             ['Time', 'Sensor 1', 'Sensor 2', 'Sensor 3', 'Sensor 4', 'Sensor 5', 'Sensor 6', 'Sensor 7', 'Sensor 8'])
 
-        self.count_sample = 9
+        self.plotArray=[[],[],[],[],[],[],[],[],[]]
+        self.sample_check=[]
         self.frames = framesTestWindow
         self.initial_time = time.time()
         while ((time.time() - self.initial_time) <= testTime): self.Update()  # Actualizamos lo rápido que podamos.
+
+        for x in range(len(self.sample[1])-1):
+            self.csv_writer.writerow(
+                [self.sample[0][x], self.sample[1][x], self.sample[2][x], self.sample[3][x],
+                 self.sample[4][x], self.sample[5][x], self.sample[6][x], self.sample[7][x],
+                 self.sample[8][x]])
         csv_file.close()
 
     def Update(self):
@@ -170,24 +178,31 @@ class TestWindow(QMainWindow):
             if (self.serial == 1):
                 line = self.ser.readline().decode('utf-8')
                 if line == '\n':
-                    self.sensor1.setData(self.sample[0], self.sample[1])
-                    self.sensor2.setData(self.sample[0], self.sample[2])
-                    self.sensor3.setData(self.sample[0], self.sample[3])
-                    self.sensor4.setData(self.sample[0], self.sample[4])
-                    self.sensor5.setData(self.sample[0], self.sample[5])
-                    self.sensor6.setData(self.sample[0], self.sample[6])
-                    self.sensor7.setData(self.sample[0], self.sample[7])
-                    self.sensor8.setData(self.sample[0], self.sample[8])
-                    self.count_sample = 0
-                    self.actual_time = round(time.time() - self.initial_time, 3)
-                    self.sample[0].append(self.actual_time)
-                    if len(self.sample[0]) > self.frames:
-                        for i in range(0, 9):
-                            self.sample[i].pop(0)
-                if 0 < self.count_sample <= 8:
-                    self.sample[self.count_sample].append(int(line))
-                self.count_sample = self.count_sample + 1
-            else:
+                    if len(self.sample_check) == 8:
+                        count_sample=1
+                        for x in self.sample_check:
+                            self.plotArray[count_sample].append(x)
+                            self.sample[count_sample].append(x)
+                            count_sample=count_sample+1
+                        self.actual_time = round(time.time() - self.initial_time, 3)
+                        self.sample[0].append(self.actual_time)
+                        self.plotArray[0].append(self.actual_time)
+                        self.sensor1.setData(self.plotArray[0], self.plotArray[1])
+                        self.sensor2.setData(self.plotArray[0], self.plotArray[2])
+                        self.sensor3.setData(self.plotArray[0], self.plotArray[3])
+                        self.sensor4.setData(self.plotArray[0], self.plotArray[4])
+                        self.sensor5.setData(self.plotArray[0], self.plotArray[5])
+                        self.sensor6.setData(self.plotArray[0], self.plotArray[6])
+                        self.sensor7.setData(self.plotArray[0], self.plotArray[7])
+                        self.sensor8.setData(self.plotArray[0], self.plotArray[8])
+                        pg.QtGui.QGuiApplication.processEvents() # Actualizamos los datos y refrescamos la gráfica.
+                        if len(self.plotArray[0]) > self.frames:
+                            for i in range(0, 9):
+                                self.plotArray[i].pop(0)
+                    self.sample_check=[]
+                else:
+                    self.sample_check.append(int(line))
+            else: #Done if Serial is not active, just for debug
                 self.actual_time = round(time.time() - self.initial_time, 3)
                 self.sample[0].append(self.actual_time)
                 numbers = [10, 20, 30, 40, 50, 60, 70, 80]
@@ -202,12 +217,8 @@ class TestWindow(QMainWindow):
                 self.sensor7.setData(self.sample[0], self.sample[7])
                 self.sensor8.setData(self.sample[0], self.sample[8])
                 self.csv_writer.writerow([self.sample[0][-1], self.sample[1][-1], self.sample[2][-1], self.sample[3][-1], self.sample[4][-1], self.sample[5][-1],self.sample[6][-1], self.sample[7][-1], self.sample[8][-1]])
-
         except:
             pass
-
-        # Actualizamos los datos y refrescamos la gráfica.
-        pg.QtGui.QGuiApplication.processEvents()
 
     def plotReset(self):
         self.sensor1.setData()

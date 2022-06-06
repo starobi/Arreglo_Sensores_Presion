@@ -3,8 +3,6 @@
 [d edition pro ]
 [d chip 16F886 ]
 [d frameptr 0 ]
-"19 C:\Users\staro\OneDrive\Escuela\TEC\Laboratorio Biomecatronica\Documentacion\Arreglo_Sensores_Presion\PIC_Code\SensorPresion.X\2_ADC_Test_Burst.c
-[v _main main `(v  1 e 1 0 ]
 "19 C:\Users\staro\OneDrive\Escuela\TEC\Laboratorio Biomecatronica\Documentacion\Arreglo_Sensores_Presion\PIC_Code\SensorPresion.X\ADC.c
 [v _ADC_init_channel ADC_init_channel `(v  1 e 1 0 ]
 "59
@@ -29,6 +27,8 @@
 [v ___eecpymem __eecpymem `(v  1 e 1 0 ]
 "39
 [v ___memcpyee __memcpyee `(v  1 e 1 0 ]
+"19 C:\Users\staro\OneDrive\Escuela\TEC\Laboratorio Biomecatronica\Documentacion\Arreglo_Sensores_Presion\PIC_Code\SensorPresion.X\SamplingProgram.c
+[v _main main `(v  1 e 1 0 ]
 "15 C:\Users\staro\OneDrive\Escuela\TEC\Laboratorio Biomecatronica\Documentacion\Arreglo_Sensores_Presion\PIC_Code\SensorPresion.X\UART.c
 [v _UART_TX_Init UART_TX_Init `(v  1 e 1 0 ]
 "34
@@ -37,12 +37,6 @@
 [v _UART_Buffer UART_Buffer `(v  1 e 1 0 ]
 "60
 [v _UART_number UART_number `(v  1 e 1 0 ]
-"16 C:\Users\staro\OneDrive\Escuela\TEC\Laboratorio Biomecatronica\Documentacion\Arreglo_Sensores_Presion\PIC_Code\SensorPresion.X\2_ADC_Test_Burst.c
-[v _mensaje mensaje `[19]uc  1 e 19 0 ]
-"17
-[v _ANChannels ANChannels `[8]uc  1 e 8 0 ]
-"18
-[v _ANRead ANRead `[8]ui  1 e 16 0 ]
 "571 C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f886.h
 [v _TMR1 TMR1 `VEus  1 e 2 @14 ]
 "1054
@@ -96,8 +90,6 @@
 [v _GO_DONE GO_DONE `VEb  1 e 0 @249 ]
 "3855
 [v _PEIE PEIE `VEb  1 e 0 @94 ]
-"3951
-[v _RC1 RC1 `VEb  1 e 0 @57 ]
 "3954
 [v _RC2 RC2 `VEb  1 e 0 @58 ]
 "4041
@@ -116,10 +108,6 @@
 [v _TMR1IF TMR1IF `VEb  1 e 0 @96 ]
 "4158
 [v _TMR1ON TMR1ON `VEb  1 e 0 @128 ]
-"4233
-[v _TRISC1 TRISC1 `VEb  1 e 0 @1081 ]
-"4236
-[v _TRISC2 TRISC2 `VEb  1 e 0 @1082 ]
 "4248
 [v _TRISC6 TRISC6 `VEb  1 e 0 @1086 ]
 "4257
@@ -128,11 +116,17 @@
 [v _TXEN TXEN `VEb  1 e 0 @1221 ]
 "358 C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\doprnt.c
 [v _dpowers dpowers `DC[5]ui  1 s 10 dpowers ]
+"16 C:\Users\staro\OneDrive\Escuela\TEC\Laboratorio Biomecatronica\Documentacion\Arreglo_Sensores_Presion\PIC_Code\SensorPresion.X\SamplingProgram.c
+[v _mensaje mensaje `[19]uc  1 e 19 0 ]
+"17
+[v _ANChannels ANChannels `[8]uc  1 e 8 0 ]
+"18
+[v _ANRead ANRead `[8]ui  1 e 16 0 ]
 "10 C:\Users\staro\OneDrive\Escuela\TEC\Laboratorio Biomecatronica\Documentacion\Arreglo_Sensores_Presion\PIC_Code\SensorPresion.X\Timer.c
 [v _timer_overflows timer_overflows `ui  1 e 2 0 ]
 "11
 [v _timer_overflow_counter timer_overflow_counter `ui  1 e 2 0 ]
-"19 C:\Users\staro\OneDrive\Escuela\TEC\Laboratorio Biomecatronica\Documentacion\Arreglo_Sensores_Presion\PIC_Code\SensorPresion.X\2_ADC_Test_Burst.c
+"19 C:\Users\staro\OneDrive\Escuela\TEC\Laboratorio Biomecatronica\Documentacion\Arreglo_Sensores_Presion\PIC_Code\SensorPresion.X\SamplingProgram.c
 [v _main main `(v  1 e 1 0 ]
 {
 "35

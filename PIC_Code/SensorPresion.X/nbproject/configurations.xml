@@ -30,6 +30,7 @@
       <itemPath>Timer.c</itemPath>
       <itemPath>4_Timer_polling.c</itemPath>
       <itemPath>4_Timer_Interrupt.c</itemPath>
+      <itemPath>SamplingProgram.c</itemPath>
     </logicalFolder>
     <logicalFolder name="ExternalFiles"
                    displayName="Important Files"
@@ -48,7 +49,7 @@
         <targetDevice>PIC16F886</targetDevice>
         <targetHeader></targetHeader>
         <targetPluginBoard></targetPluginBoard>
-        <platformTool>PICkit3PlatformTool</platformTool>
+        <platformTool>noID</platformTool>
         <languageToolchain>XC8</languageToolchain>
         <languageToolchainVersion>2.32</languageToolchainVersion>
         <platform>3</platform>
@@ -113,7 +114,7 @@
         <XC8-config-global>
         </XC8-config-global>
       </item>
-      <item path="2_ADC_Test_Burst.c" ex="false" overriding="false">
+      <item path="2_ADC_Test_Burst.c" ex="true" overriding="false">
         <HI-TECH-COMP>
         </HI-TECH-COMP>
         <HI-TECH-LINK>
