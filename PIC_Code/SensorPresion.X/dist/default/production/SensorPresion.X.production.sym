@@ -267,7 +267,7 @@ idataBANK0 8CE 8DD CODE 8CE 0
 clrtext 8BE 8CD CODE 8BE 0
 %locals
 dist/default/production\SensorPresion.X.production.o
-C:\Users\staro\AppData\Local\Temp\xcAsc0k.s
+C:\Users\staro\AppData\Local\Temp\xcAsl5g.s
 1188 7D9 0 CODE 0
 1191 7D9 0 CODE 0
 1255 7D9 0 CODE 0
@@ -323,7 +323,7 @@ C:\Users\staro\AppData\Local\Temp\xcAsc0k.s
 1289 464 0 CODE 0
 1290 465 0 CODE 0
 1291 466 0 CODE 0
-2_ADC_Test_Burst.c
+SamplingProgram.c
 19 5F2 0 CODE 0
 20 5F2 0 CODE 0
 21 601 0 CODE 0

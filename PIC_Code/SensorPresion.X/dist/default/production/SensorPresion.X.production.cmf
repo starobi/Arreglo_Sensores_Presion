@@ -37,7 +37,7 @@ dataBANK0 BANK0 1 57 57 8 1
 dataBANK1 BANK1 1 A0 A0 13 1
 clrtext CODE 0 45F 45F 8 2
 config CONFIG 4 2007 2007 2 2
-$C:\Users\staro\AppData\Local\Temp\xcAsc0k.o
+$C:\Users\staro\AppData\Local\Temp\xcAsl5g.o
 end_init CODE 0 0 0 3 2
 config CONFIG 4 2007 2007 2 2
 # %UNUSED Section
@@ -85,34 +85,34 @@ STRING 800-1FFF 2
 # All other numeric values are in decimal.
 %LINETAB
 $dist/default/production\SensorPresion.X.production.o
-7D9 cinit CODE >1188:C:\Users\staro\AppData\Local\Temp\xcAsc0k.s
-7D9 cinit CODE >1191:C:\Users\staro\AppData\Local\Temp\xcAsc0k.s
-7D9 cinit CODE >1255:C:\Users\staro\AppData\Local\Temp\xcAsc0k.s
-7DA cinit CODE >1256:C:\Users\staro\AppData\Local\Temp\xcAsc0k.s
-7DB cinit CODE >1257:C:\Users\staro\AppData\Local\Temp\xcAsc0k.s
-7DC cinit CODE >1258:C:\Users\staro\AppData\Local\Temp\xcAsc0k.s
-7DD cinit CODE >1259:C:\Users\staro\AppData\Local\Temp\xcAsc0k.s
-7DE cinit CODE >1260:C:\Users\staro\AppData\Local\Temp\xcAsc0k.s
-7DF cinit CODE >1261:C:\Users\staro\AppData\Local\Temp\xcAsc0k.s
-7E0 cinit CODE >1262:C:\Users\staro\AppData\Local\Temp\xcAsc0k.s
-7E1 cinit CODE >1263:C:\Users\staro\AppData\Local\Temp\xcAsc0k.s
-7E2 cinit CODE >1264:C:\Users\staro\AppData\Local\Temp\xcAsc0k.s
-7E7 cinit CODE >1268:C:\Users\staro\AppData\Local\Temp\xcAsc0k.s
-7E8 cinit CODE >1269:C:\Users\staro\AppData\Local\Temp\xcAsc0k.s
-7E9 cinit CODE >1270:C:\Users\staro\AppData\Local\Temp\xcAsc0k.s
-7EA cinit CODE >1271:C:\Users\staro\AppData\Local\Temp\xcAsc0k.s
-7EB cinit CODE >1272:C:\Users\staro\AppData\Local\Temp\xcAsc0k.s
-7EC cinit CODE >1273:C:\Users\staro\AppData\Local\Temp\xcAsc0k.s
-7ED cinit CODE >1274:C:\Users\staro\AppData\Local\Temp\xcAsc0k.s
-7EE cinit CODE >1275:C:\Users\staro\AppData\Local\Temp\xcAsc0k.s
-7EF cinit CODE >1276:C:\Users\staro\AppData\Local\Temp\xcAsc0k.s
-7F4 cinit CODE >1295:C:\Users\staro\AppData\Local\Temp\xcAsc0k.s
-7F5 cinit CODE >1296:C:\Users\staro\AppData\Local\Temp\xcAsc0k.s
-7F6 cinit CODE >1297:C:\Users\staro\AppData\Local\Temp\xcAsc0k.s
-7F7 cinit CODE >1298:C:\Users\staro\AppData\Local\Temp\xcAsc0k.s
-7FC cinit CODE >1304:C:\Users\staro\AppData\Local\Temp\xcAsc0k.s
-7FC cinit CODE >1306:C:\Users\staro\AppData\Local\Temp\xcAsc0k.s
-7FD cinit CODE >1307:C:\Users\staro\AppData\Local\Temp\xcAsc0k.s
+7D9 cinit CODE >1188:C:\Users\staro\AppData\Local\Temp\xcAsl5g.s
+7D9 cinit CODE >1191:C:\Users\staro\AppData\Local\Temp\xcAsl5g.s
+7D9 cinit CODE >1255:C:\Users\staro\AppData\Local\Temp\xcAsl5g.s
+7DA cinit CODE >1256:C:\Users\staro\AppData\Local\Temp\xcAsl5g.s
+7DB cinit CODE >1257:C:\Users\staro\AppData\Local\Temp\xcAsl5g.s
+7DC cinit CODE >1258:C:\Users\staro\AppData\Local\Temp\xcAsl5g.s
+7DD cinit CODE >1259:C:\Users\staro\AppData\Local\Temp\xcAsl5g.s
+7DE cinit CODE >1260:C:\Users\staro\AppData\Local\Temp\xcAsl5g.s
+7DF cinit CODE >1261:C:\Users\staro\AppData\Local\Temp\xcAsl5g.s
+7E0 cinit CODE >1262:C:\Users\staro\AppData\Local\Temp\xcAsl5g.s
+7E1 cinit CODE >1263:C:\Users\staro\AppData\Local\Temp\xcAsl5g.s
+7E2 cinit CODE >1264:C:\Users\staro\AppData\Local\Temp\xcAsl5g.s
+7E7 cinit CODE >1268:C:\Users\staro\AppData\Local\Temp\xcAsl5g.s
+7E8 cinit CODE >1269:C:\Users\staro\AppData\Local\Temp\xcAsl5g.s
+7E9 cinit CODE >1270:C:\Users\staro\AppData\Local\Temp\xcAsl5g.s
+7EA cinit CODE >1271:C:\Users\staro\AppData\Local\Temp\xcAsl5g.s
+7EB cinit CODE >1272:C:\Users\staro\AppData\Local\Temp\xcAsl5g.s
+7EC cinit CODE >1273:C:\Users\staro\AppData\Local\Temp\xcAsl5g.s
+7ED cinit CODE >1274:C:\Users\staro\AppData\Local\Temp\xcAsl5g.s
+7EE cinit CODE >1275:C:\Users\staro\AppData\Local\Temp\xcAsl5g.s
+7EF cinit CODE >1276:C:\Users\staro\AppData\Local\Temp\xcAsl5g.s
+7F4 cinit CODE >1295:C:\Users\staro\AppData\Local\Temp\xcAsl5g.s
+7F5 cinit CODE >1296:C:\Users\staro\AppData\Local\Temp\xcAsl5g.s
+7F6 cinit CODE >1297:C:\Users\staro\AppData\Local\Temp\xcAsl5g.s
+7F7 cinit CODE >1298:C:\Users\staro\AppData\Local\Temp\xcAsl5g.s
+7FC cinit CODE >1304:C:\Users\staro\AppData\Local\Temp\xcAsl5g.s
+7FC cinit CODE >1306:C:\Users\staro\AppData\Local\Temp\xcAsl5g.s
+7FD cinit CODE >1307:C:\Users\staro\AppData\Local\Temp\xcAsl5g.s
 4D5 text12 CODE >19:C:\Users\staro\OneDrive\Escuela\TEC\Laboratorio Biomecatronica\Documentacion\Arreglo_Sensores_Presion\PIC_Code\SensorPresion.X\ADC.c
 4D6 text12 CODE >22:C:\Users\staro\OneDrive\Escuela\TEC\Laboratorio Biomecatronica\Documentacion\Arreglo_Sensores_Presion\PIC_Code\SensorPresion.X\ADC.c
 4DA text12 CODE >23:C:\Users\staro\OneDrive\Escuela\TEC\Laboratorio Biomecatronica\Documentacion\Arreglo_Sensores_Presion\PIC_Code\SensorPresion.X\ADC.c
@@ -281,39 +281,39 @@ $dist/default/production\SensorPresion.X.production.o
 686 text1 CODE >29:C:\Users\staro\OneDrive\Escuela\TEC\Laboratorio Biomecatronica\Documentacion\Arreglo_Sensores_Presion\PIC_Code\SensorPresion.X\UART.c
 689 text1 CODE >30:C:\Users\staro\OneDrive\Escuela\TEC\Laboratorio Biomecatronica\Documentacion\Arreglo_Sensores_Presion\PIC_Code\SensorPresion.X\UART.c
 68A text1 CODE >31:C:\Users\staro\OneDrive\Escuela\TEC\Laboratorio Biomecatronica\Documentacion\Arreglo_Sensores_Presion\PIC_Code\SensorPresion.X\UART.c
-5F2 maintext CODE >19:C:\Users\staro\OneDrive\Escuela\TEC\Laboratorio Biomecatronica\Documentacion\Arreglo_Sensores_Presion\PIC_Code\SensorPresion.X\2_ADC_Test_Burst.c
-5F2 maintext CODE >20:C:\Users\staro\OneDrive\Escuela\TEC\Laboratorio Biomecatronica\Documentacion\Arreglo_Sensores_Presion\PIC_Code\SensorPresion.X\2_ADC_Test_Burst.c
-601 maintext CODE >21:C:\Users\staro\OneDrive\Escuela\TEC\Laboratorio Biomecatronica\Documentacion\Arreglo_Sensores_Presion\PIC_Code\SensorPresion.X\2_ADC_Test_Burst.c
-613 maintext CODE >28:C:\Users\staro\OneDrive\Escuela\TEC\Laboratorio Biomecatronica\Documentacion\Arreglo_Sensores_Presion\PIC_Code\SensorPresion.X\2_ADC_Test_Burst.c
-623 maintext CODE >30:C:\Users\staro\OneDrive\Escuela\TEC\Laboratorio Biomecatronica\Documentacion\Arreglo_Sensores_Presion\PIC_Code\SensorPresion.X\2_ADC_Test_Burst.c
-62F maintext CODE >32:C:\Users\staro\OneDrive\Escuela\TEC\Laboratorio Biomecatronica\Documentacion\Arreglo_Sensores_Presion\PIC_Code\SensorPresion.X\2_ADC_Test_Burst.c
-45F clrtext CODE >1282:C:\Users\staro\AppData\Local\Temp\xcAsc0k.s
-45F clrtext CODE >1283:C:\Users\staro\AppData\Local\Temp\xcAsc0k.s
-460 clrtext CODE >1284:C:\Users\staro\AppData\Local\Temp\xcAsc0k.s
-460 clrtext CODE >1285:C:\Users\staro\AppData\Local\Temp\xcAsc0k.s
-461 clrtext CODE >1286:C:\Users\staro\AppData\Local\Temp\xcAsc0k.s
-462 clrtext CODE >1287:C:\Users\staro\AppData\Local\Temp\xcAsc0k.s
-463 clrtext CODE >1288:C:\Users\staro\AppData\Local\Temp\xcAsc0k.s
-464 clrtext CODE >1289:C:\Users\staro\AppData\Local\Temp\xcAsc0k.s
-465 clrtext CODE >1290:C:\Users\staro\AppData\Local\Temp\xcAsc0k.s
-466 clrtext CODE >1291:C:\Users\staro\AppData\Local\Temp\xcAsc0k.s
-47B inittext CODE >1229:C:\Users\staro\AppData\Local\Temp\xcAsc0k.s
-47B inittext CODE >1230:C:\Users\staro\AppData\Local\Temp\xcAsc0k.s
-47C inittext CODE >1231:C:\Users\staro\AppData\Local\Temp\xcAsc0k.s
-47D inittext CODE >1232:C:\Users\staro\AppData\Local\Temp\xcAsc0k.s
-47E inittext CODE >1233:C:\Users\staro\AppData\Local\Temp\xcAsc0k.s
-47F inittext CODE >1240:C:\Users\staro\AppData\Local\Temp\xcAsc0k.s
-47F inittext CODE >1241:C:\Users\staro\AppData\Local\Temp\xcAsc0k.s
-484 inittext CODE >1242:C:\Users\staro\AppData\Local\Temp\xcAsc0k.s
-485 inittext CODE >1243:C:\Users\staro\AppData\Local\Temp\xcAsc0k.s
-486 inittext CODE >1244:C:\Users\staro\AppData\Local\Temp\xcAsc0k.s
-487 inittext CODE >1245:C:\Users\staro\AppData\Local\Temp\xcAsc0k.s
-488 inittext CODE >1246:C:\Users\staro\AppData\Local\Temp\xcAsc0k.s
-489 inittext CODE >1247:C:\Users\staro\AppData\Local\Temp\xcAsc0k.s
-48A inittext CODE >1248:C:\Users\staro\AppData\Local\Temp\xcAsc0k.s
-48B inittext CODE >1249:C:\Users\staro\AppData\Local\Temp\xcAsc0k.s
-48C inittext CODE >1250:C:\Users\staro\AppData\Local\Temp\xcAsc0k.s
-48D inittext CODE >1251:C:\Users\staro\AppData\Local\Temp\xcAsc0k.s
+5F2 maintext CODE >19:C:\Users\staro\OneDrive\Escuela\TEC\Laboratorio Biomecatronica\Documentacion\Arreglo_Sensores_Presion\PIC_Code\SensorPresion.X\SamplingProgram.c
+5F2 maintext CODE >20:C:\Users\staro\OneDrive\Escuela\TEC\Laboratorio Biomecatronica\Documentacion\Arreglo_Sensores_Presion\PIC_Code\SensorPresion.X\SamplingProgram.c
+601 maintext CODE >21:C:\Users\staro\OneDrive\Escuela\TEC\Laboratorio Biomecatronica\Documentacion\Arreglo_Sensores_Presion\PIC_Code\SensorPresion.X\SamplingProgram.c
+613 maintext CODE >28:C:\Users\staro\OneDrive\Escuela\TEC\Laboratorio Biomecatronica\Documentacion\Arreglo_Sensores_Presion\PIC_Code\SensorPresion.X\SamplingProgram.c
+623 maintext CODE >30:C:\Users\staro\OneDrive\Escuela\TEC\Laboratorio Biomecatronica\Documentacion\Arreglo_Sensores_Presion\PIC_Code\SensorPresion.X\SamplingProgram.c
+62F maintext CODE >32:C:\Users\staro\OneDrive\Escuela\TEC\Laboratorio Biomecatronica\Documentacion\Arreglo_Sensores_Presion\PIC_Code\SensorPresion.X\SamplingProgram.c
+45F clrtext CODE >1282:C:\Users\staro\AppData\Local\Temp\xcAsl5g.s
+45F clrtext CODE >1283:C:\Users\staro\AppData\Local\Temp\xcAsl5g.s
+460 clrtext CODE >1284:C:\Users\staro\AppData\Local\Temp\xcAsl5g.s
+460 clrtext CODE >1285:C:\Users\staro\AppData\Local\Temp\xcAsl5g.s
+461 clrtext CODE >1286:C:\Users\staro\AppData\Local\Temp\xcAsl5g.s
+462 clrtext CODE >1287:C:\Users\staro\AppData\Local\Temp\xcAsl5g.s
+463 clrtext CODE >1288:C:\Users\staro\AppData\Local\Temp\xcAsl5g.s
+464 clrtext CODE >1289:C:\Users\staro\AppData\Local\Temp\xcAsl5g.s
+465 clrtext CODE >1290:C:\Users\staro\AppData\Local\Temp\xcAsl5g.s
+466 clrtext CODE >1291:C:\Users\staro\AppData\Local\Temp\xcAsl5g.s
+47B inittext CODE >1229:C:\Users\staro\AppData\Local\Temp\xcAsl5g.s
+47B inittext CODE >1230:C:\Users\staro\AppData\Local\Temp\xcAsl5g.s
+47C inittext CODE >1231:C:\Users\staro\AppData\Local\Temp\xcAsl5g.s
+47D inittext CODE >1232:C:\Users\staro\AppData\Local\Temp\xcAsl5g.s
+47E inittext CODE >1233:C:\Users\staro\AppData\Local\Temp\xcAsl5g.s
+47F inittext CODE >1240:C:\Users\staro\AppData\Local\Temp\xcAsl5g.s
+47F inittext CODE >1241:C:\Users\staro\AppData\Local\Temp\xcAsl5g.s
+484 inittext CODE >1242:C:\Users\staro\AppData\Local\Temp\xcAsl5g.s
+485 inittext CODE >1243:C:\Users\staro\AppData\Local\Temp\xcAsl5g.s
+486 inittext CODE >1244:C:\Users\staro\AppData\Local\Temp\xcAsl5g.s
+487 inittext CODE >1245:C:\Users\staro\AppData\Local\Temp\xcAsl5g.s
+488 inittext CODE >1246:C:\Users\staro\AppData\Local\Temp\xcAsl5g.s
+489 inittext CODE >1247:C:\Users\staro\AppData\Local\Temp\xcAsl5g.s
+48A inittext CODE >1248:C:\Users\staro\AppData\Local\Temp\xcAsl5g.s
+48B inittext CODE >1249:C:\Users\staro\AppData\Local\Temp\xcAsl5g.s
+48C inittext CODE >1250:C:\Users\staro\AppData\Local\Temp\xcAsl5g.s
+48D inittext CODE >1251:C:\Users\staro\AppData\Local\Temp\xcAsl5g.s
 # %SYMTAB Section
 # An enumeration of all symbols in the program.
 # The beginning of the section is indicated by %SYMTAB.
@@ -350,10 +350,10 @@ _SYNC 4C4 0 ABS 0 - dist/default/production\SensorPresion.X.production.o
 _TMR1 E 0 ABS 0 - dist/default/production\SensorPresion.X.production.o
 _TRMT 4C1 0 ABS 0 - dist/default/production\SensorPresion.X.production.o
 _TXEN 4C5 0 ABS 0 - dist/default/production\SensorPresion.X.production.o
-___sp 0 0 STACK 2 stack C:\Users\staro\AppData\Local\Temp\xcAsc0k.o
+___sp 0 0 STACK 2 stack C:\Users\staro\AppData\Local\Temp\xcAsl5g.o
 _main BE4 0 CODE 0 maintext dist/default/production\SensorPresion.X.production.o
 btemp 7E 0 ABS 0 - dist/default/production\SensorPresion.X.production.o
-start 0 0 CODE 0 init C:\Users\staro\AppData\Local\Temp\xcAsc0k.o
+start 0 0 CODE 0 init C:\Users\staro\AppData\Local\Temp\xcAsl5g.o
 __size_of_main 0 0 ABS 0 - dist/default/production\SensorPresion.X.production.o
 __size_of___lldiv 0 0 ABS 0 - dist/default/production\SensorPresion.X.production.o
 __size_of___lwdiv 0 0 ABS 0 - dist/default/production\SensorPresion.X.production.o
@@ -363,12 +363,12 @@ __LidataBANK0 0 0 ABS 0 idataBANK0 -
 __LidataBANK1 0 0 ABS 0 idataBANK1 -
 UART_Buffer@buffer 78 0 COMMON 1 cstackCOMMON dist/default/production\SensorPresion.X.production.o
 __Hpowerup 0 0 CODE 0 powerup -
-intlevel0 0 0 ENTRY 0 functab C:\Users\staro\AppData\Local\Temp\xcAsc0k.o
-intlevel1 0 0 ENTRY 0 functab C:\Users\staro\AppData\Local\Temp\xcAsc0k.o
-intlevel2 0 0 ENTRY 0 functab C:\Users\staro\AppData\Local\Temp\xcAsc0k.o
-intlevel3 0 0 ENTRY 0 functab C:\Users\staro\AppData\Local\Temp\xcAsc0k.o
-intlevel4 0 0 ENTRY 0 functab C:\Users\staro\AppData\Local\Temp\xcAsc0k.o
-intlevel5 0 0 ENTRY 0 functab C:\Users\staro\AppData\Local\Temp\xcAsc0k.o
+intlevel0 0 0 ENTRY 0 functab C:\Users\staro\AppData\Local\Temp\xcAsl5g.o
+intlevel1 0 0 ENTRY 0 functab C:\Users\staro\AppData\Local\Temp\xcAsl5g.o
+intlevel2 0 0 ENTRY 0 functab C:\Users\staro\AppData\Local\Temp\xcAsl5g.o
+intlevel3 0 0 ENTRY 0 functab C:\Users\staro\AppData\Local\Temp\xcAsl5g.o
+intlevel4 0 0 ENTRY 0 functab C:\Users\staro\AppData\Local\Temp\xcAsl5g.o
+intlevel5 0 0 ENTRY 0 functab C:\Users\staro\AppData\Local\Temp\xcAsl5g.o
 wtemp0 7E 0 ABS 0 - dist/default/production\SensorPresion.X.production.o
 __Hfunctab 0 0 ENTRY 0 functab -
 _UART_Write 8DE 0 CODE 0 text10 dist/default/production\SensorPresion.X.production.o
@@ -390,8 +390,8 @@ __end_of___lwdiv BE4 0 CODE 0 text8 dist/default/production\SensorPresion.X.prod
 __end_of___lwmod B5C 0 CODE 0 text7 dist/default/production\SensorPresion.X.production.o
 ?_strlen 70 0 COMMON 1 cstackCOMMON dist/default/production\SensorPresion.X.production.o
 _UART_TX_Init C7C 0 CODE 0 text1 dist/default/production\SensorPresion.X.production.o
-___stackhi 0 0 ABS 0 - C:\Users\staro\AppData\Local\Temp\xcAsc0k.o
-___stacklo 0 0 ABS 0 - C:\Users\staro\AppData\Local\Temp\xcAsc0k.o
+___stackhi 0 0 ABS 0 - C:\Users\staro\AppData\Local\Temp\xcAsl5g.o
+___stacklo 0 0 ABS 0 - C:\Users\staro\AppData\Local\Temp\xcAsl5g.o
 _dpowers 12 0 STRING 0 strings dist/default/production\SensorPresion.X.production.o
 __end_of_UART_Write 8F6 0 CODE 0 text10 dist/default/production\SensorPresion.X.production.o
 ___lwdiv@quotient 75 0 COMMON 1 cstackCOMMON dist/default/production\SensorPresion.X.production.o
@@ -413,7 +413,7 @@ _TMR1ON 80 0 ABS 0 - dist/default/production\SensorPresion.X.production.o
 __size_of_UART_TX_Init 0 0 ABS 0 - dist/default/production\SensorPresion.X.production.o
 _TRISC6 43E 0 ABS 0 - dist/default/production\SensorPresion.X.production.o
 _timer_overflows 43 0 BANK0 1 bssBANK0 dist/default/production\SensorPresion.X.production.o
-___int_sp 0 0 STACK 2 stack C:\Users\staro\AppData\Local\Temp\xcAsc0k.o
+___int_sp 0 0 STACK 2 stack C:\Users\staro\AppData\Local\Temp\xcAsl5g.o
 __Hbank0 0 0 ABS 0 bank0 -
 __Hbank1 0 0 ABS 0 bank1 -
 __Hbank2 0 0 ABS 0 bank2 -
@@ -467,7 +467,7 @@ sprintf@val 29 0 BANK0 1 cstackBANK0 dist/default/production\SensorPresion.X.pro
 __Lintentry 0 0 CODE 0 intentry -
 ___lldiv@divisor 70 0 COMMON 1 cstackCOMMON dist/default/production\SensorPresion.X.production.o
 __stringtab 6 0 STRING 0 strings dist/default/production\SensorPresion.X.production.o
-reset_vec 0 0 CODE 0 reset_vec C:\Users\staro\AppData\Local\Temp\xcAsc0k.o
+reset_vec 0 0 CODE 0 reset_vec C:\Users\staro\AppData\Local\Temp\xcAsl5g.o
 strlen@s 74 0 COMMON 1 cstackCOMMON dist/default/production\SensorPresion.X.production.o
 __pdataBANK0 57 0 BANK0 1 dataBANK0 dist/default/production\SensorPresion.X.production.o
 __pdataBANK1 A0 0 BANK1 1 dataBANK1 dist/default/production\SensorPresion.X.production.o

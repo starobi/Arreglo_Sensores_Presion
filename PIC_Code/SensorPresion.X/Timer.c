@@ -1,9 +1,4 @@
-/*
- * File:   Timer.c
- * Author: staro
- *
- * Created on 14. März 2022, 14:51
- */
+//Doesn't work timer with interrupt
 
 #include "Timer.h"
 

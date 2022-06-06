@@ -1,5 +1,0 @@
-STATE OF ART
-============
-
-In other research projects the objective to measure the difference in the performance of different prothesis was proposed. In the research from Pitkin (2009) the mobility and the comfort from different prothesis was measured with angles of movement the feedback from the user. As well as the last measurements pressure measurement were taken with the F-socket from Tekscan. It was concluded that the mobility and comfort what directly related with the peak pressure values. 
-Additionally, from this project in the Biomechatronic Lab there was a first prototype developed by Salvador Ibarra (2020). A first functional system was achieved and a comparison between the F-socket and this new pressure system was done. The F-socket measures the whole surface of the stump with a big array of sensors, in comparison with the system developed by Ibarra where it only measured with few sensors in specific points of interest. The conclusion is that the measurements and the data collected by both systems have the same quality. The F-socket can haver broader information but the system developed by Ibarra has more accuracy. 

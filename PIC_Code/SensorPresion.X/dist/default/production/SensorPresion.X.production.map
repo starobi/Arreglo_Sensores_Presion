@@ -5,7 +5,7 @@ Linker command line:
 -W-3 --edf=C:\Program Files\Microchip\xc8\v2.32\pic\dat\en_msgs.txt -cn \
   -h+dist/default/production\SensorPresion.X.production.sym \
   --cmf=dist/default/production\SensorPresion.X.production.cmf -z -Q16F886 \
-  -oC:\Users\staro\AppData\Local\Temp\xcAsc0k.4 --defsym=__MPLAB_BUILD=1 \
+  -oC:\Users\staro\AppData\Local\Temp\xcAsl5g.4 --defsym=__MPLAB_BUILD=1 \
   -Mdist/default/production/SensorPresion.X.production.map -E1 \
   -ver=XC8 Compiler --acfsm=1493 -ASTACK=0110h-016Fh -pstack=STACK \
   -ACODE=00h-07FFhx4 -ASTRCODE=00h-01FFFh -ASTRING=00h-0FFhx32 \
@@ -18,7 +18,7 @@ Linker command line:
   -AEEDATA=00h-0FFh/02100h -peeprom_data=EEDATA -DEEDATA=2 -DCODE=2 \
   -DSTRCODE=2 -DSTRING=2 -DCONST=2 -DENTRY=2 \
   -preset_vec=00h,intentry,init,end_init -ppowerup=CODE -pcinit=CODE \
-  -pfunctab=ENTRY -k C:\Users\staro\AppData\Local\Temp\xcAsc0k.o \
+  -pfunctab=ENTRY -k C:\Users\staro\AppData\Local\Temp\xcAsl5g.o \
   dist/default/production\SensorPresion.X.production.o 
 
 Object code version is 3.11
@@ -28,7 +28,7 @@ Machine type is 16F886
 
 
                 Name                               Link     Load   Length Selector   Space Scale
-C:\Users\staro\AppData\Local\Temp\xcAsc0k.o
+C:\Users\staro\AppData\Local\Temp\xcAsl5g.o
                 end_init                              0        0        3        0       0
                 config                             2007     2007        2        0       4
 dist/default/production\SensorPresion.X.production.o
@@ -442,11 +442,6 @@ UART.c
 
 UART.c estimated size: 151
 
-2_ADC_Test_Burst.c
-		_main          		CODE           	05F2	0000	76
-
-2_ADC_Test_Burst.c estimated size: 76
-
 C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\strlen.c
 		_strlen        		CODE           	04A1	0000	25
 
@@ -463,6 +458,11 @@ shared
 		__initialization		CODE           	07D9	0000	35
 
 shared estimated size: 51
+
+SamplingProgram.c
+		_main          		CODE           	05F2	0000	76
+
+SamplingProgram.c estimated size: 76
 
 ADC.c
 		_ADC_init_channel		CODE           	04D5	0000	33
