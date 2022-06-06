@@ -1,0 +1,29 @@
+Notas Pitkin 2020
+
+*Usan 2 F-Sockets sensors
+https://www.tekscan.com/products-solutions/systems/f-socket-system
+
+*Los sensores y sistemas son de Tekscan. 
+
+*Los pacientes son amputados transtibiales
+
+* El objetivo del estudio es ver cómo la protesis de pie RJ mejora el angulo de flexión de la rodilla antómica
+
+*Después se hizo otra preuba con 4 F-Socket 9811 sensors. La prueba era para ver como afecta el ángulo de los pieza la presión
+
+*Ellos miden cada 1/60 de segundo 
+
+*En página 12 figura 5.10 se muestra como se colocán los sensores.
+
+Me quede en 5.3.1
+
+Dudas
+
+* En la página 106 se refieren a la FIgura 1.17. En donde está? Ahí se muestra los sensores y su colocación.
+
+
+Notas Adicionales
+
+Muñon= Es la extremedidad de la amputación.
+Socket=Residuum= es la conexión del muñon con la protesis. 
+Dorsiflexión= Es la flexión del pie hacía adelante y hacia atras. 
