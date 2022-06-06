@@ -11,7 +11,7 @@ import os   #Create Directories and get the current direction
 ###########CONFIGURATION VARIABLES#########################
 SerialActivated=1 #This variable works to use Serial Information to plot or not. When Developing is useful
 testTime=30 #This is the time that the test will last
-framesTestWindow=70 #This is the number of values desplayed on the plot before scrolling.
+framesTestWindow=50 #This is the number of values desplayed on the plot before scrolling.
 ###########################################################
 
 class MainMenu(QWidget):
@@ -22,7 +22,7 @@ class MainMenu(QWidget):
         self.UI()
 
     def UI(self):
-        ###########Set Layout#############
+        ###########Set Layout###########    ##
         self.hLayout=QHBoxLayout()
         self.vLayout=QVBoxLayout()
 
@@ -181,6 +181,10 @@ class TestWindow(QMainWindow):
                     self.count_sample = 0
                     self.actual_time = round(time.time() - self.initial_time, 3)
                     self.sample[0].append(self.actual_time)
+                    self.csv_writer.writerow(
+                        [self.sample[0][-1], self.sample[1][-1], self.sample[2][-1], self.sample[3][-1],
+                         self.sample[4][-1], self.sample[5][-1], self.sample[6][-1], self.sample[7][-1],
+                         self.sample[8][-1]])
                     if len(self.sample[0]) > self.frames:
                         for i in range(0, 9):
                             self.sample[i].pop(0)
