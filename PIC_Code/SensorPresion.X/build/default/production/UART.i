@@ -2532,6 +2532,48 @@ void UART_Buffer(uint8_t *buffer, uint8_t size);
 void UART_number(int number);
 # 9 "UART.c" 2
 
+# 1 "./conbits.h" 1
+
+
+
+
+
+
+# 1 "./ADC.h" 1
+# 35 "./ADC.h"
+# 1 "C:\\Program Files\\Microchip\\xc8\\v2.32\\pic\\include\\c90\\stdint.h" 1 3
+# 35 "./ADC.h" 2
+
+
+
+void ADC_init_channel(char channel);
+uint16_t ADC_ISR_handling(void);
+void ADC_init_channel_IR(char channel);
+void ADC_burst(uint8_t *channels,uint16_t *reading,uint8_t numberc);
+void ADC_print_burst(uint16_t *BurstReadings, uint8_t NumberReadings);
+# 7 "./conbits.h" 2
+
+# 1 "./Timer.h" 1
+# 35 "./Timer.h"
+# 1 "C:\\Program Files\\Microchip\\xc8\\v2.32\\pic\\include\\c90\\stdint.h" 1 3
+# 35 "./Timer.h" 2
+
+
+
+extern uint16_t timer_overflows;
+extern uint16_t timer_overflow_counter;
+
+void Timer_set_ms_polling(uint16_t time);
+void Timer_set_ms_interrupt(uint16_t time);
+void Timer_Interrupt_Hanlde(void);
+# 8 "./conbits.h" 2
+
+# 1 "./Bluetooth.h" 1
+# 9 "./conbits.h" 2
+
+# 1 "C:\\Program Files\\Microchip\\xc8\\v2.32\\pic\\include\\c90\\stdint.h" 1 3
+# 10 "./conbits.h" 2
+
 # 1 "C:\\Program Files\\Microchip\\xc8\\v2.32\\pic\\include\\c90\\string.h" 1 3
 
 
@@ -2583,7 +2625,24 @@ extern char * strchr(const char *, int);
 extern char * strichr(const char *, int);
 extern char * strrchr(const char *, int);
 extern char * strrichr(const char *, int);
+# 11 "./conbits.h" 2
+# 21 "./conbits.h"
+#pragma config FOSC = HS
+#pragma config WDTE = OFF
+#pragma config PWRTE = OFF
+#pragma config MCLRE = ON
+#pragma config CP = OFF
+#pragma config CPD = OFF
+#pragma config BOREN = OFF
+#pragma config IESO = ON
+#pragma config FCMEN = OFF
+#pragma config LVP = OFF
+
+
+#pragma config BOR4V = BOR40V
+#pragma config WRT = OFF
 # 10 "UART.c" 2
+
 
 # 1 "C:\\Program Files\\Microchip\\xc8\\v2.32\\pic\\include\\c90\\stdio.h" 1 3
 # 11 "C:\\Program Files\\Microchip\\xc8\\v2.32\\pic\\include\\c90\\stdio.h" 3
@@ -2665,17 +2724,20 @@ extern int vsscanf(const char *, const char *, va_list) __attribute__((unsupport
 #pragma printf_check(sprintf) const
 extern int sprintf(char *, const char *, ...);
 extern int printf(const char *, ...);
-# 11 "UART.c" 2
+# 12 "UART.c" 2
 
 
 
 void UART_TX_Init(uint32_t baud)
 {
 
-  uint8_t temp;
-  temp= (uint8_t)(((16000000/baud)/16)-1);
+  uint16_t temp;
+  temp= (uint16_t)(((16000000/baud)/4)-1);
   BRGH = 1;
-  SPBRG = temp;
+  BRG16=1;
+  SPBRG = 0xFF&temp;
+  SPBRGH= (temp&0xFF00)>>(8);
+
 
   SYNC = 0;
   SPEN = 1;
@@ -2683,16 +2745,21 @@ void UART_TX_Init(uint32_t baud)
   TRISC6 = 1;
   TXEN = 1;
 }
+
+
 void UART_Write(uint8_t data)
 {
   while(!TRMT);
   TXREG = data;
 }
+
+
 uint8_t UART_TX_Empty(void)
 {
 
   return TRMT;
 }
+
 
 void UART_Buffer(uint8_t *buffer, uint8_t size)
 {
@@ -2704,6 +2771,8 @@ void UART_Buffer(uint8_t *buffer, uint8_t size)
         buffer++;
     }
 }
+
+
 void UART_number(int number)
 {
  uint8_t buffer[10];

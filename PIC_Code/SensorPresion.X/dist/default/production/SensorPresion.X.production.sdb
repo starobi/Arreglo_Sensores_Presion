@@ -3,13 +3,11 @@
 [d edition pro ]
 [d chip 16F886 ]
 [d frameptr 0 ]
-"18 C:\Users\staro\OneDrive\Escuela\TEC\Laboratorio Biomecatronica\Documentacion\PIC_Codigo\SensorPresion.X\2_ADC_Test_Burst.c
-[v _main main `(v  1 e 1 0 ]
-"19 C:\Users\staro\OneDrive\Escuela\TEC\Laboratorio Biomecatronica\Documentacion\PIC_Codigo\SensorPresion.X\ADC.c
+"19 C:\Users\staro\OneDrive\Escuela\TEC\Laboratorio Biomecatronica\Documentacion\Arreglo_Sensores_Presion\PIC_Code\SensorPresion.X\ADC.c
 [v _ADC_init_channel ADC_init_channel `(v  1 e 1 0 ]
-"64
+"59
 [v _ADC_burst ADC_burst `(v  1 e 1 0 ]
-"74
+"70
 [v _ADC_print_burst ADC_print_burst `(v  1 e 1 0 ]
 "5 C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\__lldiv.c
 [v ___lldiv __lldiv `(ul  1 e 4 0 ]
@@ -29,21 +27,19 @@
 [v ___eecpymem __eecpymem `(v  1 e 1 0 ]
 "39
 [v ___memcpyee __memcpyee `(v  1 e 1 0 ]
-"14 C:\Users\staro\OneDrive\Escuela\TEC\Laboratorio Biomecatronica\Documentacion\PIC_Codigo\SensorPresion.X\UART.c
+"19 C:\Users\staro\OneDrive\Escuela\TEC\Laboratorio Biomecatronica\Documentacion\Arreglo_Sensores_Presion\PIC_Code\SensorPresion.X\SamplingProgram.c
+[v _main main `(v  1 e 1 0 ]
+"15 C:\Users\staro\OneDrive\Escuela\TEC\Laboratorio Biomecatronica\Documentacion\Arreglo_Sensores_Presion\PIC_Code\SensorPresion.X\UART.c
 [v _UART_TX_Init UART_TX_Init `(v  1 e 1 0 ]
-"28
+"34
 [v _UART_Write UART_Write `(v  1 e 1 0 ]
-"39
+"48
 [v _UART_Buffer UART_Buffer `(v  1 e 1 0 ]
-"49
+"60
 [v _UART_number UART_number `(v  1 e 1 0 ]
-"15 C:\Users\staro\OneDrive\Escuela\TEC\Laboratorio Biomecatronica\Documentacion\PIC_Codigo\SensorPresion.X\2_ADC_Test_Burst.c
-[v _mensaje mensaje `[20]uc  1 e 20 0 ]
-"16
-[v _ANChannels ANChannels `[8]uc  1 e 8 0 ]
-"17
-[v _ANRead ANRead `[8]ui  1 e 16 0 ]
-"1054 C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f886.h
+"571 C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f886.h
+[v _TMR1 TMR1 `VEus  1 e 2 @14 ]
+"1054
 [v _TXREG TXREG `VEuc  1 e 1 @25 ]
 "1159
 [v _ADRESH ADRESH `VEuc  1 e 1 @30 ]
@@ -74,6 +70,8 @@
 [v _ADCON0bits ADCON0bits `VES55  1 e 1 @31 ]
 "2484
 [v _SPBRG SPBRG `VEuc  1 e 1 @153 ]
+"2546
+[v _SPBRGH SPBRGH `VEuc  1 e 1 @154 ]
 "2812
 [v _ADRESL ADRESL `VEuc  1 e 1 @158 ]
 "2819
@@ -82,6 +80,8 @@
 [v _ADIE ADIE `VEb  1 e 0 @1126 ]
 "3411
 [v _ADIF ADIF `VEb  1 e 0 @102 ]
+"3483
+[v _BRG16 BRG16 `VEb  1 e 0 @3131 ]
 "3510
 [v _BRGH BRGH `VEb  1 e 0 @1218 ]
 "3711
@@ -90,14 +90,24 @@
 [v _GO_DONE GO_DONE `VEb  1 e 0 @249 ]
 "3855
 [v _PEIE PEIE `VEb  1 e 0 @94 ]
-"3951
-[v _RC1 RC1 `VEb  1 e 0 @57 ]
+"3954
+[v _RC2 RC2 `VEb  1 e 0 @58 ]
 "4041
 [v _SPEN SPEN `VEb  1 e 0 @199 ]
 "4095
 [v _SYNC SYNC `VEb  1 e 0 @1220 ]
-"4233
-[v _TRISC1 TRISC1 `VEb  1 e 0 @1081 ]
+"4110
+[v _T1CKPS0 T1CKPS0 `VEb  1 e 0 @132 ]
+"4113
+[v _T1CKPS1 T1CKPS1 `VEb  1 e 0 @133 ]
+"4146
+[v _TMR1CS TMR1CS `VEb  1 e 0 @129 ]
+"4152
+[v _TMR1IE TMR1IE `VEb  1 e 0 @1120 ]
+"4155
+[v _TMR1IF TMR1IF `VEb  1 e 0 @96 ]
+"4158
+[v _TMR1ON TMR1ON `VEb  1 e 0 @128 ]
 "4248
 [v _TRISC6 TRISC6 `VEb  1 e 0 @1086 ]
 "4257
@@ -106,19 +116,29 @@
 [v _TXEN TXEN `VEb  1 e 0 @1221 ]
 "358 C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\doprnt.c
 [v _dpowers dpowers `DC[5]ui  1 s 10 dpowers ]
-"18 C:\Users\staro\OneDrive\Escuela\TEC\Laboratorio Biomecatronica\Documentacion\PIC_Codigo\SensorPresion.X\2_ADC_Test_Burst.c
+"16 C:\Users\staro\OneDrive\Escuela\TEC\Laboratorio Biomecatronica\Documentacion\Arreglo_Sensores_Presion\PIC_Code\SensorPresion.X\SamplingProgram.c
+[v _mensaje mensaje `[19]uc  1 e 19 0 ]
+"17
+[v _ANChannels ANChannels `[8]uc  1 e 8 0 ]
+"18
+[v _ANRead ANRead `[8]ui  1 e 16 0 ]
+"10 C:\Users\staro\OneDrive\Escuela\TEC\Laboratorio Biomecatronica\Documentacion\Arreglo_Sensores_Presion\PIC_Code\SensorPresion.X\Timer.c
+[v _timer_overflows timer_overflows `ui  1 e 2 0 ]
+"11
+[v _timer_overflow_counter timer_overflow_counter `ui  1 e 2 0 ]
+"19 C:\Users\staro\OneDrive\Escuela\TEC\Laboratorio Biomecatronica\Documentacion\Arreglo_Sensores_Presion\PIC_Code\SensorPresion.X\SamplingProgram.c
 [v _main main `(v  1 e 1 0 ]
 {
-"31
+"35
 } 0
-"14 C:\Users\staro\OneDrive\Escuela\TEC\Laboratorio Biomecatronica\Documentacion\PIC_Codigo\SensorPresion.X\UART.c
+"15 C:\Users\staro\OneDrive\Escuela\TEC\Laboratorio Biomecatronica\Documentacion\Arreglo_Sensores_Presion\PIC_Code\SensorPresion.X\UART.c
 [v _UART_TX_Init UART_TX_Init `(v  1 e 1 0 ]
 {
-"17
-[v UART_TX_Init@temp temp `uc  1 a 1 9 ]
-"14
+"18
+[v UART_TX_Init@temp temp `ui  1 a 2 8 ]
+"15
 [v UART_TX_Init@baud baud `ul  1 p 4 0 ]
-"27
+"31
 } 0
 "5 C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\__lldiv.c
 [v ___lldiv __lldiv `(ul  1 e 4 0 ]
@@ -132,27 +152,27 @@
 [v ___lldiv@dividend dividend `ul  1 p 4 4 ]
 "30
 } 0
-"74 C:\Users\staro\OneDrive\Escuela\TEC\Laboratorio Biomecatronica\Documentacion\PIC_Codigo\SensorPresion.X\ADC.c
+"70 C:\Users\staro\OneDrive\Escuela\TEC\Laboratorio Biomecatronica\Documentacion\Arreglo_Sensores_Presion\PIC_Code\SensorPresion.X\ADC.c
 [v _ADC_print_burst ADC_print_burst `(v  1 e 1 0 ]
 {
 [v ADC_print_burst@BurstReadings BurstReadings `*.4ui  1 a 1 wreg ]
-"76
+"72
 [v ADC_print_burst@n n `uc  1 a 1 30 ]
-"74
+"70
 [v ADC_print_burst@BurstReadings BurstReadings `*.4ui  1 a 1 wreg ]
 [v ADC_print_burst@NumberReadings NumberReadings `uc  1 p 1 26 ]
-"76
+"72
 [v ADC_print_burst@BurstReadings BurstReadings `*.4ui  1 a 1 29 ]
-"82
+"78
 } 0
-"49 C:\Users\staro\OneDrive\Escuela\TEC\Laboratorio Biomecatronica\Documentacion\PIC_Codigo\SensorPresion.X\UART.c
+"60 C:\Users\staro\OneDrive\Escuela\TEC\Laboratorio Biomecatronica\Documentacion\Arreglo_Sensores_Presion\PIC_Code\SensorPresion.X\UART.c
 [v _UART_number UART_number `(v  1 e 1 0 ]
 {
-"51
+"62
 [v UART_number@buffer buffer `[10]uc  1 a 10 16 ]
-"49
+"60
 [v UART_number@number number `i  1 p 2 13 ]
-"54
+"65
 } 0
 "4 C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\strlen.c
 [v _strlen strlen `(ui  1 e 2 0 ]
@@ -209,40 +229,40 @@
 [v ___lwdiv@dividend dividend `ui  1 p 2 2 ]
 "30
 } 0
-"39 C:\Users\staro\OneDrive\Escuela\TEC\Laboratorio Biomecatronica\Documentacion\PIC_Codigo\SensorPresion.X\UART.c
+"48 C:\Users\staro\OneDrive\Escuela\TEC\Laboratorio Biomecatronica\Documentacion\Arreglo_Sensores_Presion\PIC_Code\SensorPresion.X\UART.c
 [v _UART_Buffer UART_Buffer `(v  1 e 1 0 ]
 {
 [v UART_Buffer@buffer buffer `*.4uc  1 a 1 wreg ]
-"41
+"50
 [v UART_Buffer@count count `uc  1 a 1 7 ]
-"39
+"48
 [v UART_Buffer@buffer buffer `*.4uc  1 a 1 wreg ]
 [v UART_Buffer@size size `uc  1 p 1 5 ]
-"41
+"50
 [v UART_Buffer@buffer buffer `*.4uc  1 a 1 8 ]
-"48
+"57
 } 0
-"28
+"34
 [v _UART_Write UART_Write `(v  1 e 1 0 ]
 {
 [v UART_Write@data data `uc  1 a 1 wreg ]
 [v UART_Write@data data `uc  1 a 1 wreg ]
 [v UART_Write@data data `uc  1 a 1 0 ]
-"32
+"38
 } 0
-"64 C:\Users\staro\OneDrive\Escuela\TEC\Laboratorio Biomecatronica\Documentacion\PIC_Codigo\SensorPresion.X\ADC.c
+"59 C:\Users\staro\OneDrive\Escuela\TEC\Laboratorio Biomecatronica\Documentacion\Arreglo_Sensores_Presion\PIC_Code\SensorPresion.X\ADC.c
 [v _ADC_burst ADC_burst `(v  1 e 1 0 ]
 {
 [v ADC_burst@channels channels `*.4uc  1 a 1 wreg ]
-"66
+"61
 [v ADC_burst@n n `uc  1 a 1 8 ]
-"64
+"59
 [v ADC_burst@channels channels `*.4uc  1 a 1 wreg ]
 [v ADC_burst@reading reading `*.4ui  1 p 1 3 ]
 [v ADC_burst@numberc numberc `uc  1 p 1 4 ]
-"66
+"61
 [v ADC_burst@channels channels `*.4uc  1 a 1 7 ]
-"72
+"67
 } 0
 "19
 [v _ADC_init_channel ADC_init_channel `(v  1 e 1 0 ]
@@ -251,5 +271,5 @@
 [v ADC_init_channel@channel channel `uc  1 a 1 wreg ]
 "22
 [v ADC_init_channel@channel channel `uc  1 a 1 2 ]
-"39
+"31
 } 0

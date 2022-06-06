@@ -1,0 +1,285 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="51dbdd32-4c40-4441-8d0e-519b52969648" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/../PIC_Code/SensorPresion.X/2_ADC_Test_Burst.c" beforeDir="false" afterPath="$PROJECT_DIR$/../PIC_Code/SensorPresion.X/2_ADC_Test_Burst.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PIC_Code/SensorPresion.X/Timer.c" beforeDir="false" afterPath="$PROJECT_DIR$/../PIC_Code/SensorPresion.X/Timer.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PIC_Code/SensorPresion.X/build/default/debug/1_UART_Test.i" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PIC_Code/SensorPresion.X/build/default/debug/1_UART_Test.p1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PIC_Code/SensorPresion.X/build/default/debug/1_UART_Test.p1.d" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PIC_Code/SensorPresion.X/build/default/debug/ADC.i" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PIC_Code/SensorPresion.X/build/default/debug/ADC.p1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PIC_Code/SensorPresion.X/build/default/debug/ADC.p1.d" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PIC_Code/SensorPresion.X/build/default/debug/Bluetooth.i" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PIC_Code/SensorPresion.X/build/default/debug/Bluetooth.p1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PIC_Code/SensorPresion.X/build/default/debug/Bluetooth.p1.d" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PIC_Code/SensorPresion.X/build/default/debug/Timer.i" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PIC_Code/SensorPresion.X/build/default/debug/Timer.p1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PIC_Code/SensorPresion.X/build/default/debug/Timer.p1.d" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PIC_Code/SensorPresion.X/build/default/debug/UART.i" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PIC_Code/SensorPresion.X/build/default/debug/UART.p1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PIC_Code/SensorPresion.X/build/default/debug/UART.p1.d" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PIC_Code/SensorPresion.X/build/default/production/1_UART_Test.i" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PIC_Code/SensorPresion.X/build/default/production/1_UART_Test.p1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PIC_Code/SensorPresion.X/build/default/production/1_UART_Test.p1.d" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PIC_Code/SensorPresion.X/build/default/production/2_ADC_Test_Burst.i" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PIC_Code/SensorPresion.X/build/default/production/2_ADC_Test_Burst.p1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PIC_Code/SensorPresion.X/build/default/production/2_ADC_Test_Burst.p1.d" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PIC_Code/SensorPresion.X/build/default/production/Bluetooth.i" beforeDir="false" afterPath="$PROJECT_DIR$/../PIC_Code/SensorPresion.X/build/default/production/Bluetooth.i" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PIC_Code/SensorPresion.X/build/default/production/Timer.i" beforeDir="false" afterPath="$PROJECT_DIR$/../PIC_Code/SensorPresion.X/build/default/production/Timer.i" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PIC_Code/SensorPresion.X/dist/default/debug/SensorPresion.X.debug.cmf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PIC_Code/SensorPresion.X/dist/default/debug/SensorPresion.X.debug.elf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PIC_Code/SensorPresion.X/dist/default/debug/SensorPresion.X.debug.hxl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PIC_Code/SensorPresion.X/dist/default/debug/SensorPresion.X.debug.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PIC_Code/SensorPresion.X/dist/default/debug/SensorPresion.X.debug.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PIC_Code/SensorPresion.X/dist/default/debug/SensorPresion.X.debug.mum" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PIC_Code/SensorPresion.X/dist/default/debug/SensorPresion.X.debug.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PIC_Code/SensorPresion.X/dist/default/debug/SensorPresion.X.debug.rlf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PIC_Code/SensorPresion.X/dist/default/debug/SensorPresion.X.debug.sdb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PIC_Code/SensorPresion.X/dist/default/debug/SensorPresion.X.debug.sym" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PIC_Code/SensorPresion.X/dist/default/debug/__eeprom.d" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PIC_Code/SensorPresion.X/dist/default/debug/__eeprom.i" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PIC_Code/SensorPresion.X/dist/default/debug/__eeprom.p1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PIC_Code/SensorPresion.X/dist/default/debug/memoryfile.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PIC_Code/SensorPresion.X/dist/default/production/SensorPresion.X.production.cmf" beforeDir="false" afterPath="$PROJECT_DIR$/../PIC_Code/SensorPresion.X/dist/default/production/SensorPresion.X.production.cmf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PIC_Code/SensorPresion.X/dist/default/production/SensorPresion.X.production.elf" beforeDir="false" afterPath="$PROJECT_DIR$/../PIC_Code/SensorPresion.X/dist/default/production/SensorPresion.X.production.elf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PIC_Code/SensorPresion.X/dist/default/production/SensorPresion.X.production.lst" beforeDir="false" afterPath="$PROJECT_DIR$/../PIC_Code/SensorPresion.X/dist/default/production/SensorPresion.X.production.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PIC_Code/SensorPresion.X/dist/default/production/SensorPresion.X.production.map" beforeDir="false" afterPath="$PROJECT_DIR$/../PIC_Code/SensorPresion.X/dist/default/production/SensorPresion.X.production.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PIC_Code/SensorPresion.X/dist/default/production/SensorPresion.X.production.o" beforeDir="false" afterPath="$PROJECT_DIR$/../PIC_Code/SensorPresion.X/dist/default/production/SensorPresion.X.production.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PIC_Code/SensorPresion.X/dist/default/production/SensorPresion.X.production.rlf" beforeDir="false" afterPath="$PROJECT_DIR$/../PIC_Code/SensorPresion.X/dist/default/production/SensorPresion.X.production.rlf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PIC_Code/SensorPresion.X/dist/default/production/SensorPresion.X.production.sdb" beforeDir="false" afterPath="$PROJECT_DIR$/../PIC_Code/SensorPresion.X/dist/default/production/SensorPresion.X.production.sdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PIC_Code/SensorPresion.X/dist/default/production/SensorPresion.X.production.sym" beforeDir="false" afterPath="$PROJECT_DIR$/../PIC_Code/SensorPresion.X/dist/default/production/SensorPresion.X.production.sym" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PIC_Code/SensorPresion.X/nbproject/Makefile-default.mk" beforeDir="false" afterPath="$PROJECT_DIR$/../PIC_Code/SensorPresion.X/nbproject/Makefile-default.mk" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PIC_Code/SensorPresion.X/nbproject/Makefile-genesis.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../PIC_Code/SensorPresion.X/nbproject/Makefile-genesis.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PIC_Code/SensorPresion.X/nbproject/configurations.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../PIC_Code/SensorPresion.X/nbproject/configurations.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PIC_Code/SensorPresion.X/nbproject/private/configurations.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../PIC_Code/SensorPresion.X/nbproject/private/configurations.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PIC_Code/SensorPresion.X/nbproject/private/private.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../PIC_Code/SensorPresion.X/nbproject/private/private.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Bluetooth Programs/Bluetooth_Configuration_Window.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Bluetooth Programs/Device_Manager.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Plot Programs/Example_PyQt5_Serial_RealTime_Varios_Time.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Plot Programs/hola.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Plot Programs/pyqtgraphtest.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/User Interface/Tests/2022-6-6_0_25hrs_Test1.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/User Interface/Tests/2022-6-6_0_42hrs_Test1.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/User Interface/Tests/2022-6-6_0_46hrs_Test1.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/User Interface/Tests/2022-6-6_0_54hrs_Test1.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/User Interface/Tests/2022-6-6_10_35hrs_Test1.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/User Interface/Tests/2022-6-6_10_39hrs_Test1.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/User Interface/Tests/2022-6-6_10_40hrs_Test1.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/User Interface/Tests/2022-6-6_10_42hrs_Test1.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/User Interface/Tests/2022-6-6_11_11hrs_Test1.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/User Interface/Tests/2022-6-6_11_12hrs_Test1.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/User Interface/Tests/2022-6-6_11_33hrs_Test1.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/User Interface/Tests/2022-6-6_11_35hrs_Test1.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/User Interface/Tests/2022-6-6_11_39hrs_Test1.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/User Interface/Tests/2022-6-6_11_40hrs_Test1.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/User Interface/Tests/2022-6-6_11_41hrs_Test1.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/User Interface/Tests/2022-6-6_11_42hrs_Test1.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/User Interface/Tests/2022-6-6_11_5hrs_Test1.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/User Interface/Tests/2022-6-6_13_18hrs_Test1.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/User Interface/Tests/2022-6-6_13_29hrs_Test1.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/User Interface/Tests/2022-6-6_13_32hrs_Test1.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/User Interface/Tests/2022-6-6_13_45hrs_Test1.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/User Interface/Tests/2022-6-6_13_49hrs_Test1.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/User Interface/Tests/2022-6-6_13_51hrs_Test1.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/User Interface/Tests/2022-6-6_13_54hrs_Test1.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/User Interface/Tests/2022-6-6_13_56hrs_Test1.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/User Interface/Tests/2022-6-6_13_57hrs_Test1.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/User Interface/Tests/2022-6-6_14_35hrs_Test1.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/User Interface/Tests/2022-6-6_14_39hrs_Test1.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/User Interface/Tests/2022-6-6_14_40hrs_Test1.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/User Interface/Tests/2022-6-6_14_42hrs_Test1.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/User Interface/Tests/2022-6-6_14_43hrs_Test1.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/User Interface/Tests/2022-6-6_14_55hrs_Test1.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/User Interface/Tests/2022-6-6_14_59hrs_Test1.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/User Interface/Tests/2022-6-6_9_17hrs_Test1.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/User Interface/Tests/2022-6-6_9_19hrs_Test1.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/User Interface/Tests/2022-6-6_9_22hrs_Test1.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/User Interface/Tests/2022-6-6_9_23hrs_Test1.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/User Interface/Tests/2022-6-6_9_25hrs_Test1.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/User Interface/Tests/2022-6-6_9_26hrs_Test1.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/User Interface/Tests/2022-6-6_9_30hrs_Test1.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/User Interface/Tests/2022-6-6_9_32hrs_Test1.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/User Interface/Tests/2022-6-6_9_34hrs_Test1.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/User Interface/Tests/2022-6-6_9_38hrs_Test1.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/User Interface/Tests/2022-6-6_9_39hrs_Test1.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/User Interface/Tests/2022-6-6_9_40hrs_Test1.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/User Interface/Tests/2022-6-6_9_42hrs_Test1.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/User Interface/Tests/2022-6-6_9_45hrs_Test1.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/User Interface/Tests/2022-6-6_9_50hrs_Test1.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/User Interface/Tests/2022-6-6_9_51hrs_Test1.csv" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="ProjectId" id="29hTWoKOZvqpyf6F1zOpsG3nOa8" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+  </component>
+  <component name="RunManager" selected="Python.PressureSensorsInterface (1)">
+    <configuration name="MainMenu_file" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="UI" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/User Interface" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/User Interface/MainMenu_file.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="MainWndow" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="UI" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/MainWndow.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="PressureSensorsInterface (1)" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="UI" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/User Interface" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/User Interface/PressureSensorsInterface.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="PressureSensorsInterface" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="UI" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/User Interface" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="C:\Users\staro\OneDrive\Escuela\TEC\Laboratorio Biomecatronica\Documentacion\Arreglo_Sensores_Presion\UI\User Interface\PressureSensorsInterface.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="TestWindow_file" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="UI" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/User Interface" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/User Interface/TestWindow_file.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python.PressureSensorsInterface (1)" />
+        <item itemvalue="Python.MainWndow" />
+        <item itemvalue="Python.PressureSensorsInterface" />
+        <item itemvalue="Python.MainMenu_file" />
+        <item itemvalue="Python.TestWindow_file" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="51dbdd32-4c40-4441-8d0e-519b52969648" name="Default Changelist" comment="" />
+      <created>1653564351356</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1653564351356</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <default-breakpoints>
+        <breakpoint type="python-exception">
+          <properties notifyOnTerminate="true" exception="BaseException">
+            <option name="notifyOnTerminate" value="true" />
+          </properties>
+        </breakpoint>
+      </default-breakpoints>
+    </breakpoint-manager>
+    <watches-manager>
+      <configuration name="PythonConfigurationType">
+        <watch expression="len(self.sample_check)" language="Python" />
+        <watch expression="self.sample_check" />
+      </configuration>
+    </watches-manager>
+  </component>
+</project>

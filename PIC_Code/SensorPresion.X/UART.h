@@ -18,5 +18,4 @@ uint8_t UART_TX_Empty(void);
 void UART_Buffer(uint8_t *buffer, uint8_t size);
 void UART_number(int number);
 
-
 #endif	/* XC_HEADER_TEMPLATE_H */

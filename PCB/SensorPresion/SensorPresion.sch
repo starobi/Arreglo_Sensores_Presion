@@ -806,7 +806,7 @@ s_signal_7
 Text Label 10200 1900 0    50   ~ 0
 s_signal_8
 $Comp
-L TP4056:TP4056 U11
+L SensorPresion-rescue:TP4056-TP4056 U11
 U 1 1 614B27FE
 P 3550 4400
 F 0 "U11" H 3550 4937 60  0000 C CNN
@@ -817,7 +817,7 @@ F 3 "" H 3550 4400 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L DW01:DW01 U12
+L SensorPresion-rescue:DW01-DW01 U12
 U 1 1 614B3019
 P 5350 4300
 F 0 "U12" H 5375 4737 60  0000 C CNN
@@ -828,7 +828,7 @@ F 3 "" H 5300 4000 60  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L FS8205A:FS8205A U13
+L SensorPresion-rescue:FS8205A-FS8205A U13
 U 1 1 614B3B9A
 P 5350 5600
 F 0 "U13" H 5678 5553 60  0000 L CNN
@@ -1062,7 +1062,7 @@ Wire Wire Line
 Wire Wire Line
 	6250 4400 6400 4400
 $Comp
-L Connector:USB_B_Micro J1
+L SensorPresion-rescue:USB_B_Micro-Connector J1
 U 1 1 615686B9
 P 1250 4500
 F 0 "J1" H 1307 4967 50  0000 C CNN
@@ -1571,7 +1571,7 @@ Wire Wire Line
 	5250 6200 5450 6200
 Connection ~ 5450 6200
 $Comp
-L HC-06:BLUETOOTH-SERIAL-HC-06 U15
+L SensorPresion-rescue:BLUETOOTH-SERIAL-HC-06-HC-06 U15
 U 1 1 61736AFF
 P 12150 2100
 F 0 "U15" H 12150 3367 50  0000 C CNN
@@ -1665,10 +1665,10 @@ F 3 "" H 1150 2950 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Connector:Conn_01x02_Female J?
+L Connector:Conn_01x02_Female J3
 U 1 1 6144C19B
 P 1350 2700
-F 0 "J?" H 1378 2676 50  0000 L CNN
+F 0 "J3" H 1378 2676 50  0000 L CNN
 F 1 "Conn_01x02_Female" H 1378 2585 50  0000 L CNN
 F 2 "" H 1350 2700 50  0001 C CNN
 F 3 "~" H 1350 2700 50  0001 C CNN
