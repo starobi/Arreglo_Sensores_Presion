@@ -1,5 +1,0 @@
-In this folder there are different versions examples of the library Pyqtgraph.
-The implemented library for plotting is Pyqtgraph being that it can plot mare frames per second in comparison with matplotlib.
-
-The last version of the Plotting is Example_PyQt5_Serial_RealTime_Varios_Time.py
-
