@@ -146,6 +146,7 @@ class TestWindow(QMainWindow):
 
     def startButton(self):
         self.plotReset()
+        self.savecsv=True
         cwd = os.path.dirname(os.path.abspath(__file__))
         testsPath = os.path.join(cwd, "Tests")
         if not os.path.exists(testsPath):
@@ -155,8 +156,15 @@ class TestWindow(QMainWindow):
         file_name= QFileDialog.getSaveFileName(self, "Confirm Name and Location", "{}-{}-{}_{}_{}hrs_{}".format(date.year, date.month, date.day, date.hour, date.minute,self.test), "*.csv")
         if file_name[0]== "":
             return
-        csv_file = open(file_name[0], 'w', newline='', encoding="utf-8")
-        self.csv_writer = csv.writer(csv_file,delimiter=',')
+        try:
+            if self.csv_file.closed == True:
+                self.csv_file.close()
+        except NameError:
+            pass
+        except AttributeError:
+            pass
+        self.csv_file = open(file_name[0], 'w', newline='', encoding="utf-8")
+        self.csv_writer = csv.writer(self.csv_file,delimiter=',')
         self.csv_writer.writerow(
             ['Time', 'Sensor 1', 'Sensor 2', 'Sensor 3', 'Sensor 4', 'Sensor 5', 'Sensor 6', 'Sensor 7', 'Sensor 8'])
 
@@ -165,17 +173,18 @@ class TestWindow(QMainWindow):
         self.frames = framesTestWindow
         self.initial_time = time.time()
         while ((time.time() - self.initial_time) <= testTime): self.Update()  # Actualizamos lo rápido que podamos.
-
-        for x in range(len(self.sample[1])-1):
-            self.csv_writer.writerow(
-                [self.sample[0][x], self.sample[1][x], self.sample[2][x], self.sample[3][x],
-                 self.sample[4][x], self.sample[5][x], self.sample[6][x], self.sample[7][x],
-                 self.sample[8][x]])
-        csv_file.close()
+        if self.savecsv==True:
+            for x in range(len(self.sample[1])-1):
+                self.csv_writer.writerow(
+                    [self.sample[0][x], self.sample[1][x], self.sample[2][x], self.sample[3][x],
+                     self.sample[4][x], self.sample[5][x], self.sample[6][x], self.sample[7][x],
+                     self.sample[8][x]])
+            self.csv_file.close()
+        self.savecsv=False
 
     def Update(self):
         try:
-            if (self.serial == 1):
+            if (self.serial == 1): #If Serial is Active
                 line = self.ser.readline().decode('utf-8')
                 if line == '\n':
                     if len(self.sample_check) == 8:
@@ -244,6 +253,8 @@ class TestWindow(QMainWindow):
             self.ser.close()
         except:
             pass
+        os.chdir(os.path.dirname(os.path.abspath(__file__)))
+
         self.windowMain = MainMenu()
 
 class BluetoothWindow(QWidget):

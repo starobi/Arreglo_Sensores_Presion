@@ -2655,7 +2655,7 @@ void main(void) {
 
         ADC_print_burst(ANRead,8);
 
-        _delay((unsigned long)((7.38)*(16000000/4000.0)));
+        _delay((unsigned long)((17.38)*(16000000/4000.0)));
     }
     return;
 }

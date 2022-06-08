@@ -122,9 +122,9 @@
 [v _ANChannels ANChannels `[8]uc  1 e 8 0 ]
 "18
 [v _ANRead ANRead `[8]ui  1 e 16 0 ]
-"10 C:\Users\staro\OneDrive\Escuela\TEC\Laboratorio Biomecatronica\Documentacion\Arreglo_Sensores_Presion\PIC_Code\SensorPresion.X\Timer.c
+"5 C:\Users\staro\OneDrive\Escuela\TEC\Laboratorio Biomecatronica\Documentacion\Arreglo_Sensores_Presion\PIC_Code\SensorPresion.X\Timer.c
 [v _timer_overflows timer_overflows `ui  1 e 2 0 ]
-"11
+"6
 [v _timer_overflow_counter timer_overflow_counter `ui  1 e 2 0 ]
 "19 C:\Users\staro\OneDrive\Escuela\TEC\Laboratorio Biomecatronica\Documentacion\Arreglo_Sensores_Presion\PIC_Code\SensorPresion.X\SamplingProgram.c
 [v _main main `(v  1 e 1 0 ]

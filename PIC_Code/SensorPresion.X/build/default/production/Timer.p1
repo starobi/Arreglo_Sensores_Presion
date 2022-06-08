@@ -257,152 +257,152 @@ Version 4.0 HI-TECH Software Intermediate Code
 "3370
 [; ;C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f886.h: 3370: __asm("EECON2 equ 018Dh");
 [; <" EECON2 equ 018Dh ;# ">
-"10 Timer.c
-[; ;Timer.c: 10: uint16_t timer_overflows=0;
+"5 Timer.c
+[; ;Timer.c: 5: uint16_t timer_overflows=0;
 [v _timer_overflows `ui ~T0 @X0 1 e ]
 [i _timer_overflows
 -> -> 0 `i `ui
 ]
-"11
-[; ;Timer.c: 11: uint16_t timer_overflow_counter=0;
+"6
+[; ;Timer.c: 6: uint16_t timer_overflow_counter=0;
 [v _timer_overflow_counter `ui ~T0 @X0 1 e ]
 [i _timer_overflow_counter
 -> -> 0 `i `ui
 ]
-"13
-[; ;Timer.c: 13: void Timer_set_ms_polling(uint16_t time)
+"8
+[; ;Timer.c: 8: void Timer_set_ms_polling(uint16_t time)
 [v _Timer_set_ms_polling `(v ~T0 @X0 1 ef1`ui ]
-"14
-[; ;Timer.c: 14: {
+"9
+[; ;Timer.c: 9: {
 {
 [e :U _Timer_set_ms_polling ]
-"13
-[; ;Timer.c: 13: void Timer_set_ms_polling(uint16_t time)
+"8
+[; ;Timer.c: 8: void Timer_set_ms_polling(uint16_t time)
 [v _time `ui ~T0 @X0 1 r1 ]
-"14
-[; ;Timer.c: 14: {
+"9
+[; ;Timer.c: 9: {
 [f ]
-"17
-[; ;Timer.c: 17:   timer_overflows=time;
+"12
+[; ;Timer.c: 12:   timer_overflows=time;
 [e = _timer_overflows _time ]
-"19
-[; ;Timer.c: 19:   TMR1 = 64535;
+"14
+[; ;Timer.c: 14:   TMR1 = 64535;
 [e = _TMR1 -> -> 64535 `l `us ]
-"21
-[; ;Timer.c: 21:   TMR1CS = 0;
+"16
+[; ;Timer.c: 16:   TMR1CS = 0;
 [e = _TMR1CS -> -> 0 `i `b ]
-"23
-[; ;Timer.c: 23:   T1CKPS0 = 0;
+"18
+[; ;Timer.c: 18:   T1CKPS0 = 0;
 [e = _T1CKPS0 -> -> 0 `i `b ]
-"24
-[; ;Timer.c: 24:   T1CKPS1 = 0;
+"19
+[; ;Timer.c: 19:   T1CKPS1 = 0;
 [e = _T1CKPS1 -> -> 0 `i `b ]
-"26
-[; ;Timer.c: 26:   TMR1IE = 0;
+"21
+[; ;Timer.c: 21:   TMR1IE = 0;
 [e = _TMR1IE -> -> 0 `i `b ]
-"27
-[; ;Timer.c: 27:   TMR1IF = 0;
+"22
+[; ;Timer.c: 22:   TMR1IF = 0;
 [e = _TMR1IF -> -> 0 `i `b ]
-"28
-[; ;Timer.c: 28:   timer_overflow_counter=0;
+"23
+[; ;Timer.c: 23:   timer_overflow_counter=0;
 [e = _timer_overflow_counter -> -> 0 `i `ui ]
-"29
-[; ;Timer.c: 29:   PEIE = 0;
+"24
+[; ;Timer.c: 24:   PEIE = 0;
 [e = _PEIE -> -> 0 `i `b ]
-"30
-[; ;Timer.c: 30:   GIE = 0;
+"25
+[; ;Timer.c: 25:   GIE = 0;
 [e = _GIE -> -> 0 `i `b ]
-"32
-[; ;Timer.c: 32:   TMR1ON = 1;
+"27
+[; ;Timer.c: 27:   TMR1ON = 1;
 [e = _TMR1ON -> -> 1 `i `b ]
-"33
-[; ;Timer.c: 33: }
+"28
+[; ;Timer.c: 28: }
 [e :UE 134 ]
 }
-"34
-[; ;Timer.c: 34: void Timer_set_ms_interrupt(uint16_t time)
+"29
+[; ;Timer.c: 29: void Timer_set_ms_interrupt(uint16_t time)
 [v _Timer_set_ms_interrupt `(v ~T0 @X0 1 ef1`ui ]
-"35
-[; ;Timer.c: 35: {
+"30
+[; ;Timer.c: 30: {
 {
 [e :U _Timer_set_ms_interrupt ]
-"34
-[; ;Timer.c: 34: void Timer_set_ms_interrupt(uint16_t time)
+"29
+[; ;Timer.c: 29: void Timer_set_ms_interrupt(uint16_t time)
 [v _time `ui ~T0 @X0 1 r1 ]
-"35
-[; ;Timer.c: 35: {
+"30
+[; ;Timer.c: 30: {
 [f ]
-"38
-[; ;Timer.c: 38:   timer_overflows=time;
+"33
+[; ;Timer.c: 33:   timer_overflows=time;
 [e = _timer_overflows _time ]
-"39
-[; ;Timer.c: 39:   timer_overflow_counter=0;
+"34
+[; ;Timer.c: 34:   timer_overflow_counter=0;
 [e = _timer_overflow_counter -> -> 0 `i `ui ]
-"41
-[; ;Timer.c: 41:   TMR1 = 64535;
+"36
+[; ;Timer.c: 36:   TMR1 = 64535;
 [e = _TMR1 -> -> 64535 `l `us ]
-"43
-[; ;Timer.c: 43:   TMR1CS = 0;
+"38
+[; ;Timer.c: 38:   TMR1CS = 0;
 [e = _TMR1CS -> -> 0 `i `b ]
-"45
-[; ;Timer.c: 45:   T1CKPS0 = 0;
+"40
+[; ;Timer.c: 40:   T1CKPS0 = 0;
 [e = _T1CKPS0 -> -> 0 `i `b ]
-"46
-[; ;Timer.c: 46:   T1CKPS1 = 0;
+"41
+[; ;Timer.c: 41:   T1CKPS1 = 0;
 [e = _T1CKPS1 -> -> 0 `i `b ]
-"48
-[; ;Timer.c: 48:   TMR1IE = 1;
+"43
+[; ;Timer.c: 43:   TMR1IE = 1;
 [e = _TMR1IE -> -> 1 `i `b ]
-"49
-[; ;Timer.c: 49:   TMR1IF = 0;
+"44
+[; ;Timer.c: 44:   TMR1IF = 0;
 [e = _TMR1IF -> -> 0 `i `b ]
-"51
-[; ;Timer.c: 51:   PEIE = 1;
+"46
+[; ;Timer.c: 46:   PEIE = 1;
 [e = _PEIE -> -> 1 `i `b ]
-"52
-[; ;Timer.c: 52:   GIE = 1;
+"47
+[; ;Timer.c: 47:   GIE = 1;
 [e = _GIE -> -> 1 `i `b ]
-"55
-[; ;Timer.c: 55:   TMR1ON = 1;
+"50
+[; ;Timer.c: 50:   TMR1ON = 1;
 [e = _TMR1ON -> -> 1 `i `b ]
-"56
-[; ;Timer.c: 56: }
+"51
+[; ;Timer.c: 51: }
 [e :UE 135 ]
 }
-"58
-[; ;Timer.c: 58: void Timer_Interrupt_Hanlde(void)
+"53
+[; ;Timer.c: 53: void Timer_Interrupt_Hanlde(void)
 [v _Timer_Interrupt_Hanlde `(v ~T0 @X0 1 ef ]
-"59
-[; ;Timer.c: 59: {
+"54
+[; ;Timer.c: 54: {
 {
 [e :U _Timer_Interrupt_Hanlde ]
 [f ]
-"60
-[; ;Timer.c: 60:       TMR1IF = 0;
+"55
+[; ;Timer.c: 55:       TMR1IF = 0;
 [e = _TMR1IF -> -> 0 `i `b ]
-"61
-[; ;Timer.c: 61:       timer_overflow_counter++;
+"56
+[; ;Timer.c: 56:       timer_overflow_counter++;
 [e ++ _timer_overflow_counter -> -> 1 `i `ui ]
-"62
-[; ;Timer.c: 62:       if(timer_overflow_counter==timer_overflows)
+"57
+[; ;Timer.c: 57:       if(timer_overflow_counter==timer_overflows)
 [e $ ! == _timer_overflow_counter _timer_overflows 137  ]
-"63
-[; ;Timer.c: 63:       {
+"58
+[; ;Timer.c: 58:       {
 {
-"65
-[; ;Timer.c: 65:         TMR1ON = 0;
+"60
+[; ;Timer.c: 60:         TMR1ON = 0;
 [e = _TMR1ON -> -> 0 `i `b ]
-"67
-[; ;Timer.c: 67:         RC2 = ~RC2;
+"62
+[; ;Timer.c: 62:         RC2 = ~RC2;
 [e = _RC2 -> ~ -> _RC2 `ui `b ]
-"69
-[; ;Timer.c: 69:         timer_overflow_counter = 0;
+"64
+[; ;Timer.c: 64:         timer_overflow_counter = 0;
 [e = _timer_overflow_counter -> -> 0 `i `ui ]
-"71
-[; ;Timer.c: 71:       }
+"66
+[; ;Timer.c: 66:       }
 }
 [e :U 137 ]
-"73
-[; ;Timer.c: 73: }
+"68
+[; ;Timer.c: 68: }
 [e :UE 136 ]
 }

@@ -9,11 +9,6 @@
 # 1 "Timer.c" 2
 
 
-
-
-
-
-
 # 1 "./Timer.h" 1
 # 34 "./Timer.h"
 # 1 "C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\\pic\\include\\proc\\pic16f886.h" 1 3
@@ -2451,7 +2446,7 @@ extern uint16_t timer_overflow_counter;
 void Timer_set_ms_polling(uint16_t time);
 void Timer_set_ms_interrupt(uint16_t time);
 void Timer_Interrupt_Hanlde(void);
-# 8 "Timer.c" 2
+# 3 "Timer.c" 2
 
 
 uint16_t timer_overflows=0;

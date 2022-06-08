@@ -29,7 +29,7 @@ void main(void) {
         //RC2=0;
         ADC_print_burst(ANRead,8);
         //RC1=0;
-        __delay_ms(7.38); //Delay to have a total Transmission of 20ms
+        __delay_ms(17.38); //Delay to have a total Transmission of 20ms
     }
     return;
 }

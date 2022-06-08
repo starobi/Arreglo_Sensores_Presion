@@ -341,8 +341,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;SamplingProgram.c: 30:         ADC_print_burst(ANRead,8);
 [e ( _ADC_print_burst (2 , &U _ANRead -> -> 8 `i `uc ]
 "32
-[; ;SamplingProgram.c: 32:         _delay((unsigned long)((7.38)*(16000000/4000.0)));
-[e ( __delay (1 -> * .7.38 / -> -> 16000000 `l `d .4000.0 `ul ]
+[; ;SamplingProgram.c: 32:         _delay((unsigned long)((17.38)*(16000000/4000.0)));
+[e ( __delay (1 -> * .17.38 / -> -> 16000000 `l `d .4000.0 `ul ]
 "33
 [; ;SamplingProgram.c: 33:     }
 }
