@@ -1,0 +1,2 @@
+In the heavy files folder there is Virtual Environment Folder with for Python to work with all the necesary Libraries. 
+https://www.youtube.com/watch?v=eQrFYMul8R8&t=233s Here is a tutorial on how to use the Virtaul Environment. 
